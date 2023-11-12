@@ -1,0 +1,22 @@
+{
+  "_fv": 47,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Campfire cooking",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 0.0,
+    "cookingTime": 600,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "campfireCookingInputStack": {
+      "value": "CUSTOM:StroopwafelDough"
+    },
+    "campfireCookingReturnStack": {
+      "value": "CUSTOM:Speculaas"
+    },
+    "name": "speculaas_campfire",
+    "namespace": "mod"
+  }
+}

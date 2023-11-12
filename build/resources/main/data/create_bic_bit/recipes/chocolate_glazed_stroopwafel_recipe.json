@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:stroopwafel"
+    },
+    {
+      "amount": 250,
+      "fluid": "create:chocolate",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "create_bic_bit:chocolate_glazed_stroopwafel"
+    }
+  ]
+}s

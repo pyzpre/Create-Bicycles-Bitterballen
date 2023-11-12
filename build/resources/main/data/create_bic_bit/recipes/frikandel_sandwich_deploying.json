@@ -1,0 +1,16 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "mineraft:bread"
+    },
+    {
+      "item": "create_bic_bit:frikandel"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_bic_bit:frikandel_sandwich"
+    }
+  ]
+}

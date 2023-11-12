@@ -1,0 +1,15 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:potato"
+
+    }
+  ],
+  "results": [
+    {
+
+      "item": "create_bic_bit:raw_fries"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "create_bic_bit:stamppot_bowl"
+    },
+    "title": {
+      "translate": "advancements.stammpot.title"
+    },
+    "description": {
+      "translate": "advancements.stammpot.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "stammpot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_bic_bit:stamppot_bowl"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "create_bic_bit:tasteof_tradition"
+}
