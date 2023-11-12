@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "create_bic_bit:fries"
+    },
+    "title": {
+      "translate": "advancements.fries.title"
+    },
+    "description": {
+      "translate": "advancements.fries.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "tasteof_tradition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_bic_bit:fries"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "create_bic_bit:local_snackbar"
+}

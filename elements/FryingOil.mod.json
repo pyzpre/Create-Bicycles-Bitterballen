@@ -1,0 +1,43 @@
+{
+  "_fv": 47,
+  "_type": "fluid",
+  "definition": {
+    "name": "Frying Oil",
+    "bucketName": "Frying Oil Bucket",
+    "textureStill": "frying_oil",
+    "textureFlowing": "frying_oil",
+    "tintType": "No tint",
+    "canMultiply": false,
+    "flowRate": 4,
+    "levelDecrease": 2,
+    "slopeFindDistance": 8,
+    "spawnParticles": false,
+    "dripParticle": {
+      "value": "EXPLOSION_NORMAL"
+    },
+    "flowStrength": 0.7000000000000001,
+    "luminosity": 0,
+    "density": 1000,
+    "viscosity": 700,
+    "temperature": 300,
+    "type": "WATER",
+    "generateBucket": true,
+    "textureBucket": "fryingoilbuck",
+    "creativeTab": {
+      "value": "CUSTOM:BicyclesBitterballen"
+    },
+    "emptySound": {
+      "value": "item.bucket.empty"
+    },
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "resistance": 100.0,
+    "luminance": 0,
+    "lightOpacity": 0,
+    "emissiveRendering": false,
+    "tickRate": 0,
+    "flammability": 8,
+    "fireSpreadSpeed": 2,
+    "colorOnMap": "YELLOW"
+  }
+}

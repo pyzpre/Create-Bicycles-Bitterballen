@@ -1,0 +1,42 @@
+{
+  "_fv": 47,
+  "_type": "fluid",
+  "definition": {
+    "name": "Stamppot",
+    "textureStill": "stamppot",
+    "textureFlowing": "stamppot",
+    "tintType": "No tint",
+    "canMultiply": false,
+    "flowRate": 1,
+    "levelDecrease": 1,
+    "slopeFindDistance": 1,
+    "spawnParticles": false,
+    "dripParticle": {
+      "value": "EXPLOSION_NORMAL"
+    },
+    "flowStrength": 0.0,
+    "luminosity": 0,
+    "density": 1000,
+    "viscosity": 1000,
+    "temperature": 300,
+    "type": "WATER",
+    "generateBucket": false,
+    "textureBucket": "",
+    "creativeTab": {
+      "value": "CUSTOM:BicyclesBitterballen"
+    },
+    "emptySound": {
+      "value": ""
+    },
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "resistance": 100.0,
+    "luminance": 0,
+    "lightOpacity": 1,
+    "emissiveRendering": false,
+    "tickRate": 0,
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "colorOnMap": "DEFAULT"
+  }
+}
