@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="MIT License"
+
+[[mods]]
+modId="create_bic_bit"
+version="${file.jarVersion}"
+displayName="Create Bicycles and Bitterballen"
+displayURL="https://github.com/pyzpre/Create-Bicycles-Bitterballen"
+logoFile="logo.png"
+authors="Pyzpre, VoidMage"
+description="G E K O L O N I S E E R D"
+
+[[dependencies.create_bic_bit]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2,1.20]"
+    ordering="NONE"
+    side="BOTH"
+
+
+[[dependencies.create_bic_bit]]
+    modId="forge"
+    mandatory=true
+    versionRange="[43,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.create_bic_bit]]
+modId="create"
+mandatory=true
+versionRange="[0.5.1.b,)"
+ordering="NONE"
+side="BOTH"
+
+
+
+

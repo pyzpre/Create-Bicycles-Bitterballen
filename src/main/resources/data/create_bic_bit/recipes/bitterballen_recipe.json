@@ -1,0 +1,22 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "forge:raw_meat"
+    },
+    {
+      "item": "create:wheat_flour"
+
+    },
+    {
+      "amount": 125,
+      "fluid": "minecraft:milk"
+    }
+  ],
+  "results": [
+    {
+
+      "item": "create_bic_bit:raw_bitterballen"
+    }
+  ]
+}

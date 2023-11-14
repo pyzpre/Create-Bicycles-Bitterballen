@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "create_bic_bit:bitterballen",
+    "create_bic_bit:frikandel",
+    "create_bic_bit:kroket"
+  ]
+}
