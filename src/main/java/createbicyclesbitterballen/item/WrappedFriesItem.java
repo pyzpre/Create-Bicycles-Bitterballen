@@ -21,7 +21,7 @@ public class WrappedFriesItem extends Item {
 
     @Override
     public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
-        ItemStack retval = new ItemStack(CreateBicBitModItems.DIRTY_PAPER);
+        ItemStack retval = CreateBicBitModItems.DIRTY_PAPER.asStack();
         super.finishUsingItem(itemstack, world, entity);
         if (itemstack.isEmpty()) {
             return retval;

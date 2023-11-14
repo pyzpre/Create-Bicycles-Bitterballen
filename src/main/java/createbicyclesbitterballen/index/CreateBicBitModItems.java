@@ -1,6 +1,7 @@
 
 package createbicyclesbitterballen.index;
 
+import createbicyclesbitterballen.CreateBicBitModTabs;
 import createbicyclesbitterballen.item.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -12,6 +13,7 @@ import com.tterrag.registrate.util.entry.ItemEntry;
 import static createbicyclesbitterballen.CreateBicBitMod.REGISTRATE;
 
 public class CreateBicBitModItems {
+	static { REGISTRATE.creativeModeTab(() -> CreateBicBitModTabs.CREATIVE_TAB); }
 	public static final ItemEntry<ChocolateGlazedStroopwafelItem> CHOCOLATE_GLAZED_STROOPWAFEL = REGISTRATE.item("chocolate_glazed_stroopwafel", ChocolateGlazedStroopwafelItem::new)
 			.properties(p -> p.food((new FoodProperties.Builder()).nutrition(9).saturationMod(0.7f).build()))
 			.register();

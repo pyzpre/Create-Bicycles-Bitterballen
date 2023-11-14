@@ -21,6 +21,7 @@ import net.minecraft.core.Direction;
 
 import net.minecraft.world.item.ItemStack;
 
+import net.minecraft.world.item.Items;
 import net.minecraft.world.phys.Vec3;
 
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlock.HeatLevel;
@@ -50,9 +51,9 @@ public class FryerScenes {
         BlockPos pressPos = util.grid.at(1, 4, 2);
         Vec3 basinSide = util.vector.blockSurface(basin, Direction.WEST);
 
-        ItemStack oil = new ItemStack(CreateBicBitModItems.FRYING_OIL_BUCKET);
-        ItemStack raw = new ItemStack(CreateBicBitModItems.RAW_BITTERBALLEN);
-        ItemStack fried = new ItemStack(CreateBicBitModItems.BITTERBALLEN);
+        ItemStack oil = CreateBicBitModItems.FRYING_OIL_BUCKET.asStack();
+        ItemStack raw = CreateBicBitModItems.RAW_BITTERBALLEN.asStack();
+        ItemStack fried = CreateBicBitModItems.BITTERBALLEN.asStack();
 
         scene.overlay.showText(60)
                 .pointAt(basinSide)

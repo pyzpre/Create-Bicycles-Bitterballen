@@ -1,6 +1,7 @@
 
 package createbicyclesbitterballen.fluid;
 
+import createbicyclesbitterballen.CreateBicBitModTabs;
 import createbicyclesbitterballen.index.BlockRegistry;
 import createbicyclesbitterballen.index.CreateBicBitModFluids;
 import createbicyclesbitterballen.index.CreateBicBitModItems;
@@ -16,8 +17,11 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import createbicyclesbitterballen.index.FluidTypesRegistry;
 import org.jetbrains.annotations.NotNull;
 
+import static createbicyclesbitterballen.CreateBicBitMod.REGISTRATE;
+
 
 public abstract class FryingOilFluid extends ForgeFlowingFluid {
+    static { REGISTRATE.creativeModeTab(() -> CreateBicBitModTabs.CREATIVE_TAB); }
     public static final ForgeFlowingFluid.Properties PROPERTIES = (new ForgeFlowingFluid.Properties(() -> {
         return (FluidType)FluidTypesRegistry.FRYING_OIL_TYPE.get();
     }, () -> {

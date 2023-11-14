@@ -22,6 +22,8 @@
   "fluid_type.create_bic_bit.stamppot" : "Stamppot",
 
   "item_group.create_bic_bit.bicycles_bitterballen": "Bicycles & Bitterballen",
+  "itemGroup.cbb_creative_tab": "Bicycles & Bitterballen",
+
   "item.create_bic_bit.roasted_sunflower_seeds": "Roasted Sunflower Seeds",
   "item.create_bic_bit.sunflower_seeds": "Sunflower Seeds",
   "item.create_bic_bit.crushed_sunflower_seeds": "Crushed Sunflower Seeds",

@@ -3,6 +3,7 @@ package createbicyclesbitterballen;
 
 import java.util.Random;
 
+import com.simibubi.create.Create;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
@@ -16,6 +17,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import com.simibubi.create.foundation.item.TooltipHelper.Palette;
@@ -59,7 +61,7 @@ public class CreateBicBitMod {
 		SoundsRegistry.prepare();
 		BlockRegistry.register();
 		CreateBicBitModItems.register();
-		CreateBicBitModTabs.register(modEventBus);
+		CreateBicBitModTabs.init();
 		RecipeRegistry.register(modEventBus);
 		BlockEntityRegistry.register();
 		PonderIndex.register();
@@ -70,14 +72,14 @@ public class CreateBicBitMod {
 		modEventBus.addListener(SoundsRegistry::register);
 
 
+
 		ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ConfigRegistry.SERVER_SPEC, "create_bic_bit-server.toml");
 		MinecraftForge.EVENT_BUS.register(this);
 		REGISTRATE.registerEventListeners(modEventBus);
 
-
-
-
 	}
+
+
 	public static ResourceLocation asResource(String path) {
 		return new ResourceLocation(MODID, path);
 	}

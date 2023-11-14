@@ -29,7 +29,6 @@ import com.simibubi.create.content.trains.schedule.ScheduleScreen;
 import com.simibubi.create.foundation.config.ConfigBase.ConfigBool;
 
 import com.simibubi.create.foundation.gui.menu.AbstractSimiContainerScreen;
-import com.simibubi.create.foundation.item.ItemHelper;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
 import com.simibubi.create.foundation.utility.Lang;
 import com.simibubi.create.infrastructure.config.AllConfigs;
@@ -53,7 +52,6 @@ import mezz.jei.api.registration.IRecipeTransferRegistration;
 
 import mezz.jei.api.runtime.IIngredientManager;
 import net.minecraft.client.Minecraft;
-import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
@@ -297,8 +295,7 @@ public class CreateBicyclesBitterballenJEI implements IModPlugin {
     }
 
     public static boolean doOutputsMatch(Recipe<?> recipe1, Recipe<?> recipe2) {
-        RegistryAccess registryAccess = Minecraft.getInstance().level.registryAccess();
-        return ItemHelper.sameItem(recipe1.getResultItem(registryAccess), recipe2.getResultItem(registryAccess));
+        return ItemStack.isSame(recipe1.getResultItem(), recipe2.getResultItem());
     }
 
 }
