@@ -1,5 +1,6 @@
 package createbicyclesbitterballen.item;
 
+import createbicyclesbitterballen.index.BlockRegistry;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
@@ -9,10 +10,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraftforge.common.IPlantable;
 import javax.annotation.Nonnull;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
@@ -39,16 +38,16 @@ public class SunflowerSeedsItem extends Item {
         ItemStack itemstack = context.getItemInHand();
         BlockState state = world.getBlockState(pos);
 
-        
+
         if (state.getBlock() instanceof DoublePlantBlock && state.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.LOWER) {
-            
-        }
-        
-        else if (state.getBlock() == Blocks.AIR || state.getBlock() == Blocks.GRASS || state.getBlock() == Blocks.TALL_GRASS ) {
-            pos = pos.below();  
+
         }
 
-        state = world.getBlockState(pos);  
+        else if (state.getBlock() == Blocks.AIR || state.getBlock() == Blocks.GRASS || state.getBlock() == Blocks.TALL_GRASS ) {
+            pos = pos.below();
+        }
+
+        state = world.getBlockState(pos);
 
         if (state.getBlock() instanceof DoublePlantBlock && state.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER) {
             return InteractionResult.FAIL;
@@ -57,13 +56,11 @@ public class SunflowerSeedsItem extends Item {
 
         if (state.getBlock() == Blocks.TALL_GRASS || state.getBlock() == Blocks.LARGE_FERN || state.getBlock() == Blocks.GRASS || state.getBlock() == Blocks.FERN) {
             if (canPlantAbove(world, pos)) {
-                world.setBlockAndUpdate(pos, Blocks.SUNFLOWER.defaultBlockState().setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER));
-                world.setBlockAndUpdate(pos.above(), Blocks.SUNFLOWER.defaultBlockState().setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.UPPER));
+                world.setBlockAndUpdate(pos, BlockRegistry.SUNFLOWERSTEM.getDefaultState().setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER));
                 return handlePlantingSuccess(context, itemstack);
             }
         } else if (state.canSustainPlant(world, pos, Direction.UP, (IPlantable) Blocks.SUNFLOWER) && canPlantAbove(world, pos)) {
-            world.setBlockAndUpdate(pos.above(), Blocks.SUNFLOWER.defaultBlockState().setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER));
-            world.setBlockAndUpdate(pos.above().above(), Blocks.SUNFLOWER.defaultBlockState().setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.UPPER));
+            world.setBlockAndUpdate(pos.above(), BlockRegistry.SUNFLOWERSTEM.getDefaultState().setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER));
             return handlePlantingSuccess(context, itemstack);
         }
 
@@ -85,4 +82,5 @@ public class SunflowerSeedsItem extends Item {
         context.getLevel().playSound(null, context.getClickedPos().above(), SoundEvents.GRASS_PLACE, SoundSource.BLOCKS, 1.0F, 0.8F);
         return InteractionResult.SUCCESS;
     }
+
 }

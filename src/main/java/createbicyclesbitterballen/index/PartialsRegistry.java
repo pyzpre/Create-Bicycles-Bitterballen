@@ -11,7 +11,6 @@ public class PartialsRegistry {
     private static PartialModel block(String path) {
         return new PartialModel(CreateBicBitMod.asResource("block/" + path));
     }
-    public static void load() {
-        // init static fields
+    public static void init() {
     }
 }

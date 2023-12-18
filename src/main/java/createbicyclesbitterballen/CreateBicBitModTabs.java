@@ -6,7 +6,7 @@ import createbicyclesbitterballen.index.CreateBicBitModItems;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-
+import net.minecraftforge.eventbus.api.IEventBus;
 
 
 public class CreateBicBitModTabs {
@@ -25,21 +25,29 @@ public class CreateBicBitModTabs {
 			items.add(new ItemStack(CreateBicBitModItems.SPECULAAS.get()));
 			items.add(new ItemStack(CreateBicBitModItems.UNBAKED_STROOPWAFEL.get()));
 			items.add(new ItemStack(CreateBicBitModItems.STROOPWAFEL.get()));
+			items.add(new ItemStack(CreateBicBitModItems.WRAPPED_STROOPWAFEL.get()));
 			items.add(new ItemStack(CreateBicBitModItems.CHOCOLATE_GLAZED_STROOPWAFEL.get()));
+			items.add(new ItemStack(CreateBicBitModItems.WRAPPED_COATED_STROOPWAFEL.get()));
 			items.add(new ItemStack(CreateBicBitModItems.OLIEBOLLEN.get()));
 			items.add(new ItemStack(CreateBicBitModItems.RAW_KROKET.get()));
 			items.add(new ItemStack(CreateBicBitModItems.KROKET.get()));
+			items.add(new ItemStack(CreateBicBitModItems.KROKET_SANDWICH.get()));
 			items.add(new ItemStack(CreateBicBitModItems.RAW_BITTERBALLEN.get()));
 			items.add(new ItemStack(CreateBicBitModItems.BITTERBALLEN.get()));
 			items.add(new ItemStack(CreateBicBitModItems.RAW_FRIKANDEL.get()));
 			items.add(new ItemStack(CreateBicBitModItems.FRIKANDEL.get()));
+			items.add(new ItemStack(CreateBicBitModItems.FRIKANDEL_SANDWICH.get()));
 			items.add(new ItemStack(CreateBicBitModItems.RAW_FRIES.get()));
 			items.add(new ItemStack(CreateBicBitModItems.FRIES.get()));
 			items.add(new ItemStack(CreateBicBitModItems.WRAPPED_FRIES.get()));
+			items.add(new ItemStack(CreateBicBitModItems.RAW_CHURROS.get()));
+			items.add(new ItemStack(CreateBicBitModItems.CHURROS.get()));
+			items.add(new ItemStack(CreateBicBitModItems.WRAPPED_CHURROS.get()));
 			items.add(new ItemStack(CreateBicBitModItems.STAMPPOT_BOWL.get()));
 			items.add(new ItemStack(CreateBicBitModItems.CRUSHED_SUNFLOWER_SEEDS.get()));
 			items.add(new ItemStack(CreateBicBitModItems.SUNFLOWER_SEEDS.get()));
 			items.add(new ItemStack(CreateBicBitModItems.ROASTED_SUNFLOWER_SEEDS.get()));
+			items.add(new ItemStack(BlockRegistry.CRYSTALLISED_OIL.get()));
 			items.add(new ItemStack(CreateBicBitModItems.FRYING_OIL_BUCKET.get()));
 			items.add(new ItemStack(BlockRegistry.MECHANICAL_FRYER.get()));
 			items.add(new ItemStack(CreateBicBitModItems.BASKET.get()));
@@ -47,6 +55,6 @@ public class CreateBicBitModTabs {
 		}
 	};
 
-	public static void init() {
+	public static void register() {
 	}
 }

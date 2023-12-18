@@ -6,7 +6,7 @@
       "item": "create:dough"
     },
     {
-      "amount": 100,
+      "amount": 125,
       "fluid": "create_bic_bit:frying_oil"
     }
   ],

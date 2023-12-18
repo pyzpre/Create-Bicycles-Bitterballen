@@ -3,7 +3,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
 }
 
-version = '0.0.50'
+version = '0.0.61'
 group = 'com.pyzpre.Create-Bicycles-Bitterballen'
 archivesBaseName = 'createbicbit-1.19.2'
 

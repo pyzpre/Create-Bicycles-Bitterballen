@@ -2,7 +2,7 @@
   "type": "create:deploying",
   "ingredients": [
     {
-      "item": "mineraft:bread"
+      "item": "minecraft:bread"
     },
     {
       "item": "create_bic_bit:frikandel"
