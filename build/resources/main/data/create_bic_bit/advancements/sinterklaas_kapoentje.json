@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "create_bic_bit:speculaas"
+    },
+    "title": {
+      "translate": "advancements.sinterklaas_kapoentje.title"
+    },
+    "description": {
+      "translate": "advancements.sinterklaas_kapoentje.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "sinterklaas_kapoentje": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_bic_bit:speculaas"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "create_bic_bit:tasteof_tradition"
+}

@@ -11,8 +11,5 @@ public class StroopwafelItem extends Item {
 		super(properties);
 	}
 
-	@Override
-	public int getUseDuration(ItemStack itemstack) {
-		return 25;
-	}
+
 }

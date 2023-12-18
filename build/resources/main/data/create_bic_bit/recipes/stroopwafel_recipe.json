@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "group": "stroopwafel",
+  "category": "food",
+  "experience": 0,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "create_bic_bit:unbaked_stroopwafel"
+  },
+  "result": "create_bic_bit:stroopwafel"
+}

@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:red_tulip"
+    },
+    "title": {
+      "translate": "advancements.literally_1636.title"
+    },
+    "description": {
+      "translate": "advancements.literally_1636.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "tulip_trade": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "item": {
+          "tag": "forge:tulip",
+          "count": {
+            "min": 1
+          }
+        }
+      }
+    }
+  },
+  "parent": "create_bic_bit:tasteof_tradition"
+}

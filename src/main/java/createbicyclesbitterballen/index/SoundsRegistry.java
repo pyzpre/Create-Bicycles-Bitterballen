@@ -40,9 +40,9 @@ public class SoundsRegistry {
 
 
             FRYING = create("frying").subtitle("Frying noises")
-			.playExisting(SoundEvents.WEATHER_RAIN, .125f, 1.6f)
-			.category(SoundSource.BLOCKS)
-			.build();
+            .playExisting(SoundEvents.WEATHER_RAIN, .125f, 1.6f)
+            .category(SoundSource.BLOCKS)
+            .build();
     private static SoundEntryBuilder create(String name) {
         return create(CreateBicBitMod.asResource(name));
     }

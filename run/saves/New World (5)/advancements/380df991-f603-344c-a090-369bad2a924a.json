@@ -1,0 +1,214 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2023-12-09 22:50:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:beach": "2023-12-09 22:50:06 +0100",
+      "minecraft:stony_shore": "2023-12-09 22:50:02 +0100"
+    },
+    "done": false
+  },
+  "create:root": {
+    "criteria": {
+      "0": "2023-12-09 22:50:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2023-12-09 22:50:03 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:wrapped_up": {
+    "criteria": {
+      "tasteof_tradition": "2023-12-09 22:50:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/book": {
+    "criteria": {
+      "has_paper": "2023-12-09 22:50:03 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/misc/crafting/schematics/schematic_and_quill": {
+    "criteria": {
+      "has_item": "2023-12-09 22:50:03 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/misc/crafting/schematics/empty_schematic": {
+    "criteria": {
+      "has_item": "2023-12-09 22:50:03 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/misc/crafting/materials/sand_paper": {
+    "criteria": {
+      "has_item": "2023-12-09 22:50:03 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/misc/crafting/materials/red_sand_paper": {
+    "criteria": {
+      "has_item": "2023-12-09 22:50:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cartography_table": {
+    "criteria": {
+      "has_paper": "2023-12-09 22:50:03 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:lawn_defender": {
+    "criteria": {
+      "harvested_sunflower": "2023-12-09 22:50:27 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:fries": {
+    "criteria": {
+      "tasteof_tradition": "2023-12-09 22:50:27 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:local_snackbar": {
+    "criteria": {
+      "got_snack": "2023-12-09 22:50:27 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:sinterklaas_kapoentje": {
+    "criteria": {
+      "sinterklaas_kapoentje": "2023-12-09 22:50:27 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:doughlightful": {
+    "criteria": {
+      "consumed_oliebollen": "2023-12-09 22:50:27 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:stammpot": {
+    "criteria": {
+      "stammpot": "2023-12-09 22:50:27 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:tasteof_tradition": {
+    "criteria": {
+      "tasteof_tradition": "2023-12-09 22:50:27 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:literally_1636": {
+    "criteria": {
+      "tulip_trade": "2023-12-09 22:50:27 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:step_3": {
+    "criteria": {
+      "got_levitation": "2023-12-09 22:50:27 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/blast_furnace": {
+    "criteria": {
+      "has_smooth_stone": "2023-12-09 22:52:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cake": {
+    "criteria": {
+      "has_egg": "2023-12-09 22:52:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_smelting": {
+    "criteria": {
+      "has_iron_pickaxe": "2023-12-09 22:52:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/iron_tools": {
+    "criteria": {
+      "iron_pickaxe": "2023-12-09 22:52:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/red_dye_from_rose_bush": {
+    "criteria": {
+      "has_rose_bush": "2023-12-09 22:52:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone_slab": {
+    "criteria": {
+      "has_smooth_stone": "2023-12-09 22:52:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2023-12-09 22:57:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone_slab_from_smooth_stone_stonecutting": {
+    "criteria": {
+      "has_smooth_stone": "2023-12-09 22:52:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_andesite_stairs_from_polished_andesite_stonecutting": {
+    "criteria": {
+      "has_polished_andesite": "2023-12-09 22:52:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_andesite_stairs": {
+    "criteria": {
+      "has_polished_andesite": "2023-12-09 22:52:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_andesite_slab": {
+    "criteria": {
+      "has_polished_andesite": "2023-12-09 22:52:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:end/elytra": {
+    "criteria": {
+      "elytra": "2023-12-09 22:52:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/yellow_dye_from_sunflower": {
+    "criteria": {
+      "has_sunflower": "2023-12-09 22:52:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_blasting": {
+    "criteria": {
+      "has_iron_pickaxe": "2023-12-09 22:52:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_andesite_slab_from_polished_andesite_stonecutting": {
+    "criteria": {
+      "has_polished_andesite": "2023-12-09 22:52:37 +0100"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}

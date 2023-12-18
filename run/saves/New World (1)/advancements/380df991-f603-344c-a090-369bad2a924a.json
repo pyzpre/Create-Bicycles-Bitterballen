@@ -1,0 +1,154 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2023-12-05 22:14:29 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:cherry_grove": "2023-12-05 22:28:50 +0100",
+      "minecraft:sunflower_plains": "2023-12-05 22:31:52 +0100",
+      "minecraft:birch_forest": "2023-12-05 22:27:23 +0100",
+      "minecraft:windswept_hills": "2023-12-05 22:19:22 +0100",
+      "minecraft:beach": "2023-12-05 22:14:41 +0100",
+      "minecraft:river": "2023-12-05 22:24:02 +0100",
+      "minecraft:grove": "2023-12-05 22:28:09 +0100",
+      "minecraft:jagged_peaks": "2023-12-05 22:27:53 +0100",
+      "minecraft:forest": "2023-12-05 22:14:55 +0100",
+      "minecraft:flower_forest": "2023-12-05 22:33:27 +0100",
+      "minecraft:meadow": "2023-12-05 22:27:39 +0100",
+      "minecraft:windswept_gravelly_hills": "2023-12-05 22:19:04 +0100",
+      "minecraft:savanna": "2023-12-05 22:33:36 +0100",
+      "minecraft:plains": "2023-12-05 22:19:00 +0100"
+    },
+    "done": false
+  },
+  "create:root": {
+    "criteria": {
+      "0": "2023-12-05 22:14:52 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/yellow_dye_from_sunflower": {
+    "criteria": {
+      "has_sunflower": "2023-12-05 22:14:52 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/white_dye": {
+    "criteria": {
+      "has_bone_meal": "2023-12-05 22:15:59 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/misc/crafting/appliances/tree_fertilizer": {
+    "criteria": {
+      "has_item": "2023-12-05 22:15:59 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bone_block": {
+    "criteria": {
+      "has_bone_meal": "2023-12-05 22:15:59 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/cherry_boat": {
+    "criteria": {
+      "in_water": "2023-12-05 22:24:04 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/bamboo_raft": {
+    "criteria": {
+      "in_water": "2023-12-05 22:24:04 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2023-12-05 22:24:04 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2023-12-05 22:24:04 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2023-12-05 22:24:04 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "in_water": "2023-12-05 22:24:04 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2023-12-05 22:24:04 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2023-12-05 22:24:04 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2023-12-05 22:24:04 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:step_3": {
+    "criteria": {
+      "got_levitation": "2023-12-05 22:30:49 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:local_snackbar": {
+    "criteria": {
+      "got_snack": "2023-12-05 22:32:32 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2023-12-05 22:33:49 +0100"
+    },
+    "done": true
+  },
+  "create:potato_cannon": {
+    "criteria": {
+      "0": "2023-12-05 22:35:16 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/firework_rocket_simple": {
+    "criteria": {
+      "has_gunpowder": "2023-12-05 22:35:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/tnt": {
+    "criteria": {
+      "has_gunpowder": "2023-12-05 22:35:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/redstone_lamp": {
+    "criteria": {
+      "has_glowstone": "2023-12-06 09:33:37 +0100"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}

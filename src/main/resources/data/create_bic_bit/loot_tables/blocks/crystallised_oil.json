@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create_bic_bit:crystallised_oil"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "create_bic_bit:blocks/crystallised_oil"
+}

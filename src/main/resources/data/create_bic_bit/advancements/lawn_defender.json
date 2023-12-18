@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:sunflower"
+    },
+    "title": {
+      "translate": "advancements.lawn_defender.title"
+    },
+    "description": {
+      "translate": "advancements.lawn_defender.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "harvested_sunflower": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "create_bic_bit:tasteof_tradition"
+}

@@ -1,0 +1,13 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:dirty_paper"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:paper"
+    }
+  ]
+}
