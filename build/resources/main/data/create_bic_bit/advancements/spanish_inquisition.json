@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "create_bic_bit:churros"
+    },
+    "title": {
+      "translate": "advancements.spanish_inquisition.title"
+    },
+    "description": {
+      "translate": "advancements.spanish_inquisition.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "spanish_inquisition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_bic_bit:churros"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "create_bic_bit:local_snackbar"
+}

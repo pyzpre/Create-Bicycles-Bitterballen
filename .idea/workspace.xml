@@ -4,99 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b0f7c56-3be1-4bae-9b9e-b97a0ca4fa6d" name="Changes" comment="Bingus my beloved &lt;3">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/runClient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/runClient.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/runServer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/runServer.xml" afterDir="false" />
+    <list default="true" id="1b0f7c56-3be1-4bae-9b9e-b97a0ca4fa6d" name="Changes" comment="Bunch of stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/CreateBicBitMod.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/CreateBicBitMod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/CreateBicBitModTabs.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/CreateBicBitModTabs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/fluid/FryingOilFluid$Flowing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/fluid/FryingOilFluid$Source.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/fluid/FryingOilFluid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/fluid/StamppotFluid$Flowing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/fluid/StamppotFluid$Source.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/fluid/StamppotFluid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/fluid/types/FryingOilFluidType$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/fluid/types/FryingOilFluidType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/fluid/types/StamppotFluidType$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/fluid/types/StamppotFluidType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/BlockRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/BlockRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/CreateBicBitModFluids$ClientSideHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/CreateBicBitModFluids.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/CreateBicBitModItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/CreateBicBitModItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/FluidTypesRegistry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/PartialsRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/PartialsRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/FryingOilItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/SunflowerSeedsItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/SunflowerSeedsItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classpath/runClient_minecraftClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/classpath/runClient_minecraftClasspath.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classpath/runServer_minecraftClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/classpath/runServer_minecraftClasspath.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/createSrgToMcp/output.srg" beforeDir="false" afterPath="$PROJECT_DIR$/build/createSrgToMcp/output.srg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/downloadMCMeta/version.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/downloadMCMeta/version.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reobfJar/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/reobfJar/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reobfJar/output.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/reobfJar/output.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/META-INF/mods.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/lang/en_us.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/lang/fy_nl.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/lang/fy_nl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/lang/nl_nl.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/lang/nl_nl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/frikandel_sandwich.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/frikandel_sandwich.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/frikandel_sandwich2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/advancements/local_snackbar.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/advancements/local_snackbar.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/bitterballen_recipe_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/bitterballen_recipe_2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/fries_recipe_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/fries_recipe_2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_recipe_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_recipe_2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_sandwich_deploying.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_sandwich_deploying.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_sandwich_recipe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_sandwich_recipe.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/kroket_recipe_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/kroket_recipe_2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/oliebollen_recipe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/oliebollen_recipe.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/blocks/mineable/pickaxe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/blocks/mineable/pickaxe.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/fml.toml" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/fml.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-4.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/CreateBicBitMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/CreateBicBitMod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/CreateBicBitModTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/CreateBicBitModTabs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/fluid/FryingOilFluid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/fluid/StamppotFluid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/fluid/types/FryingOilFluidType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/fluid/types/StamppotFluidType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/index/BlockRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/index/BlockRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/index/CreateBicBitModFluids.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/index/CreateBicBitModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/index/CreateBicBitModItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/index/FluidTypesRegistry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/index/PartialsRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/index/PartialsRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/item/FryingOilItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/item/SunflowerSeedsItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/item/SunflowerSeedsItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/create_bic_bit/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/create_bic_bit/lang/en_us.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/create_bic_bit/lang/fy_nl.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/create_bic_bit/lang/fy_nl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/create_bic_bit/lang/nl_nl.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/create_bic_bit/lang/nl_nl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/create_bic_bit/models/item/frikandel_sandwich.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/create_bic_bit/models/item/frikandel_sandwich.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/create_bic_bit/textures/item/frikandel_sandwich2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/advancements/local_snackbar.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/advancements/local_snackbar.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/bitterballen_recipe_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/bitterballen_recipe_2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/fries_recipe_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/fries_recipe_2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/frikandel_recipe_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/frikandel_recipe_2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/frikandel_sandwich_deploying.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/frikandel_sandwich_deploying.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/frikandel_sandwich_recipe.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/frikandel_sandwich_recipe.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/kroket_recipe_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/kroket_recipe_2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/oliebollen_recipe.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/oliebollen_recipe.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/mineable/pickaxe.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/blocks/mineable/pickaxe.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +70,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="1.19.2-Beta" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -180,19 +89,19 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;1.19.2-Beta&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sanne/Documents/create bb 1.19.2/src/main/resources/assets/create_bic_bit/models/item&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "1.19.2-0.0.61",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/sanne/Documents/create bb 1.19.2/src/main/resources/assets/create_bic_bit/models/item",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sanne\Documents\create bb 1.19.2\src\main\resources\assets\create_bic_bit\models\item" />
@@ -321,10 +230,33 @@
       <option name="project" value="LOCAL" />
       <updated>1699963093283</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Bunch of stuff">
+      <option name="closed" value="true" />
+      <created>1702928184866</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702928184866</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -335,7 +267,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="1.19.2-Beta" />
+                        <option value="1.19.2-0.0.61" />
                       </list>
                     </value>
                   </entry>
@@ -349,7 +281,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Bingus my beloved &lt;3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bingus my beloved &lt;3" />
+    <MESSAGE value="Bunch of stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bunch of stuff" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

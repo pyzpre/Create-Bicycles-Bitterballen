@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:elytra"
+    },
+    "title": {
+      "translate": "advancements.step_3.title"
+    },
+    "description": {
+      "translate": "advancements.step_3.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "got_levitation": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "create_bic_bit:local_snackbar"
+}

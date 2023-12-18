@@ -1,0 +1,16 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:stroopwafel"
+    },
+    {
+      "item": "minecraft:paper"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_bic_bit:wrapped_stroopwafel"
+    }
+  ]
+}
