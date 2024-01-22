@@ -28,7 +28,7 @@ mixin {
     debug.export = true
 }
 
-version = '0.0.61'
+version = '0.0.65'
 group = 'com.pyzpre.Create-Bicycles-Bitterballen'
 archivesBaseName = 'createbicbit-1.20.1'
 

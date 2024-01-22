@@ -1,5 +1,11 @@
 {
   "type": "create:compacting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ],
   "ingredients": [
     {
       "item": "minecraft:baked_potato"
@@ -26,7 +32,7 @@
       "item": "minecraft:carrot"
     },
     {
-      "item": "minecraft:carrot"
+      "item": "farmersdelight:onion"
     }
   ],
   "results": [

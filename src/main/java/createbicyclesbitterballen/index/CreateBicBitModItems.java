@@ -1,6 +1,7 @@
 
 package createbicyclesbitterballen.index;
 
+import com.simibubi.create.AllTags;
 import createbicyclesbitterballen.item.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -47,6 +48,7 @@ public class CreateBicBitModItems {
 			.properties(p -> p.food((new FoodProperties.Builder()).nutrition(2).saturationMod(0.2f).build()))
 			.register();
 	public static final ItemEntry<StamppotBowlItem> STAMPPOT_BOWL = REGISTRATE.item("stamppot_bowl", StamppotBowlItem::new)
+			.tag(AllTags.AllItemTags.UPRIGHT_ON_BELT.tag)
 			.properties(p -> p.food((new FoodProperties.Builder()).nutrition(10).saturationMod(0.5f).build()))
 			.register();
 	public static final ItemEntry<SpeculaasItem> SPECULAAS = REGISTRATE.item("speculaas", SpeculaasItem::new)
@@ -93,7 +95,9 @@ public class CreateBicBitModItems {
 
 	public static final ItemEntry<Item> BASKET = REGISTRATE.item("andesite_basket", Item::new).register();
 
-	public static final ItemEntry<Item> FRYING_OIL_BUCKET = REGISTRATE.item("frying_oil_bucket", Item::new).register();
+	public static final ItemEntry<Item> FRYING_OIL_BUCKET = REGISTRATE.item("frying_oil_bucket", Item::new)
+			.tag(AllTags.AllItemTags.UPRIGHT_ON_BELT.tag)
+			.register();
 
 
 	public static void register() {
