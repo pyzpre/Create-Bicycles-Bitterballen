@@ -6,8 +6,8 @@
     },
     {
       "fluid": "create_bic_bit:frying_oil",
-      "nbt": {},
-      "amount": 1000
+      "amount": 1000,
+      "nbt": {}
     }
   ],
   "results": [

@@ -1,0 +1,47 @@
+{
+  "type": "create:compacting",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:mod_loaded",
+        "modid": "farmersdelight"
+      }
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:carrot"
+    }
+  ],
+  "results": [
+    {
+      "amount": 250,
+      "fluid": "create_bic_bit:stamppot"
+    }
+  ]
+}

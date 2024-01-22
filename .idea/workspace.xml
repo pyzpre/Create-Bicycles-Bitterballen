@@ -5,205 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b0f7c56-3be1-4bae-9b9e-b97a0ca4fa6d" name="Changes" comment="Bunch of stuff">
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/dependencies-accessors/gc.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileChanges/last-build.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/gc.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/runClient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/runClient.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/runServer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/runServer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/_RenameSrg2Mcp_-1134426877/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/_RenameSrg2Mcp_-1182580278/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/_RenameSrg2Mcp_-1468442088/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/_RenameSrg2Mcp_-1507263078/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/_RenameSrg2Mcp_197352374/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/_RenameSrg2Mcp_223469004/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/_RenameSrg2Mcp_265622099/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/_RenameSrg2Mcp_514070979/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/_RenameSrg2Mcp_524971502/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/_RenameSrg2Mcp_896098927/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/_RenameSrg2Mcp_968998605/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/_RenameSrg2Mcp_997215867/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/CreateBicBitMod.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/CreateBicBitMod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/CreateBicBitModTabs.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/CreateBicBitModTabs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/block/mechanicalfryer/DeepFryingRecipe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/block/mechanicalfryer/FryerInstance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/block/mechanicalfryer/MechanicalFryer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/block/mechanicalfryer/MechanicalFryerEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/block/mechanicalfryer/MechanicalFryerRenderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/compat/jei/CreateBicyclesBitterballenJEI$CategoryBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/compat/jei/CreateBicyclesBitterballenJEI$CategoryBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/compat/jei/CreateBicyclesBitterballenJEI.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/compat/jei/CreateBicyclesBitterballenJEI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/compat/jei/FryingCategory$FryingType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/compat/jei/FryingCategory$FryingType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/compat/jei/FryingCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/compat/jei/FryingCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/compat/jei/animations/AnimatedFryer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/compat/jei/animations/AnimatedFryer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/config/ConfigRegistry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/BlockEntityRegistry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/BlockRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/BlockRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/CreateBicBitModItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/CreateBicBitModItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/PartialsRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/PartialsRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/PonderIndex.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/RecipeRegistry$Registers.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/RecipeRegistry$Registers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/RecipeRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/RecipeRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/ShapesRegistry$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/ShapesRegistry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry$ConfiguredSoundEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry$ConfiguredSoundEvent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry$CustomSoundEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry$CustomSoundEntry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry$SoundEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry$SoundEntry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry$SoundEntryBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry$SoundEntryBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry$SoundEntryProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry$SoundEntryProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry$WrappedSoundEntry$CompiledSoundEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry$WrappedSoundEntry$CompiledSoundEvent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry$WrappedSoundEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry$WrappedSoundEntry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/index/SoundsRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/BasketItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/BitterballenItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/ChocolateGlazedStroopwafelItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/CrushedSunflowerSeedsItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/DirtyPaperItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/FriesItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/FrikandelItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/FrikandelSandwichItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/KroketItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/OliebollenItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/RawBitterballenItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/RawFriesItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/RawFrikandelItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/RawKroketItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/RoastedSunflowerSeedsItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/SpeculaasItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/StamppotBowlItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/StroopwafelItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/SunflowerSeedsItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/SunflowerSeedsItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/SweetDoughItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/UnbakedStroopwafelItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/WrappedFriesItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/item/WrappedFriesItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/ponder/FryerScenes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/createbicyclesbitterballen/ponder/FryerScenes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classpath/runClient_minecraftClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/classpath/runClient_minecraftClasspath.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classpath/runServer_minecraftClasspath.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/classpath/runServer_minecraftClasspath.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/createMcpToSrg/output.tsrg" beforeDir="false" afterPath="$PROJECT_DIR$/build/createMcpToSrg/output.tsrg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/createSrgToMcp/output.srg" beforeDir="false" afterPath="$PROJECT_DIR$/build/createSrgToMcp/output.srg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/downloadMCMeta/version.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/downloadMCMeta/version.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/downloadMcpConfig/output.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/downloadMcpConfig/output.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/extractSrg/output.srg" beforeDir="false" afterPath="$PROJECT_DIR$/build/extractSrg/output.srg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jarjar/jarJar/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reobfJar/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/reobfJar/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reobfJar/mappings.tsrg" beforeDir="false" afterPath="$PROJECT_DIR$/build/reobfJar/mappings.tsrg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reobfJar/output.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/reobfJar/output.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/META-INF/mods.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/blockstates/frying_oil.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/blockstates/mechanical_fryer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/blockstates/stamppot.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/lang/en_us.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/lang/fy_nl.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/lang/fy_nl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/lang/nl_nl.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/lang/nl_nl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/block/frying_oil.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/block/mechanicalfryer/casing.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/block/mechanicalfryer/head.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/block/stamppot.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/andesite_basket.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/bitterballen.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/chocolate_glazed_stroopwafel.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/crushed_sunflower_seeds.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/dirty_paper.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/fries.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/frikandel.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/frikandel_sandwich.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/frikandel_sandwich.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/frying_oil_bucket.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/kroket.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/mechanical_fryer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/oliebollen.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/raw_bitterballen.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/raw_fries.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/raw_frikandel.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/raw_kroket.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/roasted_sunflower_seeds.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/speculaas.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/stamppot_bowl.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/stroopwafel.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/sunflower_seeds.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/sweet_dough.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/unbaked_stroopwafel.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/models/item/wrapped_fries.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/ponder/frying.nbt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/sounds.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/block/casing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/block/fryer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/block/frying_oil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/block/head.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/block/stamppot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/basket.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/bitterballen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/coated_stroopwafel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/creeperspeculaas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/crushed_sunflower_seed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/dirty_paper.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/fries.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/frikandel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/fryingoilbuck.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/kroket.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/oliebollen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/raw_bitterballen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/raw_fries.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/raw_frikandel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/raw_kroket.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/raw_stroopwaffel_16_export.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/roasted_sunflower_seeds.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/speculaas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/stamppot_bowl.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/stroopwaffel_16_export.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/stroopwaffel_dough_16_export.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/sunflower_seeds.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/item/wrapped_fries.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/assets/create_bic_bit/textures/screens/tulipbanner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/advancements/doughlightful.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/advancements/fries.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/advancements/literally_1636.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/advancements/local_snackbar.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/advancements/local_snackbar.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/advancements/sinterklaas_kapoentje.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/advancements/stammpot.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/advancements/tasteof_tradition.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/loot_tables/blocks/mechanical_fryer.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/basket_recipe.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/bitterballen_recipe.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/bitterballen_recipe_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/bitterballen_recipe_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/bitterballen_recipe_2.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/chocolate_glazed_stroopwafel_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/churros_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/churros_recipe_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/churros_recipe_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/crystallised_oil_recipe.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/fries_recipe_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/fries_recipe_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/fries_recipe_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/fries_recipe_2.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/fries_recipe_3.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/fries_recipe_4.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_recipe.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_recipe_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_recipe_2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_sandwich_deploying.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_sandwich_deploying.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_sandwich_recipe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_sandwich_recipe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_recipe_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_sandwich_deploying.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frikandel_sandwich_recipe.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frying_filling.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frying_oil_empty.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/frying_oil_recipe.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/kroket_recipe.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/kroket_recipe_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/kroket_recipe_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/kroket_recipe_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/kroket_sandwich_deploying.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/kroket_sandwich_recipe.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/mechanical_fryer_recipe.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/milled_seeds_recipe.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/oliebollen_recipe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/oliebollen_recipe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/oliebollen_recipe.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/paper_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/raw_churros_recipe.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/roasted_seeds.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/roasted_seeds_campfire.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/roasted_seedsfurnace.json" beforeDir="false" />
@@ -219,26 +65,11 @@
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/sunflower_seeds_recipe.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/sweet_dough_recipe.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/unbaked_stroopwafel_recipe.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/forge/tags/items/raw_meat.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/forge/tags/items/snacks.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/forge/tags/items/tulip.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/blocks/mineable/pickaxe.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/data/minecraft/tags/blocks/mineable/pickaxe.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/pack.mcmeta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/fml.toml" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/fml.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-11-05-2.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-11-05-3.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-11-05-4.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-11-05-5.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-11-05-6.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-11-05-7.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-11-05-8.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-11-05-9.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-11-06-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-11-06-2.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2023-11-06-3.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/wrapped_coated_stroopwafel_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/wrapped_coated_stroopwafel_recipe_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/wrapped_coated_stroopwafel_recipe_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/wrapped_stroopwafel_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/data/create_bic_bit/recipes/wrapped_stroopwafel_recipe_2.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-3.log.gz" afterDir="false" />
@@ -246,6 +77,86 @@
       <change beforePath="$PROJECT_DIR$/run/logs/debug-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-5.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/DIM-1/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/DIM1/data/raids_end.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.-2.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.-2.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.-2.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.-2.-2.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.-3.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.-3.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.-3.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.-3.-2.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/entities/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/entities/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/playerdata/380df991-f603-344c-a090-369bad2a924a.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-2.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-2.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-2.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-2.-2.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-3.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-3.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-3.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-3.-2.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-4.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-4.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-4.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.-4.-2.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/New World/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/index/BlockRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/index/BlockRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/index/CreateBicBitModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/createbicyclesbitterballen/index/CreateBicBitModItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/basket_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/bitterballen_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/bitterballen_recipe_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/chocolate_glazed_stroopwafel_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/churros_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/churros_recipe_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/churros_recipe_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/crystallised_oil_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/fries_recipe_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/fries_recipe_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/fries_recipe_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/fries_recipe_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/frikandel_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/frikandel_recipe_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/frikandel_sandwich_deploying.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/frikandel_sandwich_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/frying_filling.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/frying_oil_empty.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/frying_oil_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/kroket_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/kroket_recipe_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/kroket_sandwich_deploying.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/kroket_sandwich_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/mechanical_fryer_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/milled_seeds_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/oliebollen_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/paper_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/raw_churros_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/roasted_seeds.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/roasted_seeds_campfire.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/roasted_seedsfurnace.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/speculaas_campfire.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/speculaas_smelting.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/speculaas_smoking.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/stamppot_empty.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/stamppot_filling.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/stamppot_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/stroopwafel_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/stroopwafel_recipe_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/stroopwafel_recipe_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/sunflower_seeds_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/sweet_dough_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/unbaked_stroopwafel_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/wrapped_coated_stroopwafel_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/wrapped_coated_stroopwafel_recipe_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/wrapped_coated_stroopwafel_recipe_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/wrapped_stroopwafel_recipe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/create_bic_bit/recipes/wrapped_stroopwafel_recipe_2.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,26 +240,26 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging 1.19.2-0.0.61",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/sanne/Documents/create bb 1.19.2/src/main/resources/assets/create_bic_bit/models/item",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;1.19.2-0.0.61&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sanne/Documents/create bb 1.19.2/src/main/resources/data/create_bic_bit&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sanne\Documents\create bb 1.19.2\src\main\resources\data\create_bic_bit" />
+      <recent name="C:\Users\sanne\Documents\create bb 1.19.2\src\main\resources\data" />
+      <recent name="C:\Users\sanne\Documents\create bb 1.19.2\src\main\resources\data\forge\tags\items" />
       <recent name="C:\Users\sanne\Documents\create bb 1.19.2\src\main\resources\assets\create_bic_bit\models\item" />
       <recent name="C:\Users\sanne\Documents\create bb 1.19.2\src\main\resources\assets\create_bic_bit\textures\item" />
-      <recent name="C:\Users\sanne\Documents\create bb 1.19.2\src\main\resources\data\create_bic_bit\advancements" />
-      <recent name="C:\Users\sanne\Documents\create bb 1.19.2\src\main\resources\data\create_bic_bit\recipes" />
-      <recent name="C:\Users\sanne\Documents\create bb 1.19.2\src\main\resources\data\forge\tags\items" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sanne\Documents\create bb testing\src\main\resources\assets\create_bic_bit\textures\fluid" />

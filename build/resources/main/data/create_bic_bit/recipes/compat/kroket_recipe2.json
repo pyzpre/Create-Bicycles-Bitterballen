@@ -1,0 +1,32 @@
+{
+    "type": "create:mixing",
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "farmersdelight"
+        }
+    ],
+    "ingredients": [
+    {
+        "tag": "forge:raw_meat_delight"
+    },
+    {
+        "item": "create:wheat_flour"
+
+    },
+        {
+            "item": "create:wheat_flour"
+
+        },
+    {
+        "amount": 250,
+        "fluid": "minecraft:milk"
+    }
+    ],
+    "results": [
+    {
+
+        "item": "create_bic_bit:raw_kroket"
+    }
+    ]
+}
