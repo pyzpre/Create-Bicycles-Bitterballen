@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "group": "stroopwafel",
+  "category": "food",
+  "experience": 0.2,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "create_bic_bit:unbaked_stroopwafel"
+  },
+  "result": "create_bic_bit:stroopwafel"
+}

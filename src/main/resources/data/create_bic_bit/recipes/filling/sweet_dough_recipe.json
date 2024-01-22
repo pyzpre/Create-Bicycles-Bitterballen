@@ -1,0 +1,17 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "create:dough"
+    },
+    {
+      "amount": 10125,
+      "fluidTag": "c:honey"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_bic_bit:sweet_dough"
+    }
+  ]
+}

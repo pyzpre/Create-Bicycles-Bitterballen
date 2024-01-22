@@ -1,0 +1,27 @@
+{
+  "type": "create:mixing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "farmersdelight"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "farmersdelight:wheat_dough"
+
+    },
+    {
+      "item": "minecraft:sugar"
+
+    }
+  ],
+  "results": [
+    {
+
+      "item": "create_bic_bit:raw_churros"
+    }
+  ]
+}

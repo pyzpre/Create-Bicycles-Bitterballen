@@ -1,0 +1,28 @@
+{
+  "type": "create_bic_bit:deep_frying",
+  "heatRequirement": "heated",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "farmersdelight"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "farmersdelight:wheat_dough"
+    },
+    {
+      "amount": 125,
+      "fluid": "create_bic_bit:frying_oil"
+    }
+  ],
+  "results": [
+    {
+
+      "item": "create_bic_bit:oliebollen"
+    }
+  ]
+}
+

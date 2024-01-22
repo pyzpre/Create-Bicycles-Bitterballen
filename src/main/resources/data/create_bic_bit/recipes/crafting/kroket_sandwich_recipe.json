@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F",
+    "B"
+  ],
+  "key": {
+    "F": {
+      "item": "create_bic_bit:kroket"
+    },
+    "B": {
+      "item": "minecraft:bread"
+    }
+  },
+  "result": {
+    "item": "create_bic_bit:kroket_sandwich",
+    "count": 1
+  }
+}

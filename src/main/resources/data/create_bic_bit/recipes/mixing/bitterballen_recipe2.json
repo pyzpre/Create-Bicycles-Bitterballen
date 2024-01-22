@@ -1,0 +1,30 @@
+{
+  "type": "create:mixing",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "farmersdelight"
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:raw_meat_delight"
+    },
+    {
+      "item": "create:wheat_flour"
+
+    },
+    {
+      "amount": 125,
+      "fluid": "minecraft:milk"
+    }
+  ],
+  "results": [
+    {
+
+      "item": "create_bic_bit:raw_bitterballen"
+    }
+  ]
+}

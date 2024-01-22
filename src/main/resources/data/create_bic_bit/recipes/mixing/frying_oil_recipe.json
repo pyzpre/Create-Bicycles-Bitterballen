@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:crushed_sunflower_seeds"
+    },
+    {
+      "amount": 20250,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "results": [
+    {
+      "amount": 20250,
+      "fluid": "create_bic_bit:frying_oil"
+    }
+  ]
+}

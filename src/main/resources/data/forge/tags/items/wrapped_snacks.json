@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "create_bic_bit:wrapped_fries",
+    "create_bic_bit:wrapped_churros",
+    "create_bic_bit:wrapped_stroopwafel",
+    "create_bic_bit:wrapped_chocolate_glazed_stroopwafel"
+  ]
+}

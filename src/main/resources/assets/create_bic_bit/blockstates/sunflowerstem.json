@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "half=lower": { "model": "create_bic_bit:block/sunflower/sunflowerstem"},
+    "half=upper":  { "model": "create_bic_bit:block/sunflower/sunflowerstem2"}
+  }
+}
+

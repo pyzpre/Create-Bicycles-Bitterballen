@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "create_bic_bit",
+	"version": "${version}",
+	"name": "Create: Bitterballen",
+	"description": "G E K O L O N I S E E R D",
+	"authors": [
+		"Pyzpre, Vitecekuwu"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/create_bic_bit/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"pyzpre.createbicyclesbitterballen.CreateBitterballen"
+		],
+		"client": [
+			"pyzpre.createbicyclesbitterballen.CreateBitterballen"
+		],
+		"jei_mod_plugin": [
+			"pyzpre.createbicyclesbitterballen.compat.jei.CreateBicyclesBitterballenJEI"
+		]
+	},
+	"mixins": [
+		"create_bic_bit.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.3",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

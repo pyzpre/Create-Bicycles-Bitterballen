@@ -1,0 +1,27 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "create:wheat_flour"
+
+    },
+    {
+      "item": "create:wheat_flour"
+
+    },
+    {
+      "item": "minecraft:sugar"
+
+    },
+    {
+      "amount": 10125,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "results": [
+    {
+
+      "item": "create_bic_bit:raw_churros"
+    }
+  ]
+}
