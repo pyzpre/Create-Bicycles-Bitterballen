@@ -249,7 +249,7 @@ public class MechanicalFryerEntity extends BasinOperatingBlockEntity {
         if (slow && AnimationTickHolder.getTicks() % 2 == 0)
             return;
         if (runningTicks == 20)
-           SoundsRegistry.FRYING.playAt(level, worldPosition, .75f, 1, true);
+            SoundsRegistry.FRYING.playAt(level, worldPosition, .75f, 1, true);
     }
 
 }

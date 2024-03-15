@@ -1,0 +1,19 @@
+{
+  "type": "create_bic_bit:deep_frying",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "amount": 10125,
+      "fluid": "create_bic_bit:frying_oil"
+    }
+  ],
+  "processingTime": 100,
+  "results": [
+    {
+      "item": "create_bic_bit:enderball"
+    }
+  ]
+}

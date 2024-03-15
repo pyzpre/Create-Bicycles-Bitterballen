@@ -54,7 +54,26 @@ public class FluidsRegistry {
                             .blastResistance(100f))
                     .fluidAttributes(() -> new CreateBitterballenAttributeHandler("fluid.create_bic_bit.frying_oil", 1500, 1400))
                     .register();
-
+    public static final FluidEntry<SimpleFlowableFluid.Flowing> KETCHUP =
+            REGISTRATE.fluid("ketchup", new ResourceLocation("create_bic_bit:block/ketchup_still"), new ResourceLocation("create_bic_bit:block/ketchup_flow"))
+                    .lang("Ketchup")
+                    .tag(FluidTags.WATER)
+                    .fluidProperties(p -> p.levelDecreasePerBlock(2)
+                            .tickRate(25)
+                            .flowSpeed(3)
+                            .blastResistance(100f))
+                    .fluidAttributes(() -> new CreateBitterballenAttributeHandler("fluid.create_bic_bit.ketchup", 1500, 1400))
+                    .register();
+    public static final FluidEntry<SimpleFlowableFluid.Flowing> MAYONNAISE =
+            REGISTRATE.fluid("mayonnaise", new ResourceLocation("create_bic_bit:block/mayo_still"), new ResourceLocation("create_bic_bit:block/mayo_flow"))
+                    .lang("Mayonnaise")
+                    .tag(FluidTags.WATER)
+                    .fluidProperties(p -> p.levelDecreasePerBlock(2)
+                            .tickRate(25)
+                            .flowSpeed(3)
+                            .blastResistance(100f))
+                    .fluidAttributes(() -> new CreateBitterballenAttributeHandler("fluid.create_bic_bit.ketchup", 1500, 1400))
+                    .register();
     public static final FluidEntry<VirtualFluid> STAMPPOT =
             REGISTRATE.virtualFluid("stamppot", new ResourceLocation("create_bic_bit:block/stamppot_still"), new ResourceLocation("create_bic_bit:block/stamppot_still"))
                     .lang("Stamppot")

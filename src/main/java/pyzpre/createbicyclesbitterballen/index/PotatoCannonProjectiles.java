@@ -19,6 +19,15 @@ public class PotatoCannonProjectiles{
             .splitInto(3)
             .preEntityHit(setFire(3))
             .registerAndAssign(CreateBicBitModItems.BITTERBALLEN.get()),
+            KRUIDNOTEN = create("kruidnoten")
+                    .damage(2)
+                    .reloadTicks(5)
+                    .velocity(1.25f)
+                    .knockback(0.2f)
+                    .renderTowardMotion(140, 1)
+                    .soundPitch(1.5f)
+                    .splitInto(2)
+                    .registerAndAssign(CreateBicBitModItems.KRUIDNOTEN.get()),
             KROKET = create("kroket")
                     .damage(5)
                     .reloadTicks(15)

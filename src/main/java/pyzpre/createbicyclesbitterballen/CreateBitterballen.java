@@ -32,6 +32,7 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 
 import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
 import net.fabricmc.api.ModInitializer;
+import pyzpre.createbicyclesbitterballen.effect.ModEffects;
 import pyzpre.createbicyclesbitterballen.events.ClientEvents;
 import pyzpre.createbicyclesbitterballen.events.CommonEvents;
 import pyzpre.createbicyclesbitterballen.index.*;
@@ -55,18 +56,17 @@ public class CreateBitterballen implements ModInitializer, ClientModInitializer 
 	public void onInitialize() {
 
 
+		SoundsRegistry.prepare();
+		SunflowerInteractionHandler.init();
 		BlockRegistry.register();
 		CreateBicBitModItems.register();
-		SoundsRegistry.prepare();
+		FluidsRegistry.register();
 		BlockEntityRegistry.register();
 		RecipeRegistry.register();
-		FluidsRegistry.register();
-		CommonEvents.register();
 		REGISTRATE.register();
+		ModEffects.register();
 		CreateBicBitModTabs.register();
-		PartialsRegistry.init();
 		PotatoCannonProjectiles.register();
-		SunflowerInteractionHandler.init();
 
 		LOGGER.info("Create addon mod [{}] is loading alongside Create [{}]!", NAME, Create.VERSION);
 		LOGGER.info(EnvExecutor.unsafeRunForDist(
@@ -88,7 +88,9 @@ public class CreateBitterballen implements ModInitializer, ClientModInitializer 
 		BlockRenderLayerMap.INSTANCE.putFluid(FluidsRegistry.FRYING_OIL.get(), RenderType.translucent());
 		BlockRenderLayerMap.INSTANCE.putFluid(FluidsRegistry.FRYING_OIL.getSource(), RenderType.translucent());
 		BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.SUNFLOWERSTEM.get(), RenderType.cutout());
+		PartialsRegistry.init();
 		ClientEvents.register();
+		CommonEvents.register();
 		PonderIndex.register();
 
 	}

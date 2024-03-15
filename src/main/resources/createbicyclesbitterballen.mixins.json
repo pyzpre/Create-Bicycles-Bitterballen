@@ -1,11 +1,10 @@
 {
 	"required": true,
-	"priority": 1000,
-	"compatibilityLevel": "JAVA_17",
+	"minVersion": "0.8",
 	"package": "pyzpre.createbicyclesbitterballen.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"refmap": "${archivesBaseName}-refmap.json",
 	"mixins": [
 		"SunflowerMixin"
-
-	],
-	"minVersion": "0.8.5"
+	]
 }

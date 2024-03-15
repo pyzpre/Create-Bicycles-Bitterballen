@@ -25,8 +25,9 @@ public class ClientEvents {
         Fluid fluid = fluidState.getType();
         Entity entity = camera.getEntity();
 
-        if (FluidsRegistry.FRYING_OIL.get()
-                .isSame(fluid)) {
+        if (FluidsRegistry.FRYING_OIL.get().isSame(fluid) ||
+                FluidsRegistry.KETCHUP.get().isSame(fluid) ||
+                FluidsRegistry.MAYONNAISE.get().isSame(fluid)) {
             fogData.scaleFarPlaneDistance(0.5f);
             return true;
         }
@@ -48,12 +49,20 @@ public class ClientEvents {
 
         Fluid fluid = fluidState.getType();
 
-        if (FluidsRegistry.FRYING_OIL.get()
-                .isSame(fluid)) {
+        if (FluidsRegistry.FRYING_OIL.get().isSame(fluid)) {
             event.setRed(237 / 255f);
             event.setGreen(196 / 255f);
             event.setBlue(131 / 255f);
-            return;
+        }
+        else if (FluidsRegistry.KETCHUP.get().isSame(fluid)) {
+            event.setRed(155/255f);
+            event.setGreen(28/255f);
+            event.setBlue(29/255f);
+        }
+        else if (FluidsRegistry.MAYONNAISE.get().isSame(fluid)) {
+            event.setRed(201/255f);
+            event.setGreen(199/255f);
+            event.setBlue(156/255f);
         }
 
     }

@@ -7,11 +7,7 @@
 	"authors": [
 		"Pyzpre, Vitecekuwu"
 	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/create_bic_bit/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -26,15 +22,18 @@
 		]
 	},
 	"mixins": [
-		"create_bic_bit.mixins.json"
+		"createbicyclesbitterballen.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.3",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"create" : "*"
 	},
-	"suggests": {
-		"another-mod": "*"
+	"custom": {
+		"loom:injected_interfaces": {
+			"net/minecraft/class_1688": [ "com/simibubi/create/foundation/utility/fabric/AbstractMinecartExtensions" ]
+		}
 	}
 }

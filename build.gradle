@@ -1,7 +1,8 @@
 plugins {
-	id "fabric-loom" version "1.0.+"
+	id "fabric-loom" version "1.5.+"
 	// id "io.github.juuxel.loom-quiltflower" version "1.+" // Quiltflower, a better decompiler
-	id "io.github.p03w.machete" version "1.+" // automatic jar compressing on build
+
+	id "io.github.p03w.machete" version "1.1.4" // automatic jar compressing on build
 	id "maven-publish"
 }
 
@@ -28,9 +29,14 @@ repositories {
 	maven { url = "https://api.modrinth.com/maven" } // LazyDFU
 	maven { url = "https://maven.terraformersmc.com/releases/" } // Mod Menu, Wood API
 	maven { url = "https://mvn.devos.one/snapshots/" } // Create, Porting Lib, Forge Tags, Milk Lib, Registrate
+	maven { url = "https://mvn.devos.one/releases/" } // Porting Lib
 	maven { url = "https://cursemaven.com" } // Forge Config API Port
 	maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
-	maven { url = "https://jitpack.io/" } // Mixin Extras, Fabric ASM
+	maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // Forge Config API Port
+	maven { // for Porting Lib: Mixin Extras, Fabric ASM
+		url = "https://jitpack.io/"
+		content { includeGroupAndSubgroups("com.github") }
+	}
 	maven { url = "https://maven.tterrag.com/" } // Flywheel
 }
 
@@ -91,6 +97,9 @@ processResources {
 
 	filesMatching("fabric.mod.json") {
 		expand properties
+	}
+	filesMatching("createbicyclesbitterballen.mixins.json") {
+		expand "archivesBaseName": archivesBaseName
 	}
 }
 

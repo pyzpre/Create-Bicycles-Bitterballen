@@ -1,5 +1,6 @@
 package pyzpre.createbicyclesbitterballen;
 
+import com.simibubi.create.AllItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
@@ -11,7 +12,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import org.apache.commons.compress.utils.Lists;
+
+import org.spongepowered.include.com.google.common.collect.Lists;
 import pyzpre.createbicyclesbitterballen.index.BlockRegistry;
 import pyzpre.createbicyclesbitterballen.index.CreateBicBitModItems;
 import pyzpre.createbicyclesbitterballen.index.FluidsRegistry;
@@ -26,6 +28,7 @@ public class CreateBicBitModTabs {
 	public static void register() {
 		List<Item> ITEMS = Lists.newArrayList();
 		ITEMS.add(CreateBicBitModItems.SWEET_DOUGH.get());
+		ITEMS.add(CreateBicBitModItems.KRUIDNOTEN.get());
 		ITEMS.add(CreateBicBitModItems.SPECULAAS.get());
 		ITEMS.add(CreateBicBitModItems.UNBAKED_STROOPWAFEL.get());
 		ITEMS.add(CreateBicBitModItems.STROOPWAFEL.get());
@@ -36,18 +39,31 @@ public class CreateBicBitModTabs {
 		ITEMS.add(CreateBicBitModItems.RAW_KROKET.get());
 		ITEMS.add(CreateBicBitModItems.KROKET.get());
 		ITEMS.add(CreateBicBitModItems.KROKET_SANDWICH.get());
+		ITEMS.add(CreateBicBitModItems.KETCHUP_TOPPED_KROKET_SANDWICH.get());
+		ITEMS.add(CreateBicBitModItems.MAYONNAISE_TOPPED_KROKET_SANDWICH.get());
+		ITEMS.add(CreateBicBitModItems.MAYONNAISE_KETCHUP_TOPPED_KROKET_SANDWICH.get());
 		ITEMS.add(CreateBicBitModItems.RAW_BITTERBALLEN.get());
 		ITEMS.add(CreateBicBitModItems.BITTERBALLEN.get());
 		ITEMS.add(CreateBicBitModItems.RAW_FRIKANDEL.get());
 		ITEMS.add(CreateBicBitModItems.FRIKANDEL.get());
 		ITEMS.add(CreateBicBitModItems.FRIKANDEL_SANDWICH.get());
+		ITEMS.add(CreateBicBitModItems.KETCHUP_TOPPED_FRIKANDEL_SANDWICH.get());
+		ITEMS.add(CreateBicBitModItems.MAYONNAISE_TOPPED_FRIKANDEL_SANDWICH.get());
+		ITEMS.add(CreateBicBitModItems.MAYONNAISE_KETCHUP_TOPPED_FRIKANDEL_SANDWICH.get());
 		ITEMS.add(CreateBicBitModItems.RAW_FRIES.get());
 		ITEMS.add(CreateBicBitModItems.FRIES.get());
 		ITEMS.add(CreateBicBitModItems.WRAPPED_FRIES.get());
+		ITEMS.add(CreateBicBitModItems.WRAPPED_KETCHUP_TOPPED_FRIES.get());
+		ITEMS.add(CreateBicBitModItems.WRAPPED_MAYONNAISE_TOPPED_FRIES.get());
+		ITEMS.add(CreateBicBitModItems.WRAPPED_MAYONNAISE_KETCHUP_TOPPED_FRIES.get());
 		ITEMS.add(CreateBicBitModItems.RAW_CHURROS.get());
 		ITEMS.add(CreateBicBitModItems.CHURROS.get());
 		ITEMS.add(CreateBicBitModItems.WRAPPED_CHURROS.get());
 		ITEMS.add(CreateBicBitModItems.STAMPPOT_BOWL.get());
+		ITEMS.add(CreateBicBitModItems.ENDERBALL.get());
+		ITEMS.add(CreateBicBitModItems.CRUSHED_NETHERWART.get());
+		ITEMS.add(FluidsRegistry.KETCHUP.getBucket().get());
+		ITEMS.add(FluidsRegistry.MAYONNAISE.getBucket().get());
 		ITEMS.add(CreateBicBitModItems.CRUSHED_SUNFLOWER_SEEDS.get());
 		ITEMS.add(CreateBicBitModItems.SUNFLOWER_SEEDS.get());
 		ITEMS.add(CreateBicBitModItems.ROASTED_SUNFLOWER_SEEDS.get());
@@ -57,14 +73,22 @@ public class CreateBicBitModTabs {
 		ITEMS.add(CreateBicBitModItems.BASKET.get());
 		ITEMS.add(CreateBicBitModItems.DIRTY_PAPER.get());
 
+
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, CREATIVE_TAB, FabricItemGroup.builder()
 				.icon(() -> new ItemStack(CreateBicBitModItems.STROOPWAFEL))
 				.title(Component.translatable(CreateBitterballen.MOD_ID + ".group.main"))
 				.build());
 
 		ItemGroupEvents.modifyEntriesEvent(CREATIVE_TAB).register(entries -> {
-			entries.acceptAll(ITEMS.stream().map(Item::getDefaultInstance).toList());
+			ITEMS.stream()
+					.map(Item::getDefaultInstance)
+					.filter(stack -> !stack.isEmpty())
+					.forEach(entries::accept);
+
+
 		});
+
+
 	}
 
 }

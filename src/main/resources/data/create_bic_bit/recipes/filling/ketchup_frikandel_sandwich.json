@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:frikandel_sandwich"
+    },
+    {
+      "amount": 20250,
+      "fluid": "create_bic_bit:ketchup",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "create_bic_bit:ketchup_topped_frikandel_sandwich"
+    }
+  ]
+}

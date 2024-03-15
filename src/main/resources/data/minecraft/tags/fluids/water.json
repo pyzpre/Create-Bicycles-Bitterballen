@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "create_bic_bit:flowing_mayonnaise",
+    "create_bic_bit:mayonnaise",
+    "create_bic_bit:flowing_ketchup",
+    "create_bic_bit:ketchup",
     "create_bic_bit:flowing_frying_oil",
     "create_bic_bit:frying_oil"
   ]

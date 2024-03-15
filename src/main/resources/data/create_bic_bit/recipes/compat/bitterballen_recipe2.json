@@ -17,8 +17,8 @@
 
     },
     {
-      "amount": 125,
-      "fluid": "minecraft:milk"
+      "amount": 10125,
+      "fluid": "milk:still_milk"
     }
   ],
   "results": [

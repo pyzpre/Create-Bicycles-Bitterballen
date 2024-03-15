@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:wrapped_fries"
+    },
+    {
+      "amount": 20250,
+      "fluid": "create_bic_bit:mayonnaise",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "create_bic_bit:wrapped_mayonnaise_topped_fries"
+    }
+  ]
+}

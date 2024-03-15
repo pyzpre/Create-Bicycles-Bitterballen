@@ -1,0 +1,17 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:sweet_dough"
+    },
+    {
+      "item": "create_bic_bit:crushed_nether_wart"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_bic_bit:kruidnoten"
+    }
+  ]
+}
