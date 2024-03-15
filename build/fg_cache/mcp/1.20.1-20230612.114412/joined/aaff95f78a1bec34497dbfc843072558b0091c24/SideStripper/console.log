@@ -1,0 +1,9 @@
+JVM:         C:\Program Files\Eclipse Adoptium\jdk-17.0.8.7-hotspot\bin\java.exe
+JVM Args:    
+Run Args:    "--strip", "--input", "C:\Users\sanne\Documents\create bb 1.20.1\build\fg_cache\mcp\1.20.1-20230612.114412\joined\aaff95f78a1bec34497dbfc843072558b0091c24\AccessTransformer\output.jar", "--output", "C:\Users\sanne\Documents\create bb 1.20.1\build\fg_cache\mcp\1.20.1-20230612.114412\joined\aaff95f78a1bec34497dbfc843072558b0091c24\SideStripper\output.jar", "--data", "C:\Users\sanne\Documents\create bb 1.20.1\build\fg_cache\mcp\1.20.1-20230612.114412\joined\aaff95f78a1bec34497dbfc843072558b0091c24\SideStripper\string_data.sas"
+Classpath:   C:\Users\sanne\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\mergetool\1.1.7\mergetool-1.1.7-fatjar.jar
+Working Dir: C:\Users\sanne\Documents\create bb 1.20.1\build\fg_cache\mcp\1.20.1-20230612.114412\joined\aaff95f78a1bec34497dbfc843072558b0091c24\SideStripper
+Main Class:  net.minecraftforge.mergetool.ConsoleMerger
+Input:  C:\Users\sanne\Documents\create bb 1.20.1\build\fg_cache\mcp\1.20.1-20230612.114412\joined\aaff95f78a1bec34497dbfc843072558b0091c24\AccessTransformer\output.jar
+Output: C:\Users\sanne\Documents\create bb 1.20.1\build\fg_cache\mcp\1.20.1-20230612.114412\joined\aaff95f78a1bec34497dbfc843072558b0091c24\SideStripper\output.jar
+Data:   C:\Users\sanne\Documents\create bb 1.20.1\build\fg_cache\mcp\1.20.1-20230612.114412\joined\aaff95f78a1bec34497dbfc843072558b0091c24\SideStripper\string_data.sas

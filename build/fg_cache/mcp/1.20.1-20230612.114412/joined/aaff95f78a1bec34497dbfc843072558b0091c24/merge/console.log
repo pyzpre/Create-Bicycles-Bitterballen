@@ -1,0 +1,6 @@
+JVM:         C:\Program Files\Eclipse Adoptium\jdk-17.0.8.7-hotspot\bin\java.exe
+JVM Args:    
+Run Args:    "--client", "C:\Users\sanne\Documents\create bb 1.20.1\build\fg_cache\mcp\1.20.1-20230612.114412\joined\aaff95f78a1bec34497dbfc843072558b0091c24\stripClient\output.jar", "--server", "C:\Users\sanne\Documents\create bb 1.20.1\build\fg_cache\mcp\1.20.1-20230612.114412\joined\aaff95f78a1bec34497dbfc843072558b0091c24\stripServer\output.jar", "--ann", "1.20.1", "--output", "C:\Users\sanne\Documents\create bb 1.20.1\build\fg_cache\mcp\1.20.1-20230612.114412\joined\aaff95f78a1bec34497dbfc843072558b0091c24\merge\output.jar", "--inject", "false"
+Classpath:   C:\Users\sanne\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\mergetool\1.1.7\mergetool-1.1.7-fatjar.jar
+Working Dir: C:\Users\sanne\Documents\create bb 1.20.1\build\fg_cache\mcp\1.20.1-20230612.114412\joined\aaff95f78a1bec34497dbfc843072558b0091c24\merge
+Main Class:  net.minecraftforge.mergetool.ConsoleMerger

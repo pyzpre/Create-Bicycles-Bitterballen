@@ -1,0 +1,18 @@
+{"type": "create_bic_bit:deep_frying",
+"heatRequirement": "heated",
+"ingredients": [
+{
+    "tag": "create_bic_bit:ice"
+},
+{
+    "amount": 1000,
+    "fluid": "create_bic_bit:frying_oil"
+}
+],
+"results": [
+{
+    "amount": 1000,
+    "fluid": "minecraft:water"
+}
+]
+}

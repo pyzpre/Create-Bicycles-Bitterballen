@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:ice"
+    },
+    "title": {
+      "translate": "advancements.fry_about_it.title"
+    },
+    "description": {
+      "translate": "advancements.fry_about_it.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "ice_exploded": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "create_bic_bit:local_snackbar"
+}

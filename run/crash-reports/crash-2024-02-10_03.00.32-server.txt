@@ -1,0 +1,171 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 2024-02-10 03:00:32
+Description: Ticking block entity
+
+java.lang.ClassCastException: class net.minecraftforge.items.wrapper.RecipeWrapper cannot be cast to class com.simibubi.create.foundation.item.SmartInventory (net.minecraftforge.items.wrapper.RecipeWrapper is in module forge@47.1.0 of loader 'TRANSFORMER' @31120021; com.simibubi.create.foundation.item.SmartInventory is in module create@0.5.1.e-22 of loader 'TRANSFORMER' @31120021)
+	at createbicyclesbitterballen.block.mechanicalfryer.MechanicalFryerEntity.lambda$getMatchingRecipes$2(MechanicalFryerEntity.java:263) ~[%23196!/:?] {re:classloading}
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?] {re:computing_frames,re:mixin}
+	at createbicyclesbitterballen.block.mechanicalfryer.MechanicalFryerEntity.getMatchingRecipes(MechanicalFryerEntity.java:261) ~[%23196!/:?] {re:classloading}
+	at com.simibubi.create.content.processing.basin.BasinOperatingBlockEntity.updateBasin(BasinOperatingBlockEntity.java:73) ~[create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-slim.jar%23198!/:0.5.1.e-22] {re:classloading}
+	at com.simibubi.create.foundation.blockEntity.behaviour.simple.DeferralBehaviour.tick(DeferralBehaviour.java:41) ~[create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-slim.jar%23198!/:0.5.1.e-22] {re:classloading}
+	at java.util.HashMap$Values.forEach(HashMap.java:1065) ~[?:?] {}
+	at com.simibubi.create.foundation.blockEntity.SmartBlockEntity.forEachBehaviour(SmartBlockEntity.java:179) ~[create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-slim.jar%23198!/:0.5.1.e-22] {re:classloading}
+	at com.simibubi.create.foundation.blockEntity.SmartBlockEntity.tick(SmartBlockEntity.java:82) ~[create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-slim.jar%23198!/:0.5.1.e-22] {re:classloading}
+	at com.simibubi.create.content.kinetics.base.KineticBlockEntity.tick(KineticBlockEntity.java:97) ~[create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-slim.jar%23198!/:0.5.1.e-22] {re:classloading}
+	at com.simibubi.create.content.processing.basin.BasinOperatingBlockEntity.tick(BasinOperatingBlockEntity.java:56) ~[create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-slim.jar%23198!/:0.5.1.e-22] {re:classloading}
+	at createbicyclesbitterballen.block.mechanicalfryer.MechanicalFryerEntity.tick(MechanicalFryerEntity.java:141) ~[%23196!/:?] {re:classloading}
+	at com.simibubi.create.foundation.blockEntity.SmartBlockEntityTicker.tick(SmartBlockEntityTicker.java:15) ~[create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-slim.jar%23198!/:0.5.1.e-22] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$BoundTickingBlockEntity.tick(LevelChunk.java:689) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$RebindableTickingBlockEntityWrapper.tick(LevelChunk.java:782) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.level.Level.tickBlockEntities(Level.java:468) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:351) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:create.mixins.json:accessor.ServerLevelAccessor,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:893) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:814) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:89) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:661) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) ~[?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at createbicyclesbitterballen.block.mechanicalfryer.MechanicalFryerEntity.lambda$getMatchingRecipes$2(MechanicalFryerEntity.java:263) ~[%23196!/:?] {re:classloading}
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?] {re:computing_frames,re:mixin}
+	at createbicyclesbitterballen.block.mechanicalfryer.MechanicalFryerEntity.getMatchingRecipes(MechanicalFryerEntity.java:261) ~[%23196!/:?] {re:classloading}
+	at com.simibubi.create.content.processing.basin.BasinOperatingBlockEntity.updateBasin(BasinOperatingBlockEntity.java:73) ~[create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-slim.jar%23198!/:0.5.1.e-22] {re:classloading}
+	at com.simibubi.create.foundation.blockEntity.behaviour.simple.DeferralBehaviour.tick(DeferralBehaviour.java:41) ~[create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-slim.jar%23198!/:0.5.1.e-22] {re:classloading}
+	at java.util.HashMap$Values.forEach(HashMap.java:1065) ~[?:?] {}
+	at com.simibubi.create.foundation.blockEntity.SmartBlockEntity.forEachBehaviour(SmartBlockEntity.java:179) ~[create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-slim.jar%23198!/:0.5.1.e-22] {re:classloading}
+	at com.simibubi.create.foundation.blockEntity.SmartBlockEntity.tick(SmartBlockEntity.java:82) ~[create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-slim.jar%23198!/:0.5.1.e-22] {re:classloading}
+	at com.simibubi.create.content.kinetics.base.KineticBlockEntity.tick(KineticBlockEntity.java:97) ~[create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-slim.jar%23198!/:0.5.1.e-22] {re:classloading}
+	at com.simibubi.create.content.processing.basin.BasinOperatingBlockEntity.tick(BasinOperatingBlockEntity.java:56) ~[create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-slim.jar%23198!/:0.5.1.e-22] {re:classloading}
+	at createbicyclesbitterballen.block.mechanicalfryer.MechanicalFryerEntity.tick(MechanicalFryerEntity.java:141) ~[%23196!/:?] {re:classloading}
+	at com.simibubi.create.foundation.blockEntity.SmartBlockEntityTicker.tick(SmartBlockEntityTicker.java:15) ~[create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-slim.jar%23198!/:0.5.1.e-22] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$BoundTickingBlockEntity.tick(LevelChunk.java:689) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$RebindableTickingBlockEntityWrapper.tick(LevelChunk.java:782) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.level.Level.tickBlockEntities(Level.java:468) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:351) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:create.mixins.json:accessor.ServerLevelAccessor,pl:mixin:A}
+-- Block entity being ticked --
+Details:
+	Name: create_bic_bit:mechanical_fryer // createbicyclesbitterballen.block.mechanicalfryer.MechanicalFryerEntity
+	Block: Block{create_bic_bit:mechanical_fryer}[facing=south]
+	Block location: World: (-4,-58,-11), Section: (at 12,6,5 in -1,-4,-1; chunk contains blocks -16,-64,-16 to -1,319,-1), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,-64,-512 to -1,319,-1)
+	Block: Block{create_bic_bit:mechanical_fryer}[facing=south]
+	Block location: World: (-4,-58,-11), Section: (at 12,6,5 in -1,-4,-1; chunk contains blocks -16,-64,-16 to -1,319,-1), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,-64,-512 to -1,319,-1)
+Stacktrace:
+	at net.minecraft.world.level.chunk.LevelChunk$BoundTickingBlockEntity.tick(LevelChunk.java:689) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$RebindableTickingBlockEntityWrapper.tick(LevelChunk.java:782) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.level.Level.tickBlockEntities(Level.java:468) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:351) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:create.mixins.json:accessor.ServerLevelAccessor,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:893) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:814) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:89) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:661) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) ~[?:?] {}
+
+
+-- Affected level --
+Details:
+	All players: 0 total; []
+	Chunk stats: 2209
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,-60,0), Section: (at 0,4,0 in 0,-4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 32720 game time, 32720 day time
+	Level name: New World
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 2671 (now: false), thunder time: 23886 (now: false)
+	Known server brands: forge
+	Removed feature flags: 
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:893) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:814) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:89) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:661) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.1
+	Minecraft Version ID: 1.20.1
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 17.0.8, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 757780512 bytes (722 MiB) / 1958739968 bytes (1868 MiB) up to 4257218560 bytes (4060 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-10600K CPU @ 4.10GHz
+	Identifier: Intel64 Family 6 Model 165 Stepping 5
+	Microarchitecture: unknown
+	Frequency (GHz): 4.10
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: NVIDIA GeForce GTX 1660 Ti
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x2182
+	Graphics card #0 versionInfo: DriverVersion=31.0.15.3623
+	Graphics card #1 name: Intel(R) UHD Graphics 630
+	Graphics card #1 vendor: Intel Corporation (0x8086)
+	Graphics card #1 VRAM (MB): 1024.00
+	Graphics card #1 deviceId: 0x9bc5
+	Graphics card #1 versionInfo: DriverVersion=30.0.101.1273
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 2.13
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 2.13
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 48232.32
+	Virtual memory used (MB): 18840.52
+	Swap memory total (MB): 32000.00
+	Swap memory used (MB): 575.05
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Server Running: true
+	Player Count: 0 / 8; []
+	Data Packs: vanilla, mod:forge, mod:create_bic_bit, mod:flywheel, mod:create, mod:jei
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Launched Version: MOD_DEV
+	ModLauncher: 10.0.9+10.0.9+main.dcd20f30
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.5.jar eventbus PLUGINSERVICE 
+		fmlloader-1.20.1-47.1.0.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.20.1-47.1.0.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.20.1-47.1.0.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.20.1-47.1.0.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.20.1-47.1.0.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.9.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.|Minecraft                     |minecraft                     |1.20.1              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		                                                  |Forge                         |forge                         |47.1.0              |DONE      |Manifest: NOSIGNATURE
+		main                                              |Create Bitterballen           |create_bic_bit                |0.0.65              |DONE      |Manifest: NOSIGNATURE
+		flywheel-forge-1.20.1-0.6.10-7_mapped_official_1.2|Flywheel                      |flywheel                      |0.6.10-7            |DONE      |Manifest: NOSIGNATURE
+		create-1.20.1-0.5.1.e-22_mapped_official_1.20.1-sl|Create                        |create                        |0.5.1.e-22          |DONE      |Manifest: NOSIGNATURE
+		jei-1.20.1-forge-15.2.0.27_mapped_official_1.20.1.|Just Enough Items             |jei                           |15.2.0.27           |DONE      |Manifest: NOSIGNATURE
+	Flywheel Backend: GL33 Instanced Arrays
+	Crash Report UUID: 014c71b0-ca24-486a-96d7-137910aa47ef
+	FML: 47.1
+	Forge: net.minecraftforge:47.1.0

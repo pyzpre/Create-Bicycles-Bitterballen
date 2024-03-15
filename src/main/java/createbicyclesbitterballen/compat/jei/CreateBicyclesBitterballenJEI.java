@@ -36,6 +36,7 @@ import com.simibubi.create.infrastructure.config.AllConfigs;
 import com.simibubi.create.infrastructure.config.CRecipes;
 
 import createbicyclesbitterballen.CreateBicBitMod;
+import createbicyclesbitterballen.block.mechanicalfryer.DeepFryingRecipe;
 import createbicyclesbitterballen.index.BlockRegistry;
 import createbicyclesbitterballen.index.RecipeRegistry;
 import mezz.jei.api.IModPlugin;
@@ -79,7 +80,7 @@ public class CreateBicyclesBitterballenJEI implements IModPlugin {
         CreateRecipeCategory<?>
 
 
-                frying = builder(BasinRecipe.class)
+                frying = builder(DeepFryingRecipe.class)
                         .addTypedRecipes(RecipeRegistry.DEEP_FRYING)
                         .catalyst(BlockRegistry.MECHANICAL_FRYER::get)
                         .catalyst(AllBlocks.BASIN::get)

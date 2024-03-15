@@ -1,0 +1,27 @@
+{
+  "create:root": {
+    "criteria": {
+      "0": "2024-02-10 17:21:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2024-02-10 17:21:40 +0100"
+    },
+    "done": true
+  },
+  "create:funnel": {
+    "criteria": {
+      "0": "2024-02-10 17:22:13 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:snowy_taiga": "2024-02-10 17:21:43 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 3465
+}

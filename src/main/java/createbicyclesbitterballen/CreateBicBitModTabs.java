@@ -22,6 +22,7 @@ public class CreateBicBitModTabs {
 							.icon(() -> new ItemStack(CreateBicBitModItems.STROOPWAFEL.get()))
 							.displayItems((parameters, tabData) -> {
 								tabData.accept(CreateBicBitModItems.SWEET_DOUGH.get());
+								tabData.accept(CreateBicBitModItems.KRUIDNOTEN.get());
 								tabData.accept(CreateBicBitModItems.SPECULAAS.get());
 								tabData.accept(CreateBicBitModItems.UNBAKED_STROOPWAFEL.get());
 								tabData.accept(CreateBicBitModItems.STROOPWAFEL.get());
@@ -32,18 +33,33 @@ public class CreateBicBitModTabs {
 								tabData.accept(CreateBicBitModItems.RAW_KROKET.get());
 								tabData.accept(CreateBicBitModItems.KROKET.get());
 								tabData.accept(CreateBicBitModItems.KROKET_SANDWICH.get());
+								tabData.accept(CreateBicBitModItems.KETCHUP_TOPPED_KROKET_SANDWICH.get());
+								tabData.accept(CreateBicBitModItems.MAYONNAISE_TOPPED_KROKET_SANDWICH.get());
+								tabData.accept(CreateBicBitModItems.MAYONNAISE_KETCHUP_TOPPED_KROKET_SANDWICH.get());
 								tabData.accept(CreateBicBitModItems.RAW_BITTERBALLEN.get());
 								tabData.accept(CreateBicBitModItems.BITTERBALLEN.get());
 								tabData.accept(CreateBicBitModItems.RAW_FRIKANDEL.get());
 								tabData.accept(CreateBicBitModItems.FRIKANDEL.get());
 								tabData.accept(CreateBicBitModItems.FRIKANDEL_SANDWICH.get());
+								tabData.accept(CreateBicBitModItems.KETCHUP_TOPPED_FRIKANDEL_SANDWICH.get());
+								tabData.accept(CreateBicBitModItems.MAYONNAISE_TOPPED_FRIKANDEL_SANDWICH.get());
+								tabData.accept(CreateBicBitModItems.MAYONNAISE_KETCHUP_TOPPED_FRIKANDEL_SANDWICH.get());
 								tabData.accept(CreateBicBitModItems.RAW_FRIES.get());
 								tabData.accept(CreateBicBitModItems.FRIES.get());
 								tabData.accept(CreateBicBitModItems.WRAPPED_FRIES.get());
+								tabData.accept(CreateBicBitModItems.WRAPPED_KETCHUP_TOPPED_FRIES.get());
+								tabData.accept(CreateBicBitModItems.WRAPPED_MAYONNAISE_TOPPED_FRIES.get());
+								tabData.accept(CreateBicBitModItems.WRAPPED_MAYONNAISE_KETCHUP_TOPPED_FRIES.get());
 								tabData.accept(CreateBicBitModItems.RAW_CHURROS.get());
 								tabData.accept(CreateBicBitModItems.CHURROS.get());
 								tabData.accept(CreateBicBitModItems.WRAPPED_CHURROS.get());
+								tabData.accept(CreateBicBitModItems.RAW_HERRING.get());
+								tabData.accept(CreateBicBitModItems.COOKED_HERRING.get());
 								tabData.accept(CreateBicBitModItems.STAMPPOT_BOWL.get());
+								tabData.accept(CreateBicBitModItems.ENDERBALL.get());
+								tabData.accept(CreateBicBitModItems.CRUSHED_NETHERWART.get());
+								tabData.accept(CreateBicBitModItems.KETCHUP_BUCKET.get());
+								tabData.accept(CreateBicBitModItems.MAYONNAISE_BUCKET.get());
 								tabData.accept(CreateBicBitModItems.CRUSHED_SUNFLOWER_SEEDS.get());
 								tabData.accept(CreateBicBitModItems.SUNFLOWER_SEEDS.get());
 								tabData.accept(CreateBicBitModItems.ROASTED_SUNFLOWER_SEEDS.get());

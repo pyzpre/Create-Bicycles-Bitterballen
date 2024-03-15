@@ -1,17 +1,18 @@
 buildscript {
     repositories {
-        // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
         maven { url = 'https://maven.minecraftforge.net' }
         mavenCentral()
-        maven { url = 'https://maven.parchmentmc.org' }
+        jcenter()
         maven { url = 'https://repo.spongepowered.org/repository/maven-public' }
+        maven { url = 'https://maven.parchmentmc.org' }
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: "${forgegradle_version}", changing: true
-        classpath "org.parchmentmc:librarian:${librarian_version}"
+        classpath "net.minecraftforge.gradle:ForgeGradle:${forgegradle_version}"
         classpath "org.spongepowered:mixingradle:${mixingradle_version}"
+        classpath "org.parchmentmc:librarian:${librarian_version}"
     }
 }
+
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
@@ -21,14 +22,8 @@ apply plugin: 'org.spongepowered.mixin'
 
 jarJar.enable()
 
-mixin {
-    add sourceSets.main, "create_bic_bit.refmap.json"
-    config "create_bic_bit.mixins.json"
 
-    debug.export = true
-}
-
-version = '0.0.65'
+version = '0.0.70'
 group = 'com.pyzpre.Create-Bicycles-Bitterballen'
 archivesBaseName = 'createbicbit-1.20.1'
 
@@ -44,7 +39,7 @@ minecraft {
     runs {
         client {
             workingDirectory project.file('run')
-
+            arg "-mixin.config=createbicyclesbitterballen.mixins.json" // mixin
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
 
@@ -61,7 +56,7 @@ minecraft {
 
         server {
             workingDirectory project.file('run')
-
+            arg "-mixin.config=createbicyclesbitterballen.mixins.json" // mixin
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
 
@@ -75,9 +70,25 @@ minecraft {
                 }
             }
         }
+        data {
+            workingDirectory project.file('run')
+            arg "-mixin.config=createbicyclesbitterballen.mixins.json" // mixin
+
+            ideaModule "${rootProject.name}.${project.name}.main"
+            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            taskName 'Data'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            mods {
+                modDataRun {
+                    source sourceSets.main
+                }
+            }
+        }
     }
 
 }
+sourceSets.main.resources.srcDir 'src/generated/resources'
 repositories {
     maven {
         name = 'tterrag maven'
@@ -115,16 +126,14 @@ dependencies {
     annotationProcessor "org.spongepowered:mixin:0.8.5:processor"
 
 }
-mixin {
-    config 'create_bic_bit.mixins.json'
+mixin { // mixin
+add sourceSets.main, 'createbicyclesbitterballen.refmap.json'
+    config 'createbicyclesbitterballen.mixins.json' // mixin
 
-    debug.verbose = true
-    debug.export = true
-}
-
+    debug.verbose = true // mixin
+    debug.export = true // mixin
+} // mixin
+jar.finalizedBy('reobfJar')
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
-
-
-

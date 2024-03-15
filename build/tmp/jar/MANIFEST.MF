@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-MixinConfigs: create_bic_bit.mixins.json
+MixinConfigs: createbicyclesbitterballen.mixins.json
 

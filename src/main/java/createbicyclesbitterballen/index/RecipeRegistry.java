@@ -7,14 +7,19 @@ import com.simibubi.create.foundation.utility.Lang;
 import createbicyclesbitterballen.block.mechanicalfryer.DeepFryingRecipe;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.Container;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.items.wrapper.RecipeWrapper;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Optional;
 import java.util.function.Supplier;
 
 public enum RecipeRegistry implements IRecipeTypeInfo {
@@ -57,6 +62,17 @@ public enum RecipeRegistry implements IRecipeTypeInfo {
 
         return (T) type.get();
     }
+
+    public <C extends Container, T extends Recipe<C>> Optional<T> find(C inv, Level world) {
+        return world.getRecipeManager()
+                .getRecipeFor(getType(), inv, world);
+    }
+
+    public RecipeType<DeepFryingRecipe> get() {
+        // Since the type field is a Supplier<RecipeType<?>>, we cast it to the specific RecipeType we need
+        return (RecipeType<DeepFryingRecipe>) type.get();
+    }
+
 
     private static class Registers {
         private static final DeferredRegister<RecipeSerializer<?>> SERIALIZER_REGISTER = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, "create_bic_bit");

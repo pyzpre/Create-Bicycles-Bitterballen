@@ -1,0 +1,195 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2024-02-05 23:46:00 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:plains": "2024-02-05 23:46:02 +0100"
+    },
+    "done": false
+  },
+  "create:root": {
+    "criteria": {
+      "0": "2024-02-06 01:07:55 +0100"
+    },
+    "done": true
+  },
+  "create:funnel": {
+    "criteria": {
+      "0": "2024-02-06 01:08:29 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:local_snackbar": {
+    "criteria": {
+      "got_snack": "2024-02-06 01:09:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_beef_from_smoking": {
+    "criteria": {
+      "has_beef": "2024-02-06 01:09:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_beef": {
+    "criteria": {
+      "has_beef": "2024-02-06 01:09:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_beef_from_campfire_cooking": {
+    "criteria": {
+      "has_beef": "2024-02-06 01:09:47 +0100"
+    },
+    "done": true
+  },
+  "create:burner": {
+    "criteria": {
+      "0": "2024-02-06 01:21:01 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/jungle_planks": {
+    "criteria": {
+      "has_logs": "2024-02-06 01:21:05 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/charcoal": {
+    "criteria": {
+      "has_log": "2024-02-06 01:21:05 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2024-02-06 01:23:19 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:spanish_inquisition": {
+    "criteria": {
+      "spanish_inquisition": "2024-02-06 01:42:18 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2024-02-06 01:43:04 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/spruce_wood": {
+    "criteria": {
+      "has_log": "2024-02-06 03:13:04 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/spruce_planks": {
+    "criteria": {
+      "has_logs": "2024-02-06 03:13:04 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:fries": {
+    "criteria": {
+      "tasteof_tradition": "2024-02-10 09:52:42 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:sinterklaas_kapoentje": {
+    "criteria": {
+      "sinterklaas_kapoentje": "2024-02-10 10:26:48 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:tasteof_tradition": {
+    "criteria": {
+      "tasteof_tradition": "2024-02-10 10:27:08 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:stammpot": {
+    "criteria": {
+      "stammpot": "2024-02-10 10:27:15 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:wrapped_up": {
+    "criteria": {
+      "wrapped_up": "2024-02-10 10:27:21 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:doughlightful": {
+    "criteria": {
+      "consumed_oliebollen": "2024-02-10 10:27:32 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/white_dye": {
+    "criteria": {
+      "has_bone_meal": "2024-02-10 10:27:42 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/misc/crafting/appliances/tree_fertilizer": {
+    "criteria": {
+      "has_item": "2024-02-10 10:27:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bone_block": {
+    "criteria": {
+      "has_bone_meal": "2024-02-10 10:27:42 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:lawn_defender": {
+    "criteria": {
+      "harvested_sunflower": "2024-02-10 10:27:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/yellow_dye_from_sunflower": {
+    "criteria": {
+      "has_sunflower": "2024-02-10 10:27:45 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/misc/smelting/bread": {
+    "criteria": {
+      "has_item": "2024-02-10 10:28:44 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/misc/smoking/bread": {
+    "criteria": {
+      "has_item": "2024-02-10 10:28:44 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/misc/crafting/curiosities/cake": {
+    "criteria": {
+      "has_item": "2024-02-10 10:28:44 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/misc/campfire_cooking/bread": {
+    "criteria": {
+      "has_item": "2024-02-10 10:28:44 +0100"
+    },
+    "done": true
+  },
+  "create:recipes/misc/crafting/appliances/slime_ball": {
+    "criteria": {
+      "has_item": "2024-02-10 10:28:44 +0100"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}

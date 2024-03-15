@@ -1,141 +1,174 @@
-[17Jan2024 17:22:40.033] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\sanne\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.1.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mixin.config, create_bic_bit.mixins.json]
-[17Jan2024 17:22:40.037] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
-[17Jan2024 17:22:40.145] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[17Jan2024 17:22:40.225] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[17Jan2024 17:22:40.373] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[17Jan2024 17:22:40.525] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/sanne/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23132!/ Service=ModLauncher Env=CLIENT
-[17Jan2024 17:22:40.599] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce GTX 1660 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 536.23, NVIDIA Corporation
-[17Jan2024 17:22:40.934] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.1.0\a2cd58d15791eaac9983e30be0995e66bd48633e\javafmllanguage-1.20.1-47.1.0.jar is missing mods.toml file
-[17Jan2024 17:22:40.936] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.1.0\f1f11b7217b8320f1b3eb81c746b7b8a70a9ba06\lowcodelanguage-1.20.1-47.1.0.jar is missing mods.toml file
-[17Jan2024 17:22:40.940] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.1.0\ff1b8eeb1bd00dfb130263b8952b931f5369252e\mclanguage-1.20.1-47.1.0.jar is missing mods.toml file
-[17Jan2024 17:22:40.942] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.1.0\69ca36ae5b8d45c377a5485dc38a7343e5ebf33c\fmlcore-1.20.1-47.1.0.jar is missing mods.toml file
-[17Jan2024 17:22:41.062] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[17Jan2024 17:22:42.557] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by create_bic_bit.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
-[17Jan2024 17:22:42.557] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[17Jan2024 17:22:42.568] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\sanne\.gradle\caches\forge_gradle\assets, --assetIndex, 5]
-[17Jan2024 17:22:42.616] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
-[17Jan2024 17:22:42.617] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
-[17Jan2024 17:22:42.644] [main/INFO] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
-[17Jan2024 17:22:42.644] [main/INFO] [mixin/]: Selecting config create_bic_bit.mixins.json
-[17Jan2024 17:22:42.648] [main/INFO] [mixin/]: Selecting config flywheel.mixins.json
-[17Jan2024 17:22:42.865] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\Users\sanne\Documents\create bb 1.20.1/build/createSrgToMcp/output.srg
-[17Jan2024 17:22:42.865] [main/INFO] [mixin/]: Selecting config flywheel.sodium.mixins.json
-[17Jan2024 17:22:42.875] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\Users\sanne\Documents\create bb 1.20.1/build/createSrgToMcp/output.srg
-[17Jan2024 17:22:42.875] [main/INFO] [mixin/]: Selecting config create.mixins.json
-[17Jan2024 17:22:42.877] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using C:\Users\sanne\Documents\create bb 1.20.1/build/createSrgToMcp/output.srg
-[17Jan2024 17:22:42.877] [main/INFO] [mixin/]: Preparing create_bic_bit.mixins.json (1)
-[17Jan2024 17:22:42.907] [main/INFO] [mixin/]: Preparing flywheel.mixins.json (23)
-[17Jan2024 17:22:43.176] [main/INFO] [mixin/]: Preparing flywheel.sodium.mixins.json (1)
-[17Jan2024 17:22:43.177] [main/INFO] [mixin/]: Preparing create.mixins.json (31)
-[17Jan2024 17:22:43.304] [main/INFO] [mixin/]: Prepared 55 mixins in 0.659 sec (12.0ms avg) (0ms load, 0ms transform, 0ms plugin)
-[17Jan2024 17:22:43.321] [main/INFO] [mixin/]: Mixing PausedPartialTickAccessor from flywheel.mixins.json into net.minecraft.client.Minecraft
-[17Jan2024 17:22:43.353] [main/INFO] [mixin/]: Mixing client.WindowResizeMixin from create.mixins.json into net.minecraft.client.Minecraft
-[17Jan2024 17:22:43.603] [main/INFO] [mixin/]: Mixing ClientMainMixin from flywheel.mixins.json into net.minecraft.client.main.Main
-[17Jan2024 17:22:44.394] [pool-4-thread-1/INFO] [mixin/]: Mixing EntityMixin from create.mixins.json into net.minecraft.world.entity.Entity
-[17Jan2024 17:22:44.396] [pool-4-thread-1/INFO] [mixin/]: Mixing ContraptionDriverInteractMixin from create.mixins.json into net.minecraft.world.entity.Entity
-[17Jan2024 17:22:44.398] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.EntityAccessor from create.mixins.json into net.minecraft.world.entity.Entity
-[17Jan2024 17:22:44.404] [pool-4-thread-1/INFO] [mixin/]: Mixing client.EntityContraptionInteractionMixin from create.mixins.json into net.minecraft.world.entity.Entity
-[17Jan2024 17:22:44.405] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$onSpawnSprintParticle$4(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;Lcom/simibubi/create/content/contraptions/Contraption;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V to mdd5c3ab$lambda$create$onSpawnSprintParticle$4$0 in create.mixins.json:client.EntityContraptionInteractionMixin
-[17Jan2024 17:22:44.406] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$onMove$3(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/Entity;Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)Z to mdd5c3ab$lambda$create$onMove$3$1 in create.mixins.json:client.EntityContraptionInteractionMixin
-[17Jan2024 17:22:44.406] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$contraptionStepSounds$2(Lorg/apache/commons/lang3/mutable/MutableBoolean;Lcom/simibubi/create/content/contraptions/Contraption;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V to mdd5c3ab$lambda$create$contraptionStepSounds$2$2 in create.mixins.json:client.EntityContraptionInteractionMixin
-[17Jan2024 17:22:44.407] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$forCollision$1(Lnet/minecraft/world/phys/Vec3;Lorg/apache/logging/log4j/util/TriConsumer;Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)V to mdd5c3ab$lambda$forCollision$1$3 in create.mixins.json:client.EntityContraptionInteractionMixin
-[17Jan2024 17:22:44.407] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$getIntersectionContraptionsStream$0(Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)Z to mdd5c3ab$lambda$create$getIntersectionContraptionsStream$0$4 in create.mixins.json:client.EntityContraptionInteractionMixin
-[17Jan2024 17:22:44.539] [pool-4-thread-1/INFO] [mixin/]: Mixing CustomItemUseEffectsMixin from create.mixins.json into net.minecraft.world.entity.LivingEntity
-[17Jan2024 17:22:44.551] [pool-4-thread-1/INFO] [mixin/]: Mixing LavaSwimmingMixin from create.mixins.json into net.minecraft.world.entity.LivingEntity
-[17Jan2024 17:22:44.558] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.LivingEntityAccessor from create.mixins.json into net.minecraft.world.entity.LivingEntity
-[17Jan2024 17:22:44.652] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.ServerLevelAccessor from create.mixins.json into net.minecraft.server.level.ServerLevel
-[17Jan2024 17:22:44.785] [pool-4-thread-1/INFO] [mixin/]: Mixing EntityTypeMixin from flywheel.mixins.json into net.minecraft.world.entity.EntityType
-[17Jan2024 17:22:44.811] [pool-4-thread-1/INFO] [mixin/]: Mixing BlockEntityTypeMixin from flywheel.mixins.json into net.minecraft.world.level.block.entity.BlockEntityType
-[17Jan2024 17:22:45.017] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.DispenserBlockAccessor from create.mixins.json into net.minecraft.world.level.block.DispenserBlock
-[17Jan2024 17:22:45.207] [pool-4-thread-1/INFO] [mixin/]: Mixing WaterWheelFluidSpreadMixin from create.mixins.json into net.minecraft.world.level.material.FlowingFluid
-[17Jan2024 17:22:45.287] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.FallingBlockEntityAccessor from create.mixins.json into net.minecraft.world.entity.item.FallingBlockEntity
-[17Jan2024 17:22:45.288] [pool-4-thread-1/INFO] [mixin/]: Renaming @Invoker method create$callInit(Lnet/minecraft/world/level/Level;DDDLnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/entity/item/FallingBlockEntity; to create$callInit_$md$d5c3ab$0 in create.mixins.json:accessor.FallingBlockEntityAccessor
-[17Jan2024 17:22:45.301] [pool-4-thread-1/INFO] [mixin/]: Mixing instancemanage.InstanceRemoveMixin from flywheel.mixins.json into net.minecraft.world.level.block.entity.BlockEntity
-[17Jan2024 17:22:46.228] [pool-4-thread-1/INFO] [mixin/]: Mixing SunflowerMixin from create_bic_bit.mixins.json into net.minecraft.world.item.BlockItem
-[17Jan2024 17:22:46.911] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 126 milliseconds
-[17Jan2024 17:22:47.232] [pool-4-thread-1/INFO] [mixin/]: Mixing instancemanage.InstanceAddMixin from flywheel.mixins.json into net.minecraft.world.level.chunk.LevelChunk
-[17Jan2024 17:22:47.396] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.AbstractProjectileDispenseBehaviorAccessor from create.mixins.json into net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior
-[17Jan2024 17:22:48.284] [Render thread/INFO] [mixin/]: Mixing RenderTexturesMixin from flywheel.mixins.json into com.mojang.blaze3d.systems.RenderSystem
-[17Jan2024 17:22:48.303] [Render thread/INFO] [mixin/]: Mixing BufferBuilderMixin from flywheel.mixins.json into com.mojang.blaze3d.vertex.BufferBuilder
-[17Jan2024 17:22:48.400] [Render thread/INFO] [mixin/]: Mixing fix.FixNormalScalingMixin from flywheel.mixins.json into com.mojang.blaze3d.vertex.PoseStack
-[17Jan2024 17:22:48.401] [Render thread/INFO] [mixin/]: Mixing matrix.PoseStackMixin from flywheel.mixins.json into com.mojang.blaze3d.vertex.PoseStack
-[17Jan2024 17:22:48.443] [Render thread/INFO] [mixin/]: Mixing ClientLevelMixin from flywheel.mixins.json into net.minecraft.client.multiplayer.ClientLevel
-[17Jan2024 17:22:48.459] [Render thread/INFO] [mixin/]: Mixing client.HeavyBootsOnPlayerMixin from create.mixins.json into net.minecraft.client.player.LocalPlayer
-[17Jan2024 17:22:48.556] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/sanne/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.1.0_mapped_official_1.20.1/forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[17Jan2024 17:22:48.556] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/sanne/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.1.0_mapped_official_1.20.1/forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[17Jan2024 17:22:48.573] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[17Jan2024 17:22:48.578] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[17Jan2024 17:22:48.671] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
-[17Jan2024 17:22:48.786] [Render thread/INFO] [mixin/]: Mixing GlStateManagerMixin from flywheel.mixins.json into com.mojang.blaze3d.platform.GlStateManager
-[17Jan2024 17:22:48.931] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.1.0, for MC 1.20.1 with MCP 20230612.114412
-[17Jan2024 17:22:48.931] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.1.0 Initialized
-[17Jan2024 17:22:48.946] [modloading-worker-0/INFO] [com.jozufozu.flywheel.backend.Backend/]: No shaders mod detected.
-[17Jan2024 17:22:49.013] [modloading-worker-0/INFO] [mixin/]: Mixing CameraMixin from flywheel.mixins.json into net.minecraft.client.Camera
-[17Jan2024 17:22:49.015] [modloading-worker-0/INFO] [mixin/]: Mixing client.CameraMixin from create.mixins.json into net.minecraft.client.Camera
-[17Jan2024 17:22:49.048] [modloading-worker-0/INFO] [mixin/]: Mixing FrustumMixin from flywheel.mixins.json into net.minecraft.client.renderer.culling.Frustum
-[17Jan2024 17:22:49.058] [modloading-worker-0/INFO] [mixin/]: Mixing RenderTypeMixin from flywheel.mixins.json into net.minecraft.client.renderer.RenderType
-[17Jan2024 17:22:49.074] [modloading-worker-0/INFO] [mixin/]: Mixing LevelRendererAccessor from flywheel.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[17Jan2024 17:22:49.079] [modloading-worker-0/INFO] [mixin/]: Mixing fix.FixFabulousDepthMixin from flywheel.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[17Jan2024 17:22:49.079] [modloading-worker-0/INFO] [mixin/]: Mixing instancemanage.InstanceUpdateMixin from flywheel.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[17Jan2024 17:22:49.079] [modloading-worker-0/INFO] [mixin/]: Mixing client.LevelRendererMixin from create.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[17Jan2024 17:22:49.080] [modloading-worker-0/INFO] [mixin/]: Renaming synthetic method lambda$create$onDestroyBlockProgress$0(J)Ljava/util/SortedSet; to mdd5c3ab$lambda$create$onDestroyBlockProgress$0$0 in create.mixins.json:client.LevelRendererMixin
-[17Jan2024 17:22:49.083] [modloading-worker-0/INFO] [mixin/]: Mixing LevelRendererMixin from flywheel.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[17Jan2024 17:22:49.231] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[17Jan2024 17:22:49.235] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.424 ms
-[17Jan2024 17:22:49.246] [modloading-worker-0/INFO] [mixin/]: Mixing client.GameRendererMixin from create.mixins.json into net.minecraft.client.renderer.GameRenderer
-[17Jan2024 17:22:49.248] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.GameRendererAccessor from create.mixins.json into net.minecraft.client.renderer.GameRenderer
-[17Jan2024 17:22:50.600] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.ParticleEngineAccessor from create.mixins.json into net.minecraft.client.particle.ParticleEngine
-[17Jan2024 17:22:51.650] [Render thread/INFO] [mixin/]: Mixing accessor.AgeableListModelAccessor from create.mixins.json into net.minecraft.client.model.AgeableListModel
-[17Jan2024 17:22:52.087] [Render thread/INFO] [mixin/]: Mixing BlockEntityRenderDispatcherAccessor from flywheel.mixins.json into net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher
-[17Jan2024 17:22:52.280] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: []
-[17Jan2024 17:22:52.287] [Render thread/INFO] [mixin/]: Mixing accessor.GameTestHelperAccessor from create.mixins.json into net.minecraft.gametest.framework.GameTestHelper
-[17Jan2024 17:22:52.343] [Render thread/INFO] [mixin/]: Mixing client.PlayerRendererMixin from create.mixins.json into net.minecraft.client.renderer.entity.player.PlayerRenderer
-[17Jan2024 17:22:52.381] [Render thread/INFO] [mixin/]: Mixing client.HumanoidArmorLayerMixin from create.mixins.json into net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer
-[17Jan2024 17:22:52.382] [Render thread/INFO] [mixin/]: Mixing accessor.HumanoidArmorLayerAccessor from create.mixins.json into net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer
-[17Jan2024 17:22:52.382] [Render thread/INFO] [mixin/]: Renaming @Accessor method create$getArmorLocationCache()Ljava/util/Map; to create$getArmorLocationCache_$md$d5c3ab$0 in create.mixins.json:accessor.HumanoidArmorLayerAccessor
-[17Jan2024 17:22:52.678] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
-[17Jan2024 17:22:52.771] [Worker-Main-3/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
-[17Jan2024 17:22:52.774] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[17Jan2024 17:22:53.351] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.1.0 Target: 47.2.0
-[17Jan2024 17:22:53.351] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Starting version check at https://api.modrinth.com/updates/flywheel/forge_updates.json
-[17Jan2024 17:22:53.860] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=1'
-[17Jan2024 17:22:53.860] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=0'
-[17Jan2024 17:22:53.860] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=9'
-[17Jan2024 17:22:53.860] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=8'
-[17Jan2024 17:22:53.861] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=7'
-[17Jan2024 17:22:53.861] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=6'
-[17Jan2024 17:22:53.861] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=5'
-[17Jan2024 17:22:53.861] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=4'
-[17Jan2024 17:22:53.861] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=3'
-[17Jan2024 17:22:53.861] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=2'
-[17Jan2024 17:22:53.861] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=10'
-[17Jan2024 17:22:53.861] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=11'
-[17Jan2024 17:22:53.861] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=12'
-[17Jan2024 17:22:53.861] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=13'
-[17Jan2024 17:22:53.861] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=14'
-[17Jan2024 17:22:53.861] [Worker-Main-11/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=15'
-[17Jan2024 17:22:53.983] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Found status: BETA Current: 0.6.10-7 Target: null
-[17Jan2024 17:22:55.104] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loaded all shader sources.
-[17Jan2024 17:22:56.714] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[17Jan2024 17:22:56.714] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[17Jan2024 17:22:56.741] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Hoofdtelefoon (2- Arctis Nova 3)
-[17Jan2024 17:22:56.742] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[17Jan2024 17:22:56.847] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[17Jan2024 17:22:56.857] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[17Jan2024 17:22:56.859] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[17Jan2024 17:22:56.860] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[17Jan2024 17:22:56.860] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[17Jan2024 17:22:56.862] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[17Jan2024 17:22:56.865] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[17Jan2024 17:22:56.866] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[17Jan2024 17:22:56.866] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[17Jan2024 17:22:57.013] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[17Jan2024 17:22:57.114] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[17Jan2024 17:22:57.116] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[17Jan2024 17:22:57.116] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[17Jan2024 17:22:57.118] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
-[17Jan2024 17:22:57.739] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[17Jan2024 17:23:00.393] [Worker-Main-3/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (5)\level.dat
+[10Mar2024 08:22:30.696] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\sanne\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.1.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, -mixin.config=createbicyclesbitterballen.mixins.json, --mixin.config, createbicyclesbitterballen.mixins.json]
+[10Mar2024 08:22:30.702] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[10Mar2024 08:22:30.851] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[10Mar2024 08:22:30.960] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[10Mar2024 08:22:31.191] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[10Mar2024 08:22:31.296] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/sanne/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23132!/ Service=ModLauncher Env=CLIENT
+[10Mar2024 08:22:31.373] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce GTX 1660 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 536.23, NVIDIA Corporation
+[10Mar2024 08:22:31.875] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.1.0\a2cd58d15791eaac9983e30be0995e66bd48633e\javafmllanguage-1.20.1-47.1.0.jar is missing mods.toml file
+[10Mar2024 08:22:31.880] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.1.0\f1f11b7217b8320f1b3eb81c746b7b8a70a9ba06\lowcodelanguage-1.20.1-47.1.0.jar is missing mods.toml file
+[10Mar2024 08:22:31.883] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.1.0\ff1b8eeb1bd00dfb130263b8952b931f5369252e\mclanguage-1.20.1-47.1.0.jar is missing mods.toml file
+[10Mar2024 08:22:31.887] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.1.0\69ca36ae5b8d45c377a5485dc38a7343e5ebf33c\fmlcore-1.20.1-47.1.0.jar is missing mods.toml file
+[10Mar2024 08:22:32.121] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[10Mar2024 08:22:34.282] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by createbicyclesbitterballen.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[10Mar2024 08:22:34.282] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[10Mar2024 08:22:34.297] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\sanne\.gradle\caches\forge_gradle\assets, --assetIndex, 5]
+[10Mar2024 08:22:34.362] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
+[10Mar2024 08:22:34.365] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
+[10Mar2024 08:22:34.416] [main/INFO] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[10Mar2024 08:22:34.417] [main/INFO] [mixin/]: Selecting config createbicyclesbitterballen.mixins.json
+[10Mar2024 08:22:34.422] [main/WARN] [mixin/]: Reference map 'createbicyclesbitterballen.refmap.json' for createbicyclesbitterballen.mixins.json could not be read. If this is a development environment you can ignore this message
+[10Mar2024 08:22:34.425] [main/INFO] [mixin/]: Selecting config flywheel.mixins.json
+[10Mar2024 08:22:34.730] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\Users\sanne\Documents\create bb 1.20.1/build/createSrgToMcp/output.srg
+[10Mar2024 08:22:34.730] [main/INFO] [mixin/]: Selecting config flywheel.sodium.mixins.json
+[10Mar2024 08:22:34.741] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using C:\Users\sanne\Documents\create bb 1.20.1/build/createSrgToMcp/output.srg
+[10Mar2024 08:22:34.741] [main/INFO] [mixin/]: Selecting config create.mixins.json
+[10Mar2024 08:22:34.743] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using C:\Users\sanne\Documents\create bb 1.20.1/build/createSrgToMcp/output.srg
+[10Mar2024 08:22:34.744] [main/INFO] [mixin/]: Preparing createbicyclesbitterballen.mixins.json (1)
+[10Mar2024 08:22:34.774] [main/INFO] [mixin/]: Preparing flywheel.mixins.json (23)
+[10Mar2024 08:22:35.156] [main/INFO] [mixin/]: Preparing flywheel.sodium.mixins.json (1)
+[10Mar2024 08:22:35.157] [main/INFO] [mixin/]: Preparing create.mixins.json (31)
+[10Mar2024 08:22:35.374] [main/INFO] [mixin/]: Prepared 55 mixins in 0.956 sec (17.4ms avg) (0ms load, 0ms transform, 0ms plugin)
+[10Mar2024 08:22:35.405] [main/INFO] [mixin/]: Mixing PausedPartialTickAccessor from flywheel.mixins.json into net.minecraft.client.Minecraft
+[10Mar2024 08:22:35.462] [main/INFO] [mixin/]: Mixing client.WindowResizeMixin from create.mixins.json into net.minecraft.client.Minecraft
+[10Mar2024 08:22:35.935] [main/INFO] [mixin/]: Mixing ClientMainMixin from flywheel.mixins.json into net.minecraft.client.main.Main
+[10Mar2024 08:22:37.165] [pool-4-thread-1/INFO] [mixin/]: Mixing EntityMixin from create.mixins.json into net.minecraft.world.entity.Entity
+[10Mar2024 08:22:37.170] [pool-4-thread-1/INFO] [mixin/]: Mixing ContraptionDriverInteractMixin from create.mixins.json into net.minecraft.world.entity.Entity
+[10Mar2024 08:22:37.172] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.EntityAccessor from create.mixins.json into net.minecraft.world.entity.Entity
+[10Mar2024 08:22:37.179] [pool-4-thread-1/INFO] [mixin/]: Mixing client.EntityContraptionInteractionMixin from create.mixins.json into net.minecraft.world.entity.Entity
+[10Mar2024 08:22:37.180] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$onSpawnSprintParticle$4(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;Lcom/simibubi/create/content/contraptions/Contraption;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V to md29fb7e$lambda$create$onSpawnSprintParticle$4$0 in create.mixins.json:client.EntityContraptionInteractionMixin
+[10Mar2024 08:22:37.181] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$onMove$3(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/Entity;Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)Z to md29fb7e$lambda$create$onMove$3$1 in create.mixins.json:client.EntityContraptionInteractionMixin
+[10Mar2024 08:22:37.181] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$contraptionStepSounds$2(Lorg/apache/commons/lang3/mutable/MutableBoolean;Lcom/simibubi/create/content/contraptions/Contraption;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V to md29fb7e$lambda$create$contraptionStepSounds$2$2 in create.mixins.json:client.EntityContraptionInteractionMixin
+[10Mar2024 08:22:37.181] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$forCollision$1(Lnet/minecraft/world/phys/Vec3;Lorg/apache/logging/log4j/util/TriConsumer;Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)V to md29fb7e$lambda$forCollision$1$3 in create.mixins.json:client.EntityContraptionInteractionMixin
+[10Mar2024 08:22:37.182] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$getIntersectionContraptionsStream$0(Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)Z to md29fb7e$lambda$create$getIntersectionContraptionsStream$0$4 in create.mixins.json:client.EntityContraptionInteractionMixin
+[10Mar2024 08:22:37.377] [pool-4-thread-1/INFO] [mixin/]: Mixing CustomItemUseEffectsMixin from create.mixins.json into net.minecraft.world.entity.LivingEntity
+[10Mar2024 08:22:37.401] [pool-4-thread-1/INFO] [mixin/]: Mixing LavaSwimmingMixin from create.mixins.json into net.minecraft.world.entity.LivingEntity
+[10Mar2024 08:22:37.413] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.LivingEntityAccessor from create.mixins.json into net.minecraft.world.entity.LivingEntity
+[10Mar2024 08:22:37.591] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.ServerLevelAccessor from create.mixins.json into net.minecraft.server.level.ServerLevel
+[10Mar2024 08:22:37.812] [pool-4-thread-1/INFO] [mixin/]: Mixing EntityTypeMixin from flywheel.mixins.json into net.minecraft.world.entity.EntityType
+[10Mar2024 08:22:37.878] [pool-4-thread-1/INFO] [mixin/]: Mixing BlockEntityTypeMixin from flywheel.mixins.json into net.minecraft.world.level.block.entity.BlockEntityType
+[10Mar2024 08:22:38.295] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.DispenserBlockAccessor from create.mixins.json into net.minecraft.world.level.block.DispenserBlock
+[10Mar2024 08:22:38.691] [pool-4-thread-1/INFO] [mixin/]: Mixing WaterWheelFluidSpreadMixin from create.mixins.json into net.minecraft.world.level.material.FlowingFluid
+[10Mar2024 08:22:38.907] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.FallingBlockEntityAccessor from create.mixins.json into net.minecraft.world.entity.item.FallingBlockEntity
+[10Mar2024 08:22:38.908] [pool-4-thread-1/INFO] [mixin/]: Renaming @Invoker method create$callInit(Lnet/minecraft/world/level/Level;DDDLnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/entity/item/FallingBlockEntity; to create$callInit_$md$29fb7e$0 in create.mixins.json:accessor.FallingBlockEntityAccessor
+[10Mar2024 08:22:38.931] [pool-4-thread-1/INFO] [mixin/]: Mixing instancemanage.InstanceRemoveMixin from flywheel.mixins.json into net.minecraft.world.level.block.entity.BlockEntity
+[10Mar2024 08:22:40.660] [pool-4-thread-1/INFO] [mixin/]: Mixing SunflowerMixin from createbicyclesbitterballen.mixins.json into net.minecraft.world.item.BlockItem
+[10Mar2024 08:22:41.820] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 186 milliseconds
+[10Mar2024 08:22:42.234] [pool-4-thread-1/INFO] [mixin/]: Mixing instancemanage.InstanceAddMixin from flywheel.mixins.json into net.minecraft.world.level.chunk.LevelChunk
+[10Mar2024 08:22:42.587] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.AbstractProjectileDispenseBehaviorAccessor from create.mixins.json into net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior
+[10Mar2024 08:22:43.769] [Render thread/INFO] [mixin/]: Mixing RenderTexturesMixin from flywheel.mixins.json into com.mojang.blaze3d.systems.RenderSystem
+[10Mar2024 08:22:43.792] [Render thread/INFO] [mixin/]: Mixing BufferBuilderMixin from flywheel.mixins.json into com.mojang.blaze3d.vertex.BufferBuilder
+[10Mar2024 08:22:43.938] [Render thread/INFO] [mixin/]: Mixing fix.FixNormalScalingMixin from flywheel.mixins.json into com.mojang.blaze3d.vertex.PoseStack
+[10Mar2024 08:22:43.940] [Render thread/INFO] [mixin/]: Mixing matrix.PoseStackMixin from flywheel.mixins.json into com.mojang.blaze3d.vertex.PoseStack
+[10Mar2024 08:22:44.023] [Render thread/INFO] [mixin/]: Mixing ClientLevelMixin from flywheel.mixins.json into net.minecraft.client.multiplayer.ClientLevel
+[10Mar2024 08:22:44.102] [Render thread/INFO] [mixin/]: Mixing client.HeavyBootsOnPlayerMixin from create.mixins.json into net.minecraft.client.player.LocalPlayer
+[10Mar2024 08:22:44.404] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/sanne/Documents/create%20bb%201.20.1/build/fg_cache/net/minecraftforge/forge/1.20.1-47.1.0_mapped_official_1.20.1/forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[10Mar2024 08:22:44.405] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/sanne/Documents/create%20bb%201.20.1/build/fg_cache/net/minecraftforge/forge/1.20.1-47.1.0_mapped_official_1.20.1/forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[10Mar2024 08:22:44.433] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[10Mar2024 08:22:44.442] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[10Mar2024 08:22:44.572] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
+[10Mar2024 08:22:44.751] [Render thread/INFO] [mixin/]: Mixing GlStateManagerMixin from flywheel.mixins.json into com.mojang.blaze3d.platform.GlStateManager
+[10Mar2024 08:22:44.926] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.1.0, for MC 1.20.1 with MCP 20230612.114412
+[10Mar2024 08:22:44.926] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.1.0 Initialized
+[10Mar2024 08:22:44.930] [modloading-worker-0/INFO] [com.jozufozu.flywheel.backend.Backend/]: No shaders mod detected.
+[10Mar2024 08:22:45.046] [modloading-worker-0/INFO] [mixin/]: Mixing CameraMixin from flywheel.mixins.json into net.minecraft.client.Camera
+[10Mar2024 08:22:45.048] [modloading-worker-0/INFO] [mixin/]: Mixing client.CameraMixin from create.mixins.json into net.minecraft.client.Camera
+[10Mar2024 08:22:45.101] [modloading-worker-0/INFO] [mixin/]: Mixing RenderTypeMixin from flywheel.mixins.json into net.minecraft.client.renderer.RenderType
+[10Mar2024 08:22:45.120] [modloading-worker-0/INFO] [mixin/]: Mixing FrustumMixin from flywheel.mixins.json into net.minecraft.client.renderer.culling.Frustum
+[10Mar2024 08:22:45.150] [modloading-worker-0/INFO] [mixin/]: Mixing LevelRendererAccessor from flywheel.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[10Mar2024 08:22:45.159] [modloading-worker-0/INFO] [mixin/]: Mixing fix.FixFabulousDepthMixin from flywheel.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[10Mar2024 08:22:45.160] [modloading-worker-0/INFO] [mixin/]: Mixing instancemanage.InstanceUpdateMixin from flywheel.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[10Mar2024 08:22:45.161] [modloading-worker-0/INFO] [mixin/]: Mixing client.LevelRendererMixin from create.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[10Mar2024 08:22:45.161] [modloading-worker-0/INFO] [mixin/]: Renaming synthetic method lambda$create$onDestroyBlockProgress$0(J)Ljava/util/SortedSet; to md29fb7e$lambda$create$onDestroyBlockProgress$0$0 in create.mixins.json:client.LevelRendererMixin
+[10Mar2024 08:22:45.175] [modloading-worker-0/INFO] [mixin/]: Mixing LevelRendererMixin from flywheel.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[10Mar2024 08:22:45.487] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[10Mar2024 08:22:45.493] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.985 ms
+[10Mar2024 08:22:45.573] [modloading-worker-0/INFO] [mixin/]: Mixing client.GameRendererMixin from create.mixins.json into net.minecraft.client.renderer.GameRenderer
+[10Mar2024 08:22:45.576] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.GameRendererAccessor from create.mixins.json into net.minecraft.client.renderer.GameRenderer
+[10Mar2024 08:22:47.582] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.ParticleEngineAccessor from create.mixins.json into net.minecraft.client.particle.ParticleEngine
+[10Mar2024 08:22:49.265] [Render thread/INFO] [mixin/]: Mixing accessor.AgeableListModelAccessor from create.mixins.json into net.minecraft.client.model.AgeableListModel
+[10Mar2024 08:22:49.922] [Render thread/INFO] [mixin/]: Mixing BlockEntityRenderDispatcherAccessor from flywheel.mixins.json into net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher
+[10Mar2024 08:22:50.115] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: []
+[10Mar2024 08:22:50.126] [Render thread/INFO] [mixin/]: Mixing accessor.GameTestHelperAccessor from create.mixins.json into net.minecraft.gametest.framework.GameTestHelper
+[10Mar2024 08:22:50.201] [Render thread/INFO] [mixin/]: Mixing client.PlayerRendererMixin from create.mixins.json into net.minecraft.client.renderer.entity.player.PlayerRenderer
+[10Mar2024 08:22:50.254] [Render thread/INFO] [mixin/]: Mixing client.HumanoidArmorLayerMixin from create.mixins.json into net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer
+[10Mar2024 08:22:50.259] [Render thread/INFO] [mixin/]: Mixing accessor.HumanoidArmorLayerAccessor from create.mixins.json into net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer
+[10Mar2024 08:22:50.259] [Render thread/INFO] [mixin/]: Renaming @Accessor method create$getArmorLocationCache()Ljava/util/Map; to create$getArmorLocationCache_$md$29fb7e$0 in create.mixins.json:accessor.HumanoidArmorLayerAccessor
+[10Mar2024 08:22:50.611] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
+[10Mar2024 08:22:50.747] [Worker-Main-10/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[10Mar2024 08:22:50.804] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[10Mar2024 08:22:51.677] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.1.0 Target: 47.2.0
+[10Mar2024 08:22:51.677] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Starting version check at https://api.modrinth.com/updates/flywheel/forge_updates.json
+[10Mar2024 08:22:51.981] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Found status: BETA Current: 0.6.10-7 Target: null
+[10Mar2024 08:22:52.504] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=1'
+[10Mar2024 08:22:52.505] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=0'
+[10Mar2024 08:22:52.505] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=9'
+[10Mar2024 08:22:52.505] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=8'
+[10Mar2024 08:22:52.505] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=7'
+[10Mar2024 08:22:52.505] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=6'
+[10Mar2024 08:22:52.505] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=5'
+[10Mar2024 08:22:52.505] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=4'
+[10Mar2024 08:22:52.505] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=3'
+[10Mar2024 08:22:52.505] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=2'
+[10Mar2024 08:22:52.505] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=10'
+[10Mar2024 08:22:52.505] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=11'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=12'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=13'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=14'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/frying_oil.json' missing model for variant: 'create_bic_bit:frying_oil#level=15'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=12'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=11'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=10'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=15'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=14'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=13'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=6'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=7'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=4'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=5'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=8'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=9'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=2'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=3'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=0'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/ketchup.json' missing model for variant: 'create_bic_bit:ketchup#level=1'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=8'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=10'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=9'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=6'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=7'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=14'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=13'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=12'
+[10Mar2024 08:22:52.506] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=11'
+[10Mar2024 08:22:52.507] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=0'
+[10Mar2024 08:22:52.507] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=1'
+[10Mar2024 08:22:52.507] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=15'
+[10Mar2024 08:22:52.507] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=4'
+[10Mar2024 08:22:52.507] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=5'
+[10Mar2024 08:22:52.507] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=2'
+[10Mar2024 08:22:52.507] [Worker-Main-6/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'create_bic_bit:blockstates/mayonnaise.json' missing model for variant: 'create_bic_bit:mayonnaise#level=3'
+[10Mar2024 08:22:54.668] [Render thread/INFO] [com.jozufozu.flywheel.backend.Backend/]: Loaded all shader sources.
+[10Mar2024 08:22:56.574] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[10Mar2024 08:22:56.575] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[10Mar2024 08:22:56.623] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Realtek HD Audio 2nd output (Realtek(R) Audio)
+[10Mar2024 08:22:56.623] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[10Mar2024 08:22:56.761] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[10Mar2024 08:22:56.773] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[10Mar2024 08:22:56.779] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[10Mar2024 08:22:56.780] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[10Mar2024 08:22:56.781] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[10Mar2024 08:22:56.783] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[10Mar2024 08:22:56.785] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[10Mar2024 08:22:56.785] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[10Mar2024 08:22:56.785] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[10Mar2024 08:22:56.925] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[10Mar2024 08:22:57.404] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[10Mar2024 08:22:57.406] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[10Mar2024 08:22:57.406] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[10Mar2024 08:22:57.409] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
+[10Mar2024 08:22:57.714] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[10Mar2024 08:22:59.952] [Worker-Main-10/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (1)\level.dat
 java.io.EOFException: null
 	at java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:268) ~[?:?]
 	at java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:258) ~[?:?]
@@ -156,7 +189,7 @@ java.io.EOFException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[17Jan2024 17:23:00.393] [Worker-Main-11/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (4)\level.dat
+[10Mar2024 08:22:59.952] [Worker-Main-1/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (4)\level.dat
 java.io.EOFException: null
 	at java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:268) ~[?:?]
 	at java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:258) ~[?:?]
@@ -177,7 +210,7 @@ java.io.EOFException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[17Jan2024 17:23:00.393] [Worker-Main-9/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (1)\level.dat
+[10Mar2024 08:22:59.952] [Worker-Main-3/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (2)\level.dat
 java.io.EOFException: null
 	at java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:268) ~[?:?]
 	at java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:258) ~[?:?]
@@ -198,7 +231,7 @@ java.io.EOFException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[17Jan2024 17:23:00.393] [Worker-Main-7/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (3)\level.dat
+[10Mar2024 08:22:59.952] [Worker-Main-4/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World\level.dat
 java.io.EOFException: null
 	at java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:268) ~[?:?]
 	at java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:258) ~[?:?]
@@ -219,7 +252,7 @@ java.io.EOFException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[17Jan2024 17:23:00.393] [Worker-Main-4/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World\level.dat
+[10Mar2024 08:22:59.952] [Worker-Main-5/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (3)\level.dat
 java.io.EOFException: null
 	at java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:268) ~[?:?]
 	at java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:258) ~[?:?]
@@ -240,7 +273,7 @@ java.io.EOFException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[17Jan2024 17:23:00.394] [Worker-Main-3/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (5)\level.dat_old
+[10Mar2024 08:22:59.956] [Worker-Main-10/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (1)\level.dat_old
 java.io.EOFException: null
 	at java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:268) ~[?:?]
 	at java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:258) ~[?:?]
@@ -261,7 +294,7 @@ java.io.EOFException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[17Jan2024 17:23:00.395] [Worker-Main-7/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (3)\level.dat_old
+[10Mar2024 08:22:59.956] [Worker-Main-4/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World\level.dat_old
 java.io.EOFException: null
 	at java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:268) ~[?:?]
 	at java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:258) ~[?:?]
@@ -282,7 +315,28 @@ java.io.EOFException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[17Jan2024 17:23:00.393] [Worker-Main-10/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (2)\level.dat
+[10Mar2024 08:22:59.956] [Worker-Main-1/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (4)\level.dat_old
+java.io.EOFException: null
+	at java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:268) ~[?:?]
+	at java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:258) ~[?:?]
+	at java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:164) ~[?:?]
+	at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:79) ~[?:?]
+	at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:91) ~[?:?]
+	at net.minecraft.nbt.NbtIo.createDecompressorStream(NbtIo.java:30) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
+	at net.minecraft.nbt.NbtIo.parseCompressed(NbtIo.java:47) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
+	at net.minecraft.nbt.NbtIo.parseCompressed(NbtIo.java:41) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
+	at net.minecraft.world.level.storage.LevelStorageSource.readLightweightData(LevelStorageSource.java:305) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
+	at net.minecraft.world.level.storage.LevelStorageSource.lambda$levelSummaryReader$5(LevelStorageSource.java:266) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
+	at net.minecraft.world.level.storage.LevelStorageSource.readLevelData(LevelStorageSource.java:209) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
+	at net.minecraft.world.level.storage.LevelStorageSource.lambda$loadLevelSummaries$2(LevelStorageSource.java:171) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[?:?]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) ~[?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) ~[?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
+[10Mar2024 08:22:59.958] [Worker-Main-10/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (5)\level.dat
 java.io.EOFException: null
 	at java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:268) ~[?:?]
 	at java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:258) ~[?:?]
@@ -303,7 +357,7 @@ java.io.EOFException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[17Jan2024 17:23:00.394] [Worker-Main-11/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (4)\level.dat_old
+[10Mar2024 08:22:59.959] [Worker-Main-10/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (5)\level.dat_old
 java.io.EOFException: null
 	at java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:268) ~[?:?]
 	at java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:258) ~[?:?]
@@ -324,7 +378,7 @@ java.io.EOFException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[17Jan2024 17:23:00.395] [Worker-Main-9/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (1)\level.dat_old
+[10Mar2024 08:22:59.963] [Worker-Main-3/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (2)\level.dat_old
 java.io.EOFException: null
 	at java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:268) ~[?:?]
 	at java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:258) ~[?:?]
@@ -345,7 +399,7 @@ java.io.EOFException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[17Jan2024 17:23:00.396] [Worker-Main-4/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World\level.dat_old
+[10Mar2024 08:22:59.963] [Worker-Main-5/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (3)\level.dat_old
 java.io.EOFException: null
 	at java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:268) ~[?:?]
 	at java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:258) ~[?:?]
@@ -366,39 +420,15 @@ java.io.EOFException: null
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[17Jan2024 17:23:00.396] [Worker-Main-10/ERROR] [net.minecraft.world.level.storage.LevelStorageSource/]: Exception reading .\saves\New World (2)\level.dat_old
-java.io.EOFException: null
-	at java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:268) ~[?:?]
-	at java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:258) ~[?:?]
-	at java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:164) ~[?:?]
-	at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:79) ~[?:?]
-	at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:91) ~[?:?]
-	at net.minecraft.nbt.NbtIo.createDecompressorStream(NbtIo.java:30) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.nbt.NbtIo.parseCompressed(NbtIo.java:47) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.nbt.NbtIo.parseCompressed(NbtIo.java:41) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.level.storage.LevelStorageSource.readLightweightData(LevelStorageSource.java:305) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.level.storage.LevelStorageSource.lambda$levelSummaryReader$5(LevelStorageSource.java:266) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.level.storage.LevelStorageSource.readLevelData(LevelStorageSource.java:209) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.level.storage.LevelStorageSource.lambda$loadLevelSummaries$2(LevelStorageSource.java:171) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?]
-	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[?:?]
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) ~[?:?]
-	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) ~[?:?]
-	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?]
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?]
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?]
-[17Jan2024 17:23:00.739] [Render thread/INFO] [mixin/]: Mixing accessor.NbtAccounterAccessor from create.mixins.json into net.minecraft.nbt.NbtAccounter
-[17Jan2024 17:23:00.758] [Render thread/WARN] [net.minecraftforge.common.ForgeHooks/WP]: The following mods have version differences that were not resolved:
-create_bic_bit (version 0.0.61 -> 0.0.65)
-Things may not work well.
-[17Jan2024 17:23:00.770] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
-[17Jan2024 17:23:02.383] [Render thread/INFO] [mixin/]: Mixing TestCommandMixin from create.mixins.json into net.minecraft.gametest.framework.TestCommand
-[17Jan2024 17:23:02.483] [Worker-Main-6/ERROR] [net.minecraft.tags.TagLoader/]: Couldn't load tag [farmersdelight:minced_beef (from main), farmersdelight:chicken_cuts (from main), farmersdelight:bacon (from main), farmersdelight:mutton_chops (from main), farmersdelight:ham (from main)] as it is missing following references: farmersdelight:minced_beef (from main), 
+[10Mar2024 08:23:00.443] [Render thread/INFO] [mixin/]: Mixing accessor.NbtAccounterAccessor from create.mixins.json into net.minecraft.nbt.NbtAccounter
+[10Mar2024 08:23:00.493] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[10Mar2024 08:23:02.551] [Render thread/INFO] [mixin/]: Mixing TestCommandMixin from create.mixins.json into net.minecraft.gametest.framework.TestCommand
+[10Mar2024 08:23:02.745] [Worker-Main-6/ERROR] [net.minecraft.tags.TagLoader/]: Couldn't load tag [farmersdelight:minced_beef (from main), farmersdelight:chicken_cuts (from main), farmersdelight:bacon (from main), farmersdelight:mutton_chops (from main), farmersdelight:ham (from main)] as it is missing following references: farmersdelight:minced_beef (from main), 
 	farmersdelight:chicken_cuts (from main), 
 	farmersdelight:bacon (from main), 
 	farmersdelight:mutton_chops (from main), 
 	farmersdelight:ham (from main)
-[17Jan2024 17:23:03.034] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe create_bic_bit:compat/oil_extruding
+[10Mar2024 08:23:03.446] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe create_bic_bit:compat/oil_extruding
 com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'create_mechanical_extruder:extruding'
 	at net.minecraft.world.item.crafting.RecipeManager.lambda$fromJson$9(RecipeManager.java:170) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
@@ -431,9 +461,11 @@ com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'create_
 	at net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:188) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar:?]
 	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) ~[lwjgl-glfw-3.3.1.jar:build 7]
 	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.1.jar:build 7]
-	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3474) ~[lwjgl-glfw-3.3.1.jar:build 7]
-	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:207) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1173) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar:?]
+	at org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3403) ~[lwjgl-glfw-3.3.1.jar:build 7]
+	at com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:175) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar:?]
+	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:184) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar:?]
+	at com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:274) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1170) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar:?]
 	at net.minecraft.client.Minecraft.run(Minecraft.java:718) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar:?]
 	at net.minecraft.client.main.Main.main(Main.java:218) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
@@ -452,102 +484,123 @@ com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'create_
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[17Jan2024 17:23:03.089] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 23 recipes
-[17Jan2024 17:23:03.170] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2241 advancements
-[17Jan2024 17:23:04.035] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
-[17Jan2024 17:23:04.035] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[17Jan2024 17:23:04.135] [Server thread/INFO] [mixin/]: Mixing MapItemSavedDataMixin from create.mixins.json into net.minecraft.world.level.saveddata.maps.MapItemSavedData
-[17Jan2024 17:23:05.128] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[17Jan2024 17:23:07.032] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[17Jan2024 17:23:07.050] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[17Jan2024 17:23:07.050] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[17Jan2024 17:23:07.050] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[17Jan2024 17:23:07.141] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[17Jan2024 17:23:07.642] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 1%
-[17Jan2024 17:23:08.150] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 89%
-[17Jan2024 17:23:08.179] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[17Jan2024 17:23:08.185] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 3051 ms
-[17Jan2024 17:23:08.335] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[17Jan2024 17:23:08.338] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[17Jan2024 17:23:08.409] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
-[17Jan2024 17:23:08.513] [Netty Local Client IO #0/INFO] [mixin/]: Mixing ClientboundMapItemDataPacketMixin from create.mixins.json into net.minecraft.network.protocol.game.ClientboundMapItemDataPacket
-[17Jan2024 17:23:08.949] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
-[17Jan2024 17:23:08.951] [Netty Local Client IO #0/INFO] [mixin/]: Mixing light.NetworkLightUpdateMixin from flywheel.mixins.json into net.minecraft.client.multiplayer.ClientPacketListener
-[17Jan2024 17:23:08.951] [Netty Local Client IO #0/INFO] [mixin/]: Renaming synthetic method lambda$flywheel$onLightUpdatePacket$1(Lnet/minecraft/network/protocol/game/ClientboundLightUpdatePacket;)V to mdd5c3ab$lambda$flywheel$onLightUpdatePacket$1$0 in flywheel.mixins.json:light.NetworkLightUpdateMixin
-[17Jan2024 17:23:08.951] [Netty Local Client IO #0/INFO] [mixin/]: Renaming synthetic method lambda$flywheel$onLevelChunkWithLight$0(Lnet/minecraft/network/protocol/game/ClientboundLevelChunkWithLightPacket;)V to mdd5c3ab$lambda$flywheel$onLevelChunkWithLight$0$1 in flywheel.mixins.json:light.NetworkLightUpdateMixin
-[17Jan2024 17:23:09.009] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:243abfdf] logged in with entity id 58 at (1088.7502916109938, 77.0, 83.8784035858364)
-[17Jan2024 17:23:09.041] [Render thread/INFO] [mixin/]: Mixing light.LightUpdateMixin from flywheel.mixins.json into net.minecraft.client.multiplayer.ClientChunkCache
-[17Jan2024 17:23:09.076] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[17Jan2024 17:23:09.088] [Render thread/INFO] [mixin/]: Mixing instancemanage.ChunkRebuildHooksMixin from flywheel.mixins.json into net.minecraft.client.renderer.chunk.ChunkRenderDispatcher$RenderChunk$RebuildTask
-[17Jan2024 17:23:09.440] [Render thread/INFO] [BatchExecutor/]: Started 6 worker threads
-[17Jan2024 17:23:09.465] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingIn
-[17Jan2024 17:23:09.465] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from DISABLED to ENABLED
-[17Jan2024 17:23:09.667] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.RecipesUpdatedEvent
-[17Jan2024 17:23:09.679] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.event.TagsUpdatedEvent
-[17Jan2024 17:23:09.679] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from ENABLED to JEI_STARTED
-[17Jan2024 17:23:09.680] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
-[17Jan2024 17:23:09.688] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
-[17Jan2024 17:23:09.692] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 3.564 ms
-[17Jan2024 17:23:09.692] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
-[17Jan2024 17:23:09.695] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 2.333 ms
-[17Jan2024 17:23:09.696] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
-[17Jan2024 17:23:09.825] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 127.6 milliseconds
-[17Jan2024 17:23:09.825] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 128.4 ms
-[17Jan2024 17:23:09.835] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
-[17Jan2024 17:23:09.851] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:minecraft took 15.48 milliseconds
-[17Jan2024 17:23:09.864] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: create_bic_bit:jei_plugin took 13.31 milliseconds
-[17Jan2024 17:23:09.891] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: create:jei_plugin took 27.11 milliseconds
-[17Jan2024 17:23:09.893] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 57.80 ms
-[17Jan2024 17:23:09.893] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
-[17Jan2024 17:23:09.896] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 2.146 ms
-[17Jan2024 17:23:09.898] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
-[17Jan2024 17:23:09.901] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 2.364 ms
-[17Jan2024 17:23:09.902] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
-[17Jan2024 17:23:09.902] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 432.5 ?s
-[17Jan2024 17:23:09.903] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
-[17Jan2024 17:23:09.921] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 17.97 ms
-[17Jan2024 17:23:09.924] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
-[17Jan2024 17:23:10.210] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 285.2 milliseconds
-[17Jan2024 17:23:10.377] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: create:jei_plugin took 158.1 milliseconds
-[17Jan2024 17:23:10.377] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 452.6 ms
-[17Jan2024 17:23:10.381] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
-[17Jan2024 17:23:10.385] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 3.827 ms
-[17Jan2024 17:23:10.393] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
-[17Jan2024 17:23:10.398] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
-[17Jan2024 17:23:10.432] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering gui handlers: jei:gui took 31.55 milliseconds
-[17Jan2024 17:23:10.433] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 35.16 ms
-[17Jan2024 17:23:10.436] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
-[17Jan2024 17:23:10.440] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
-[17Jan2024 17:23:10.440] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
-[17Jan2024 17:23:10.443] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 2.667 ms
-[17Jan2024 17:23:10.443] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
-[17Jan2024 17:23:10.466] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 2015 ingredients
-[17Jan2024 17:23:10.733] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 2015 ingredients
-[17Jan2024 17:23:10.735] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 291.5 ms
-[17Jan2024 17:23:10.830] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:forge_gui took 392.6 milliseconds
-[17Jan2024 17:23:10.830] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 394.0 ms
-[17Jan2024 17:23:10.831] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 439.2 ms
-[17Jan2024 17:23:10.832] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
-[17Jan2024 17:23:10.832] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 509.4 ?s
-[17Jan2024 17:23:10.832] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 1.153 s
-[17Jan2024 17:23:10.844] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 48 advancements
-[17Jan2024 17:23:21.316] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
-[17Jan2024 17:23:21.317] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingOut
-[17Jan2024 17:23:21.317] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from JEI_STARTED to DISABLED
-[17Jan2024 17:23:21.317] [Render thread/INFO] [mezz.jei.library.startup.JeiStarter/]: Stopping JEI
-[17Jan2024 17:23:21.318] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable...
-[17Jan2024 17:23:21.318] [Render thread/INFO] [mezz.jei.forge.plugins.forge.ForgeGuiPlugin/]: Stopping JEI GUI
-[17Jan2024 17:23:21.319] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable took 1.261 ms
-[17Jan2024 17:23:21.339] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[17Jan2024 17:23:21.339] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[17Jan2024 17:23:21.356] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
-[17Jan2024 17:23:21.390] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[17Jan2024 17:23:21.391] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[17Jan2024 17:23:21.391] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[17Jan2024 17:23:22.226] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[17Jan2024 17:23:22.773] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[17Jan2024 17:23:22.774] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[17Jan2024 17:23:22.790] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World (6)): All chunks are saved
-[17Jan2024 17:23:22.790] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[17Jan2024 17:23:22.790] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[17Jan2024 17:23:22.790] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[10Mar2024 08:23:03.516] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 23 recipes
+[10Mar2024 08:23:03.608] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2245 advancements
+[10Mar2024 08:23:04.723] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
+[10Mar2024 08:23:04.723] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[10Mar2024 08:23:04.868] [Server thread/INFO] [mixin/]: Mixing MapItemSavedDataMixin from create.mixins.json into net.minecraft.world.level.saveddata.maps.MapItemSavedData
+[10Mar2024 08:23:05.126] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[10Mar2024 08:23:08.771] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10Mar2024 08:23:08.771] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10Mar2024 08:23:08.771] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10Mar2024 08:23:08.771] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10Mar2024 08:23:08.771] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10Mar2024 08:23:08.771] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10Mar2024 08:23:08.771] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10Mar2024 08:23:08.771] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[10Mar2024 08:23:09.150] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 6%
+[10Mar2024 08:23:09.652] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 71%
+[10Mar2024 08:23:10.071] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[10Mar2024 08:23:10.085] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 4940 ms
+[10Mar2024 08:23:10.403] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[10Mar2024 08:23:10.405] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[10Mar2024 08:23:10.532] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[10Mar2024 08:23:10.977] [Netty Local Client IO #0/INFO] [mixin/]: Mixing ClientboundMapItemDataPacketMixin from create.mixins.json into net.minecraft.network.protocol.game.ClientboundMapItemDataPacket
+[10Mar2024 08:23:11.849] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[10Mar2024 08:23:11.856] [Netty Local Client IO #0/INFO] [mixin/]: Mixing light.NetworkLightUpdateMixin from flywheel.mixins.json into net.minecraft.client.multiplayer.ClientPacketListener
+[10Mar2024 08:23:11.859] [Netty Local Client IO #0/INFO] [mixin/]: Renaming synthetic method lambda$flywheel$onLightUpdatePacket$1(Lnet/minecraft/network/protocol/game/ClientboundLightUpdatePacket;)V to md29fb7e$lambda$flywheel$onLightUpdatePacket$1$0 in flywheel.mixins.json:light.NetworkLightUpdateMixin
+[10Mar2024 08:23:11.859] [Netty Local Client IO #0/INFO] [mixin/]: Renaming synthetic method lambda$flywheel$onLevelChunkWithLight$0(Lnet/minecraft/network/protocol/game/ClientboundLevelChunkWithLightPacket;)V to md29fb7e$lambda$flywheel$onLevelChunkWithLight$0$1 in flywheel.mixins.json:light.NetworkLightUpdateMixin
+[10Mar2024 08:23:12.002] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:7362eb6c] logged in with entity id 13 at (-3.247090025232175, -54.12427420950553, 82.50290695108647)
+[10Mar2024 08:23:12.044] [Render thread/INFO] [mixin/]: Mixing light.LightUpdateMixin from flywheel.mixins.json into net.minecraft.client.multiplayer.ClientChunkCache
+[10Mar2024 08:23:12.100] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[10Mar2024 08:23:12.108] [Render thread/INFO] [mixin/]: Mixing instancemanage.ChunkRebuildHooksMixin from flywheel.mixins.json into net.minecraft.client.renderer.chunk.ChunkRenderDispatcher$RenderChunk$RebuildTask
+[10Mar2024 08:23:12.428] [Render thread/INFO] [BatchExecutor/]: Started 6 worker threads
+[10Mar2024 08:23:12.463] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingIn
+[10Mar2024 08:23:12.463] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from DISABLED to ENABLED
+[10Mar2024 08:23:12.700] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.RecipesUpdatedEvent
+[10Mar2024 08:23:12.720] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.event.TagsUpdatedEvent
+[10Mar2024 08:23:12.720] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from ENABLED to JEI_STARTED
+[10Mar2024 08:23:12.721] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
+[10Mar2024 08:23:12.735] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
+[10Mar2024 08:23:12.738] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 2.451 ms
+[10Mar2024 08:23:12.738] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
+[10Mar2024 08:23:12.741] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 2.689 ms
+[10Mar2024 08:23:12.743] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
+[10Mar2024 08:23:12.826] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 82.52 milliseconds
+[10Mar2024 08:23:12.826] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 83.43 ms
+[10Mar2024 08:23:12.835] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
+[10Mar2024 08:23:12.860] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: create_bic_bit:jei_plugin took 15.00 milliseconds
+[10Mar2024 08:23:12.886] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: create:jei_plugin took 26.28 milliseconds
+[10Mar2024 08:23:12.889] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 53.45 ms
+[10Mar2024 08:23:12.890] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
+[10Mar2024 08:23:12.892] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 2.378 ms
+[10Mar2024 08:23:12.894] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
+[10Mar2024 08:23:12.898] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 3.010 ms
+[10Mar2024 08:23:12.899] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
+[10Mar2024 08:23:12.899] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 289.5 ?s
+[10Mar2024 08:23:12.900] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
+[10Mar2024 08:23:12.913] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 12.41 ms
+[10Mar2024 08:23:12.915] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
+[10Mar2024 08:23:13.206] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 290.9 milliseconds
+[10Mar2024 08:23:13.362] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: create:jei_plugin took 150.2 milliseconds
+[10Mar2024 08:23:13.363] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 448.0 ms
+[10Mar2024 08:23:13.366] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
+[10Mar2024 08:23:13.370] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 3.251 ms
+[10Mar2024 08:23:13.378] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
+[10Mar2024 08:23:13.383] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
+[10Mar2024 08:23:13.394] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 10.99 ms
+[10Mar2024 08:23:13.397] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
+[10Mar2024 08:23:13.399] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
+[10Mar2024 08:23:13.400] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
+[10Mar2024 08:23:13.403] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 2.810 ms
+[10Mar2024 08:23:13.403] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
+[10Mar2024 08:23:13.432] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 2033 ingredients
+[10Mar2024 08:23:13.682] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 2033 ingredients
+[10Mar2024 08:23:13.683] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 279.2 ms
+[10Mar2024 08:23:13.782] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:forge_gui took 383.8 milliseconds
+[10Mar2024 08:23:13.782] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 384.4 ms
+[10Mar2024 08:23:13.783] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 404.6 ms
+[10Mar2024 08:23:13.783] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
+[10Mar2024 08:23:13.784] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 498.5 ?s
+[10Mar2024 08:23:13.784] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 1.063 s
+[10Mar2024 08:23:13.885] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 50 advancements
+[10Mar2024 08:23:33.897] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> no i was testing
+[10Mar2024 08:23:33.916] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> no i was testing
+[10Mar2024 08:23:42.021] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[10Mar2024 08:23:42.034] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[10Mar2024 08:23:42.044] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[10Mar2024 08:23:42.045] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[10Mar2024 08:24:43.762] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> see?
+[10Mar2024 08:24:43.771] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> see?
+[10Mar2024 08:24:49.281] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> its not rlly there anymore
+[10Mar2024 08:24:49.282] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> its not rlly there anymore
+[10Mar2024 08:24:55.372] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[10Mar2024 08:24:55.380] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[10Mar2024 08:24:55.388] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[10Mar2024 08:24:55.390] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[10Mar2024 08:25:05.106] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingOut
+[10Mar2024 08:25:05.106] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from JEI_STARTED to DISABLED
+[10Mar2024 08:25:05.106] [Render thread/INFO] [mezz.jei.library.startup.JeiStarter/]: Stopping JEI
+[10Mar2024 08:25:05.106] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable...
+[10Mar2024 08:25:05.106] [Render thread/INFO] [mezz.jei.forge.plugins.forge.ForgeGuiPlugin/]: Stopping JEI GUI
+[10Mar2024 08:25:05.107] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime Unavailable took 1.502 ms
+[10Mar2024 08:25:05.130] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[10Mar2024 08:25:05.130] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[10Mar2024 08:25:05.137] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[10Mar2024 08:25:05.172] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[10Mar2024 08:25:05.172] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[10Mar2024 08:25:05.172] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[10Mar2024 08:25:05.619] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[10Mar2024 08:25:05.677] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[10Mar2024 08:25:05.678] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[10Mar2024 08:25:05.704] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World (15)): All chunks are saved
+[10Mar2024 08:25:05.704] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[10Mar2024 08:25:05.704] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[10Mar2024 08:25:05.704] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[10Mar2024 08:25:08.144] [MCO Compatability Checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[10Mar2024 08:25:08.144] [MCO Compatability Checker #1/ERROR] [com.mojang.realmsclient.RealmsMainScreen/]: Couldn't connect to realms
+com.mojang.realmsclient.exception.RealmsServiceException: Realms service error (401) Invalid session id
+	at com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:423) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
+	at com.mojang.realmsclient.client.RealmsClient.clientCompatible(RealmsClient.java:215) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
+	at com.mojang.realmsclient.RealmsMainScreen$1.run(RealmsMainScreen.java:587) ~[forge-1.20.1-47.1.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
+[10Mar2024 08:25:08.793] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!

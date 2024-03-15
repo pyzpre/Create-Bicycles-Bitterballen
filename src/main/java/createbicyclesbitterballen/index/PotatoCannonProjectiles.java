@@ -36,6 +36,15 @@ public class PotatoCannonProjectiles{
                     .renderTowardMotion(140, 1)
                     .soundPitch(1.5f)
                     .registerAndAssign(CreateBicBitModItems.FRIKANDEL.get()),
+            KRUIDNOTEN = create("kruidnoten")
+                    .damage(2)
+                    .reloadTicks(5)
+                    .velocity(1.25f)
+                    .knockback(0.2f)
+                    .renderTowardMotion(140, 1)
+                    .soundPitch(1.5f)
+                    .splitInto(2)
+                    .registerAndAssign(CreateBicBitModItems.KRUIDNOTEN.get()),
             OLIEBOLLEN = create("oliebollen")
             .damage(4)
             .reloadTicks(10)
@@ -45,6 +54,8 @@ public class PotatoCannonProjectiles{
             .soundPitch(1.5f)
                     .splitInto(3)
             .registerAndAssign(CreateBicBitModItems.OLIEBOLLEN.get());
+
+
 
 
     public static void register() {

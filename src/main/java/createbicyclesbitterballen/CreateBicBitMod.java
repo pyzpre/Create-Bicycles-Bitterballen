@@ -3,6 +3,7 @@ package createbicyclesbitterballen;
 
 import java.util.Random;
 
+import createbicyclesbitterballen.effect.ModEffects;
 import createbicyclesbitterballen.fluid.FluidsRegistry;
 import createbicyclesbitterballen.index.BlockEntityRegistry;
 import createbicyclesbitterballen.index.BlockRegistry;
@@ -17,6 +18,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.common.MinecraftForge;
+
+
+
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
 
@@ -46,6 +50,7 @@ public class CreateBicBitMod
 		FluidsRegistry.register();
 
 		RecipeRegistry.register(eventBus);
+		ModEffects.register(eventBus);
 		eventBus.addListener(this::clientSetup);
 		modEventBus.addListener(CreateBicBitMod::clientInit);
 		modEventBus.addListener(SoundsRegistry::register);

@@ -47,9 +47,14 @@ import static createbicyclesbitterballen.CreateBicBitMod.REGISTRATE;
 
 public class FluidsRegistry {
     private static final float FRYING_OIL_FOG_DISTANCE = 0.2f;
+    private static final float KETCHUP_FOG_DISTANCE = 0.1f;
+    private static final float MAYONNAISE_FOG_DISTANCE = 0.1f;
     public static final ResourceLocation FRYINGOIL_STILL_RL = new ResourceLocation("create_bic_bit", "block/fryingoil_still");
     public static final ResourceLocation FRYINGOIL_FLOW_RL = new ResourceLocation("create_bic_bit", "block/fryingoil_flow");
-
+    public static final ResourceLocation KETCHUP_STILL_RL = new ResourceLocation("create_bic_bit", "block/ketchup_still");
+    public static final ResourceLocation KETCHUP_FLOW_RL = new ResourceLocation("create_bic_bit", "block/ketchup_flow");
+    public static final ResourceLocation MAYONNAISE_STILL_RL = new ResourceLocation("create_bic_bit", "block/mayo_still");
+    public static final ResourceLocation MAYONNAISE_FLOW_RL = new ResourceLocation("create_bic_bit", "block/mayo_flow");
     private static class CustomSolidRenderedFluidType extends TintedFluidType {
         private Vector3f fogColor;
         private Supplier<Float> fogDistance;
@@ -86,7 +91,18 @@ public class FluidsRegistry {
         fluidType.fogDistance = () -> FRYING_OIL_FOG_DISTANCE;
         return fluidType;
     };
-
+    private static final FluidBuilder.FluidTypeFactory KETCHUP_TYPE_FACTORY = (properties, still, flowing) -> {
+        CustomSolidRenderedFluidType fluidType = new CustomSolidRenderedFluidType(properties, KETCHUP_STILL_RL, KETCHUP_FLOW_RL);
+        fluidType.fogColor = new Vector3f(155 / 255f, 28 / 255f, 29 / 255f);
+        fluidType.fogDistance = () -> KETCHUP_FOG_DISTANCE;
+        return fluidType;
+    };
+    private static final FluidBuilder.FluidTypeFactory MAYONNAISE_TYPE_FACTORY = (properties, still, flowing) -> {
+        CustomSolidRenderedFluidType fluidType = new CustomSolidRenderedFluidType(properties, MAYONNAISE_STILL_RL, MAYONNAISE_FLOW_RL);
+        fluidType.fogColor = new Vector3f(201 / 255f, 199 / 255f, 156 / 255f);
+        fluidType.fogDistance = () -> MAYONNAISE_FOG_DISTANCE;
+        return fluidType;
+    };
 
     public static final FluidEntry<ForgeFlowingFluid.Flowing> FRYING_OIL =
             REGISTRATE.standardFluid("frying_oil", FRYING_OIL_TYPE_FACTORY)
@@ -98,6 +114,27 @@ public class FluidsRegistry {
                             .slopeFindDistance(5)
                             .explosionResistance(100f))
                     .register();
+    public static final FluidEntry<ForgeFlowingFluid.Flowing> KETCHUP =
+            REGISTRATE.standardFluid("ketchup", KETCHUP_TYPE_FACTORY)
+                    .lang("Ketchup")
+                    .properties(b -> b.viscosity(1500).density(1400))
+                    .fluidProperties(p -> p
+                            .levelDecreasePerBlock(2)
+                            .tickRate(25)
+                            .slopeFindDistance(3)
+                            .explosionResistance(100f))
+                    .register();
+    public static final FluidEntry<ForgeFlowingFluid.Flowing> MAYONNAISE =
+            REGISTRATE.standardFluid("mayonnaise", MAYONNAISE_TYPE_FACTORY)
+                    .lang("Mayonnaise")
+                    .properties(b -> b.viscosity(1500).density(1400))
+                    .fluidProperties(p -> p
+                            .levelDecreasePerBlock(2)
+                            .tickRate(25)
+                            .slopeFindDistance(3)
+                            .explosionResistance(100f))
+                    .register();
+
 
     public static final ResourceLocation STAMPPOT_STILL_RL = new ResourceLocation("create_bic_bit", "block/stamppot");
     public static final ResourceLocation STAMPPOT_FLOW_RL = new ResourceLocation("create_bic_bit", "block/stamppot");
