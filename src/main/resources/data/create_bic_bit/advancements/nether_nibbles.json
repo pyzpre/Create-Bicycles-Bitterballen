@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "create_bic_bit:kruidnoten"
+    },
+    "title": {
+      "translate": "advancements.nether_nibbles.title"
+    },
+    "description": {
+      "translate": "advancements.nether_nibbles.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "nether_nibbles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_bic_bit:kruidnoten"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "create_bic_bit:dutch_mentality"
+}

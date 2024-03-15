@@ -1,4 +1,4 @@
-C:\Users\sanne\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.19.2-43.2.4_mapped_official_1.19.2\forge-1.19.2-43.2.4_mapped_official_1.19.2-recomp.jar
+C:\Users\sanne\Documents\create bb 1.19.2\build\fg_cache\net\minecraftforge\forge\1.19.2-43.2.4_mapped_official_1.19.2\forge-1.19.2-43.2.4_mapped_official_1.19.2-recomp.jar
 C:\Users\sanne\.gradle\caches\forge_gradle\minecraft_repo\versions\1.19.2\client-extra.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.19.2-43.2.4\9dd0e01623ca7febbc6623ea50a59e6b717bd24f\javafmllanguage-1.19.2-43.2.4.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.19.2-43.2.4\4e3df9fe9d70bcfec5888a8ff7b466e4ee6323eb\lowcodelanguage-1.19.2-43.2.4.jar
@@ -7,6 +7,10 @@ C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.1
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlloader\1.19.2-43.2.4\cb4d2b3c3356f836a2f91e5f510ac8884abf5f91\fmlloader-1.19.2-43.2.4.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarSelector\0.3.16\2a31421fb5e267249da103a644f23afb43d158af\JarJarSelector-0.3.16.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarMetadata\0.3.16\f62c8c898dffc8666f5097a8587ed72095e8e83a\JarJarMetadata-0.3.16.jar
+C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.mojang\patchy\2.2.10\da05971b07cbb379d002cf7eaec6a2048211fefc\patchy-2.2.10.jar
+C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.mojang\datafixerupper\5.0.28\e2157e236e529aff80a5fc3ccb506e56d46b130b\datafixerupper-5.0.28.jar
+C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\3.11.49\2e3055ec2a017c7f94b79744b4a68b65695a118c\authlib-3.11.49.jar
+C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.mojang\text2speech\1.16.7\ee4095669061d1fe4bce5fea23d69d1520bc2d58\text2speech-1.16.7.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\31.0.1-jre\119ea2b2bc205b138974d351777b20f02b92704b\guava-31.0.1-jre.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.2\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\jsr305-3.0.2.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\ca.weblite\java-objc-bridge\1.1\1227f9e0666314f9de41477e3ec277e542ed7f7b\java-objc-bridge-1.1.jar
@@ -40,7 +44,6 @@ C:\Users\sanne\.gradle\caches\modules-2\files-2.1\org.spongepowered\mixin\0.8.5\
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\JarJarFileSystems\0.3.16\e52afbb2599dc7c6f779efea0496d32fc01152e3\JarJarFileSystems-0.3.16.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.mojang\logging\1.0.0\f6ca3b2eee0b80b384e8ed93d368faecb82dfb9b\logging-1.0.0.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.mojang\blocklist\1.0.10\5c685c5ffa94c4cd39496c7184c1d122e515ecef\blocklist-1.0.10.jar
-C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.mojang\patchy\2.2.10\da05971b07cbb379d002cf7eaec6a2048211fefc\patchy-2.2.10.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.github.oshi\oshi-core\5.8.5\1d0ec654d820741327f5a9229d513732a4b7ce50\oshi-core-5.8.5.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna-platform\5.10.0\fbed7d9669dba47714ad0d4f4454290a997aee69\jna-platform-5.10.0.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\5.10.0\7cf4c87dd802db50721db66947aa237d7ad09418\jna-5.10.0.jar
@@ -65,9 +68,7 @@ C:\Users\sanne\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.11.0\a
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.5.13\e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada\httpclient-4.5.13.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.15\49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d\commons-codec-1.15.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.mojang\brigadier\1.0.18\c1ef1234282716483c92183f49bef47b1a89bfa9\brigadier-1.0.18.jar
-C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.mojang\datafixerupper\5.0.28\e2157e236e529aff80a5fc3ccb506e56d46b130b\datafixerupper-5.0.28.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.9\8a432c1d6825781e21a02db2e2c33c5fde2833b9\gson-2.8.9.jar
-C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\3.11.49\2e3055ec2a017c7f94b79744b4a68b65695a118c\authlib-3.11.49.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.21\4ec95b60d4e86b5c95a0e919cb172a0af98011ef\commons-compress-1.21.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686\commons-logging-1.2.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.14\9dd1a631c082d92ecd4bd8fd4cf55026c720a8c1\httpcore-4.4.14.jar
@@ -102,7 +103,6 @@ C:\Users\sanne\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\ae58664f
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\36c37f16ab611b3aa11f3bcf80b1d509b4ce6b\lwjgl-3.3.1-natives-windows.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\3b14f4beae9dd39791ec9e12190a9380cd8a3ce6\lwjgl-3.3.1-natives-windows-x86.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\org.lwjgl\lwjgl\3.3.1\f46cadcf95675908fd3a550d63d9d709cb68998\lwjgl-3.3.1-natives-windows-arm64.jar
-C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.mojang\text2speech\1.16.7\ee4095669061d1fe4bce5fea23d69d1520bc2d58\text2speech-1.16.7.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\net.minecraftforge\srgutils\0.4.11\fbad1341ffdb47d276bbdc40ecb06da49e053e74\srgutils-0.4.11.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\org.codehaus.plexus\plexus-utils\3.3.0\cf43b5391de623b36fe066a21127baef82c64022\plexus-utils-3.3.0.jar
 C:\Users\sanne\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\b421526c5f297295adef1c886e5246c39d4ac629\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar

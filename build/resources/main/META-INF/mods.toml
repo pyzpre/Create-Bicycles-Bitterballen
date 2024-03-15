@@ -4,7 +4,7 @@ license="MIT License"
 
 [[mods]]
 modId="create_bic_bit"
-version="0.0.65"
+version="0.0.70B"
 displayName="Create Bitterballen"
 displayURL="https://github.com/pyzpre/Create-Bicycles-Bitterballen"
 logoFile="logo.png"

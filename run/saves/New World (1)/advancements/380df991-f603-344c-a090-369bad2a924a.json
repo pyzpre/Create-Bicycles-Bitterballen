@@ -1,0 +1,52 @@
+{
+  "create_bic_bit:fry_about_it": {
+    "criteria": {
+      "ice_exploded": "2024-03-11 00:41:07 +0100"
+    },
+    "done": true
+  },
+  "create:root": {
+    "criteria": {
+      "0": "2024-03-10 23:39:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2024-03-11 00:41:50 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:local_snackbar": {
+    "criteria": {
+      "got_snack": "2024-03-10 23:40:33 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/yellow_dye_from_sunflower": {
+    "criteria": {
+      "has_sunflower": "2024-03-11 00:41:35 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2024-03-10 23:39:14 +0100",
+      "minecraft:plains": "2024-03-11 00:42:00 +0100"
+    },
+    "done": false
+  },
+  "create:burner": {
+    "criteria": {
+      "0": "2024-03-10 23:39:59 +0100"
+    },
+    "done": true
+  },
+  "create_bic_bit:nether_nibbles": {
+    "criteria": {
+      "nether_nibbles": "2024-03-11 00:41:48 +0100"
+    },
+    "done": true
+  },
+  "DataVersion": 3120
+}

@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "create_bic_bit:raw_herring"
+    },
+    "title": {
+      "translate": "advancements.first_taste_of_summer.title"
+    },
+    "description": {
+      "translate": "advancements.first_taste_of_summer.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "herring": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_bic_bit:raw_herring"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "create_bic_bit:tasteof_tradition"
+}

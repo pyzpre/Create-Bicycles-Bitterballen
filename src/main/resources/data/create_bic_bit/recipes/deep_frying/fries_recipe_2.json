@@ -10,7 +10,6 @@
       "fluid": "create_bic_bit:frying_oil"
     }
   ],
-  "processingTime": 100,
   "results": [
     {
       "item": "create_bic_bit:fries"

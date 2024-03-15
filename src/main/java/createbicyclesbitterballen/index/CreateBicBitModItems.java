@@ -1,7 +1,8 @@
 
 package createbicyclesbitterballen.index;
 
-import createbicyclesbitterballen.CreateBicBitModTabs;
+import com.simibubi.create.AllTags;
+import createbicyclesbitterballen.effect.ModEffects;
 import createbicyclesbitterballen.item.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -14,14 +15,12 @@ import com.tterrag.registrate.util.entry.ItemEntry;
 import static createbicyclesbitterballen.CreateBicBitMod.REGISTRATE;
 
 public class CreateBicBitModItems {
-	static { REGISTRATE.creativeModeTab(() -> CreateBicBitModTabs.CREATIVE_TAB); }
 	public static final ItemEntry<ChocolateGlazedStroopwafelItem> CHOCOLATE_GLAZED_STROOPWAFEL = REGISTRATE.item("chocolate_glazed_stroopwafel", ChocolateGlazedStroopwafelItem::new)
 			.properties(p -> p.food((new FoodProperties.Builder()).nutrition(9).saturationMod(0.7f).build()))
 			.register();
 	public static final ItemEntry<StroopwafelItem> STROOPWAFEL = REGISTRATE.item("stroopwafel", StroopwafelItem::new)
 			.properties(p -> p.food((new FoodProperties.Builder()).nutrition(7).saturationMod(0.5f).build()))
 			.register();
-
 	public static final ItemEntry<WrappedStroopwafelItem> WRAPPED_STROOPWAFEL = REGISTRATE.item("wrapped_stroopwafel", WrappedStroopwafelItem::new)
 			.properties(p -> p.food((new FoodProperties.Builder()).nutrition(7).saturationMod(0.5f).meat().build()))
 			.register();
@@ -40,8 +39,8 @@ public class CreateBicBitModItems {
 			.properties(p -> p.food((new FoodProperties.Builder()).nutrition(8).saturationMod(0.2f).meat().build()))
 			.register();
 	public static final ItemEntry<FrikandelSandwichItem> FRIKANDEL_SANDWICH = REGISTRATE.item("frikandel_sandwich", FrikandelSandwichItem::new)
-	.properties(p -> p.food((new FoodProperties.Builder()).nutrition(10).saturationMod(0.3f).meat().build()))
-	.register();
+			.properties(p -> p.food((new FoodProperties.Builder()).nutrition(10).saturationMod(0.3f).meat().build()))
+			.register();
 	public static final ItemEntry<Item> CRUSHED_SUNFLOWER_SEEDS = REGISTRATE.item("crushed_sunflower_seeds", Item::new).register();
 	public static final ItemEntry<SunflowerSeedsItem> SUNFLOWER_SEEDS = REGISTRATE.item("sunflower_seeds", SunflowerSeedsItem::new)
 			.properties(p -> p.food((new FoodProperties.Builder()).nutrition(1).saturationMod(0.1f).build()))
@@ -49,8 +48,8 @@ public class CreateBicBitModItems {
 	public static final ItemEntry<RoastedSunflowerSeedsItem> ROASTED_SUNFLOWER_SEEDS = REGISTRATE.item("roasted_sunflower_seeds", RoastedSunflowerSeedsItem::new)
 			.properties(p -> p.food((new FoodProperties.Builder()).nutrition(2).saturationMod(0.2f).build()))
 			.register();
-
 	public static final ItemEntry<StamppotBowlItem> STAMPPOT_BOWL = REGISTRATE.item("stamppot_bowl", StamppotBowlItem::new)
+			.tag(AllTags.AllItemTags.UPRIGHT_ON_BELT.tag)
 			.properties(p -> p.food((new FoodProperties.Builder()).nutrition(10).saturationMod(0.5f).build()))
 			.register();
 	public static final ItemEntry<SpeculaasItem> SPECULAAS = REGISTRATE.item("speculaas", SpeculaasItem::new)
@@ -97,8 +96,63 @@ public class CreateBicBitModItems {
 
 	public static final ItemEntry<Item> BASKET = REGISTRATE.item("andesite_basket", Item::new).register();
 
-	public static final ItemEntry<Item> FRYING_OIL_BUCKET = REGISTRATE.item("frying_oil_bucket", Item::new).register();
+	public static final ItemEntry<Item> FRYING_OIL_BUCKET = REGISTRATE.item("frying_oil_bucket", Item::new)
+			.tag(AllTags.AllItemTags.UPRIGHT_ON_BELT.tag)
+			.register();
+	public static final ItemEntry<Item> KETCHUP_BUCKET = REGISTRATE.item("ketchup_bucket", Item::new)
+			.tag(AllTags.AllItemTags.UPRIGHT_ON_BELT.tag)
+			.register();
+	public static final ItemEntry<Item> MAYONNAISE_BUCKET = REGISTRATE.item("mayonnaise_bucket", Item::new)
+			.tag(AllTags.AllItemTags.UPRIGHT_ON_BELT.tag)
+			.register();
+	public static final ItemEntry<Item> CRUSHED_NETHERWART = REGISTRATE.item("crushed_nether_wart", Item::new).register();
+	public static final ItemEntry<Item> RAW_HERRING = REGISTRATE.item("raw_herring", Item::new)
+			.properties(p -> p.food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.2f).meat().build()))
+			.register();
+	public static final ItemEntry<Item> COOKED_HERRING = REGISTRATE.item("cooked_herring", Item::new)
+			.properties(p -> p.food((new FoodProperties.Builder()).nutrition(6).saturationMod(0.4f).build()))
+			.register();
+	public static final ItemEntry<Item> KRUIDNOTEN = REGISTRATE.item("kruidnoten", Item::new)
+			.properties(p -> p.food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.4f).build()))
+			.register();
 
+	public static final ItemEntry<WrappedFriesItem> WRAPPED_KETCHUP_TOPPED_FRIES = REGISTRATE.item("wrapped_ketchup_topped_fries", WrappedFriesItem::new)
+			.properties(p -> p.food((new FoodProperties.Builder()).alwaysEat().nutrition(6).saturationMod(0.5f).effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0), 1F).build()))
+			.register();
+
+	public static final ItemEntry<FrikandelSandwichItem> KETCHUP_TOPPED_FRIKANDEL_SANDWICH = REGISTRATE.item("ketchup_topped_frikandel_sandwich", FrikandelSandwichItem::new)
+			.properties(p -> p.food((new FoodProperties.Builder()).alwaysEat().nutrition(10).saturationMod(0.3f).meat().effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0), 1F).build()))
+			.register();
+
+	public static final ItemEntry<KroketSandwichItem> KETCHUP_TOPPED_KROKET_SANDWICH = REGISTRATE.item("ketchup_topped_kroket_sandwich", KroketSandwichItem::new)
+			.properties(p -> p.food((new FoodProperties.Builder()).alwaysEat().nutrition(10).saturationMod(0.3f).meat().effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0), 1F).build()))
+			.register();
+	public static final ItemEntry<WrappedFriesItem> WRAPPED_MAYONNAISE_TOPPED_FRIES = REGISTRATE.item("wrapped_mayonnaise_topped_fries", WrappedFriesItem::new)
+			.properties(p -> p.food((new FoodProperties.Builder()).alwaysEat().nutrition(6).saturationMod(0.5f).effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 0), 1F).build()))
+			.register();
+
+	public static final ItemEntry<FrikandelSandwichItem> MAYONNAISE_TOPPED_FRIKANDEL_SANDWICH = REGISTRATE.item("mayonnaise_topped_frikandel_sandwich", FrikandelSandwichItem::new)
+			.properties(p -> p.food((new FoodProperties.Builder()).alwaysEat().nutrition(10).saturationMod(0.3f).meat().effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 0), 1F).build()))
+			.register();
+
+	public static final ItemEntry<KroketSandwichItem> MAYONNAISE_TOPPED_KROKET_SANDWICH = REGISTRATE.item("mayonnaise_topped_kroket_sandwich", KroketSandwichItem::new)
+			.properties(p -> p.food((new FoodProperties.Builder()).alwaysEat().nutrition(10).saturationMod(0.3f).meat().effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 0), 1F).build()))
+			.register();
+	public static final ItemEntry<FrikandelSandwichItem> MAYONNAISE_KETCHUP_TOPPED_FRIKANDEL_SANDWICH = REGISTRATE.item("mayonnaise_ketchup_topped_frikandel_sandwich", FrikandelSandwichItem::new)
+			.properties(p -> p.food((new FoodProperties.Builder()).alwaysEat().nutrition(10).saturationMod(0.3f).meat().effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 0), 1F).effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0), 1F).build()))
+			.register();
+
+	public static final ItemEntry<KroketSandwichItem> MAYONNAISE_KETCHUP_TOPPED_KROKET_SANDWICH = REGISTRATE.item("mayonnaise_ketchup_topped_kroket_sandwich", KroketSandwichItem::new)
+			.properties(p -> p.food((new FoodProperties.Builder()).alwaysEat().nutrition(10).saturationMod(0.3f).meat().effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 0), 1F).effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0), 1F).build()))
+			.register();
+
+	public static final ItemEntry<WrappedFriesItem> WRAPPED_MAYONNAISE_KETCHUP_TOPPED_FRIES = REGISTRATE.item("wrapped_mayonnaise_ketchup_topped_fries", WrappedFriesItem::new)
+			.properties(p -> p.food((new FoodProperties.Builder()).alwaysEat().nutrition(6).saturationMod(0.5f).effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 0), 1F).effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0), 1F).build()))
+			.register();
+
+	public static final ItemEntry<Item> ENDERBALL = REGISTRATE.item("enderball", Item::new)
+			.properties(p -> p.food((new FoodProperties.Builder()).alwaysEat().nutrition(10).saturationMod(0.10f).effect(() -> new MobEffectInstance(ModEffects.UNANCHORED.get(), 600, 0), 1F).build()))
+			.register();
 
 	public static void register() {
 	}

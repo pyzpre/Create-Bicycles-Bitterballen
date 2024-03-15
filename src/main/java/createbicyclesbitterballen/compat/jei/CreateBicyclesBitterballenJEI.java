@@ -29,12 +29,14 @@ import com.simibubi.create.content.trains.schedule.ScheduleScreen;
 import com.simibubi.create.foundation.config.ConfigBase.ConfigBool;
 
 import com.simibubi.create.foundation.gui.menu.AbstractSimiContainerScreen;
+import com.simibubi.create.foundation.item.ItemHelper;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
 import com.simibubi.create.foundation.utility.Lang;
 import com.simibubi.create.infrastructure.config.AllConfigs;
 import com.simibubi.create.infrastructure.config.CRecipes;
 
 import createbicyclesbitterballen.CreateBicBitMod;
+import createbicyclesbitterballen.block.mechanicalfryer.DeepFryingRecipe;
 import createbicyclesbitterballen.index.BlockRegistry;
 import createbicyclesbitterballen.index.RecipeRegistry;
 import mezz.jei.api.IModPlugin;
@@ -52,6 +54,7 @@ import mezz.jei.api.registration.IRecipeTransferRegistration;
 
 import mezz.jei.api.runtime.IIngredientManager;
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
@@ -77,13 +80,13 @@ public class CreateBicyclesBitterballenJEI implements IModPlugin {
         CreateRecipeCategory<?>
 
 
-                frying = builder(BasinRecipe.class)
-                        .addTypedRecipes(RecipeRegistry.DEEP_FRYING)
-                        .catalyst(BlockRegistry.MECHANICAL_FRYER::get)
-                        .catalyst(AllBlocks.BASIN::get)
-                        .doubleItemIcon(BlockRegistry.MECHANICAL_FRYER.get(), AllBlocks.BASIN.get())
-                        .emptyBackground(177, 103)
-                        .build("frying", FryingCategory::standard);
+                frying = builder(DeepFryingRecipe.class)
+                .addTypedRecipes(RecipeRegistry.DEEP_FRYING)
+                .catalyst(BlockRegistry.MECHANICAL_FRYER::get)
+                .catalyst(AllBlocks.BASIN::get)
+                .doubleItemIcon(BlockRegistry.MECHANICAL_FRYER.get(), AllBlocks.BASIN.get())
+                .emptyBackground(177, 103)
+                .build("frying", FryingCategory::standard);
 
     }
 
