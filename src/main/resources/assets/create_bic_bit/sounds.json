@@ -1,0 +1,11 @@
+{
+  "frying": {
+    "sounds": [
+      {
+        "type": "event",
+        "name": "minecraft:weather.rain"
+      }
+    ],
+    "subtitle": "create_bic_bit.subtitle.frying"
+  }
+}

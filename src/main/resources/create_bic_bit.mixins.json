@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.pyzpre.create_bic_bit.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "create_bic_bit.refmap.json",
+  "mixins": [
+    "SunflowerMixin",
+    "HarvesterMixin",
+    "FrictionMixin"
+  ]
+}

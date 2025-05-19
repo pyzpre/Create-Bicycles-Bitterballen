@@ -1,0 +1,52 @@
+{
+  "display": {
+    "icon": {
+      "item": "create_bic_bit:young_cheese_wedge"
+    },
+    "title": {
+      "translate": "advancements.cheese.title"
+    },
+    "description": {
+      "translate": "advancements.cheese.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cheese": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:cheese",
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "cheese2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "create_bic_bit:cheese_wheel",
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cheese",
+      "cheese2"
+    ]
+  ],
+  "parent": "create_bic_bit:dutch_mentality"
+}

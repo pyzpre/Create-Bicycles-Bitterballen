@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "experience": 0,
+  "cookingtime": 600,
+  "ingredient": {
+    "item": "create_bic_bit:sweet_dough"
+  },
+  "result": "create_bic_bit:speculaas"
+}

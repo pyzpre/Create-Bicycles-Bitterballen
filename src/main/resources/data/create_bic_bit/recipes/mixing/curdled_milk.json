@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:crushed_nether_wart"
+    },
+    {
+      "amount": 250,
+      "fluid": "minecraft:milk"
+    }
+  ],
+  "results": [
+    {
+      "amount": 250,
+      "fluid": "create_bic_bit:curdled_milk"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id":"create_bic_bit:stroopwafel","required":false},
+    {"id":"create_bic_bit:chocolate_glazed_stroopwafel","required":false}
+  ]
+}

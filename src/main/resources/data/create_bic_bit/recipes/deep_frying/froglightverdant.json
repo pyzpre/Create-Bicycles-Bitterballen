@@ -1,0 +1,23 @@
+{
+  "type": "create_bic_bit:deep_frying",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:magma_block"
+    },
+    {
+      "fluid": "create:potion",
+      "amount": 250,
+      "nbt": {
+        "Bottle": "REGULAR",
+        "Potion": "minecraft:leaping"
+      }
+    }
+  ],
+  "processingTime": 100,
+  "results": [
+    {
+      "item": "minecraft:verdant_froglight"
+    }
+  ]
+}

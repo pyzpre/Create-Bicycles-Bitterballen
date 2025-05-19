@@ -1,0 +1,17 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:unripe_cheese"
+    },
+    {
+      "item": "minecraft:honeycomb_block"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_bic_bit:waxed_unripe_cheese"
+    }
+  ],
+  "keepHeldItem": true
+}

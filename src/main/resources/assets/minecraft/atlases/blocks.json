@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "type": "single",
+      "resource": "create_bic_bit:fluid/frying_oil_flow"
+    },
+    {
+      "type": "single",
+      "resource": "create_bic_bit:fluid/frying_oil_still"
+    },
+    {
+      "type": "single",
+      "resource": "create_bic_bit:fluid/ketchup_flow"
+    },
+    {
+      "type": "single",
+      "resource": "create_bic_bit:fluid/ketchup_still"
+    },
+    {
+      "type": "single",
+      "resource": "create_bic_bit:fluid/mayonnaise_flow"
+    },
+    {
+      "type": "single",
+      "resource": "create_bic_bit:fluid/mayonnaise_still"
+    },
+    {
+      "type": "single",
+      "resource": "create_bic_bit:fluid/curdled_milk_flow"
+    },
+    {
+      "type": "single",
+      "resource": "create_bic_bit:fluid/curdled_milk_still"
+    },
+    {
+      "type": "single",
+      "resource": "create_bic_bit:fluid/stamppot_flow"
+    },
+    {
+      "type": "single",
+      "resource": "create_bic_bit:fluid/stamppot_still"
+    }
+  ]
+}

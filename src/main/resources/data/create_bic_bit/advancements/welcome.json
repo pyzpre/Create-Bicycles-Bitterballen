@@ -1,0 +1,29 @@
+{
+  "display": {
+    "background": "create_bic_bit:textures/screens/tulipbanner.png",
+    "icon": {
+      "item": "create_bic_bit:bitterballen"
+    },
+    "title": {
+      "translate": "advancements.welcome.title"
+    },
+    "description": {
+      "translate": "advancements.welcome.descr"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "inventory_changed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {}
+    }
+  },
+  "requirements": [
+    [
+      "inventory_changed"
+    ]
+  ]
+}

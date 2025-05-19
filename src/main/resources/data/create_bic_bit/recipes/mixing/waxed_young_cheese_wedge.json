@@ -1,0 +1,16 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:waxed_young_cheese"
+
+    }
+  ],
+  "results": [
+    {
+
+      "item": "create_bic_bit:young_cheese_wedge",
+      "count": 4
+    }
+  ]
+}
