@@ -1,0 +1,13 @@
+{
+  "damage": 4,
+  "reload_ticks": 10,
+  "velocity_multiplier": 1.45,
+  "knockback": 0.3,
+  "render_mode": {
+    "type": "create:toward_motion",
+    "sprite_angle_offset": 140,
+    "spin": 1
+  },
+  "sound_pitch": 1.5,
+  "items": "create_bic_bit:frikandel"
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F",
+    "B"
+  ],
+  "key": {
+    "F": {
+      "item": "create_bic_bit:fries"
+    },
+    "B": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "create_bic_bit:wrapped_fries",
+    "count": 1
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "display": {
+
+    "icon": {
+      "item": "create_bic_bit:sweet_dough"
+    },
+    "title": {
+      "translate": "advancements.sweet_dough.title"
+    },
+    "description": {
+      "translate": "advancements.sweet_dough.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "tasteof_tradition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_bic_bit:sweet_dough"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "create_bic_bit:welcome"
+}

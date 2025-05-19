@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "create_bic_bit:mayonnaise_bottle"
+    },
+    "title": {
+      "translate": "advancements.comfort_food.title"
+    },
+    "description": {
+      "translate": "advancements.comfort_food.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "consumed_mayonnaise": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "create_bic_bit:mayonnaise_bottle"
+          ],
+          "count": {
+            "min": 1
+          }
+        }
+      }
+    }
+  },
+  "parent": "create_bic_bit:spanish_inquisition"
+}

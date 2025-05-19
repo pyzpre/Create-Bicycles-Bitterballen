@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:sweet_dough"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_bic_bit:unbaked_stroopwafel"
+    }
+  ]
+}

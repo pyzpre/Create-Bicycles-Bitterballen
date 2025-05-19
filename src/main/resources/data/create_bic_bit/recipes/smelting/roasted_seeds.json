@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "group": "food",
+  "category": "food",
+  "experience": 0.2,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "create_bic_bit:sunflower_seeds"
+  },
+  "result": "create_bic_bit:roasted_sunflower_seeds"
+}

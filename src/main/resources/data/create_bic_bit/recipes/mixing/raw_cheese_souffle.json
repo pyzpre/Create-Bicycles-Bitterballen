@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "forge:cheese"
+    },
+    {
+      "item": "create:wheat_flour"
+
+    }
+  ],
+  "results": [
+    {
+
+      "item": "create_bic_bit:raw_cheese_souffle"
+    }
+  ]
+}

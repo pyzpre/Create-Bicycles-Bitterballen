@@ -1,0 +1,22 @@
+{  "conditions": [
+  {
+    "type": "forge:mod_loaded",
+    "modid": "farmersdelight"
+  }
+],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:waxed_unripe_cheese"
+    }
+  ],
+  "result": [
+    {
+      "count": 4,
+      "item": "create_bic_bit:unripe_cheese_wedge"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

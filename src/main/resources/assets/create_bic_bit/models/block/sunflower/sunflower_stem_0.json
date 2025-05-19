@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "create_bic_bit:block/sunflower/sun_flower_0"
+  }
+}
