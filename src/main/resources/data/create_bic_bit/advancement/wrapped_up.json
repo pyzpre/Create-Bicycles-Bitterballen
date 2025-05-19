@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:paper"
+    },
+    "title": {
+      "translate": "advancements.wrapped_up.title"
+    },
+    "description": {
+      "translate": "advancements.wrapped_up.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "wrapped_up": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#create_bic_bit:wrapped_snacks"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "create_bic_bit:spanish_inquisition"
+}

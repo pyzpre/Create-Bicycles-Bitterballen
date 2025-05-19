@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": {
+      "id": "create_bic_bit:frying_oil_bucket"
+    },
+    "title": {
+      "translate": "advancements.local_snackbar.title"
+    },
+    "description": {
+      "translate": "advancements.local_snackbar.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "got_snack": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#create_bic_bit:snacks"
+          }
+        ]
+      }
+    },
+    "got_snack_deepfried": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#create_bic_bit:snacks_deepfried"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "got_snack",
+      "got_snack_deepfried"
+    ]
+  ],
+  "parent": "create_bic_bit:lawn_defender"
+}

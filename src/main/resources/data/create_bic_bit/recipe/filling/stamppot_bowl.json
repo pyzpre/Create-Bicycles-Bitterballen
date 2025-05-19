@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 250,
+      "fluid": "create_bic_bit:stamppot"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_bic_bit:stamppot_bowl"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes":  [
+    "minecraft:cold_ocean",
+    "minecraft:frozen_ocean",
+    "minecraft:deep_ocean",
+    "minecraft:ocean"
+  ],
+  "spawners": [
+    {
+      "type": "create_bic_bit:herring",
+      "weight": 15,
+      "minCount": 2,
+      "maxCount": 5
+    }
+  ]
+}

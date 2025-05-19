@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smoking",
+  "group": "food",
+  "category": "food",
+  "experience": 0.2,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "create_bic_bit:raw_herring"
+  },
+  "result": {
+    "count": 1,
+    "id": "create_bic_bit:cooked_herring"
+  }
+}

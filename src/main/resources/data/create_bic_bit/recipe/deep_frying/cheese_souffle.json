@@ -1,0 +1,22 @@
+{
+  "type": "create_bic_bit:deep_frying",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:raw_cheese_souffle"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 125,
+      "fluid": "create_bic_bit:frying_oil"
+    }
+  ],
+  "results": [
+    {
+      "item": {
+        "count": 1,
+        "id": "create_bic_bit:cheese_souffle"
+      }
+    }
+  ]
+}

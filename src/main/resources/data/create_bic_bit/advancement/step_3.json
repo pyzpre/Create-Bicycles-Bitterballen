@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:elytra"
+    },
+    "title": {
+      "translate": "advancements.step_3.title"
+    },
+    "description": {
+      "translate": "advancements.step_3.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "got_levitation": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "create_bic_bit:fry_about_it"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "create_mechanical_extruder:extruding",
+  "blockIngredients": {
+    "first": {
+      "blocks": "create_bic_bit:frying_oil"
+    },
+    "second": {
+      "blocks": "minecraft:lava"
+    }
+  },
+  "result": {
+    "id": "create_bic_bit:crystallised_oil"
+  }
+}

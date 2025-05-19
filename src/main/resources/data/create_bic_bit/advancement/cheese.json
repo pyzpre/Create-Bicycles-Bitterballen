@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "create_bic_bit:young_cheese_wedge"
+    },
+    "title": {
+      "translate": "advancements.cheese.title"
+    },
+    "description": {
+      "translate": "advancements.cheese.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "placed_cheese": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "placed_cheese"
+    ]
+  ],
+  "parent": "create_bic_bit:dutch_mentality"
+}

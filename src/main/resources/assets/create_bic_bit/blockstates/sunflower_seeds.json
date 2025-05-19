@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "age=0,half=lower": { "model": "create_bic_bit:block/sunflower/sunflower_stem_0" },
+    "age=1,half=lower": { "model": "create_bic_bit:block/sunflower/sunflower_stem_3" },
+    "age=2,half=lower": { "model": "create_bic_bit:block/sunflower/sunflower_stem_1" },
+    "age=2,half=upper": { "model": "create_bic_bit:block/sunflower/sunflower_stem_2" }
+  }
+}

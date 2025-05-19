@@ -1,0 +1,21 @@
+{
+    "type": "create_bic_bit:deep_frying",
+    "heat_requirement": "heated",
+    "ingredients": [
+        {
+            "tag": "c:ice"
+        },
+        {
+            "type": "fluid_stack",
+            "amount": 125,
+            "fluid": "create_bic_bit:frying_oil"
+        }
+    ],
+    "processingTime": 100,
+    "results": [
+        {
+            "id": "minecraft:water",
+            "amount": 500
+        }
+    ]
+}

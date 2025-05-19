@@ -1,0 +1,24 @@
+{
+  "type": "create:filling",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "farmersdelight:wheat_dough"
+    },
+    {
+      "type": "fluid_tag",
+      "amount": 125,
+      "fluid_tag": "c:honey"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_bic_bit:sweet_dough"
+    }
+  ]
+}

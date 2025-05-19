@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "farmersdelight:minced_beef",
+    "farmersdelight:chicken_cuts",
+    "farmersdelight:bacon",
+    "farmersdelight:mutton_chops",
+    "farmersdelight:ham"
+  ]
+}

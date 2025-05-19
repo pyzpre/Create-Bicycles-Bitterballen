@@ -1,0 +1,24 @@
+{  "neoforge:conditions": [
+  {
+    "type": "neoforge:mod_loaded",
+    "modid": "farmersdelight"
+  }
+],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:waxed_young_cheese"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 4,
+        "id": "create_bic_bit:young_cheese_wedge"
+      }
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  }
+}

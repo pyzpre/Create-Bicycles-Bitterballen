@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "create:dough"
+
+    },
+    {
+      "item": "minecraft:sugar"
+
+    }
+  ],
+  "results": [
+    {
+
+      "id": "create_bic_bit:raw_churros"
+    }
+  ]
+}

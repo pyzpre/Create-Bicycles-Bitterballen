@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "experience": 0,
+  "cookingtime": 600,
+  "ingredient": {
+    "item": "create_bic_bit:unbaked_stroopwafel"
+  },
+  "result": {
+    "count": 1,
+    "id": "create_bic_bit:stroopwafel"
+  }
+}

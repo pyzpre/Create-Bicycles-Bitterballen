@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "experience": 0.2,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "create_bic_bit:sweet_dough"
+  },
+  "result": {
+    "count": 1,
+    "id": "create_bic_bit:speculaas"
+  }
+}

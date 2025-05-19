@@ -1,0 +1,19 @@
+{
+  "type": "create_bic_bit:deep_frying",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:magma_block"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 1000,
+      "fluid": "create_bic_bit:frying_oil"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_bic_bit:crystallised_oil"
+    }
+  ]
+}

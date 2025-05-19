@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "create_bic_bit:unripe_cheese",
+    "create_bic_bit:waxed_unripe_cheese",
+    "create_bic_bit:young_cheese",
+    "create_bic_bit:waxed_young_cheese",
+    "create_bic_bit:aged_cheese",
+    "create_bic_bit:waxed_aged_cheese"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "create_bic_bit:enderball"
+    },
+    "title": {
+      "translate": "advancements.enderball.title"
+    },
+    "description": {
+      "translate": "advancements.enderball.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "consumed_mayonnaise": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "create_bic_bit:enderball"
+          ],
+          "count": {
+            "min": 1
+          }
+        }
+      }
+    }
+  },
+  "parent": "create_bic_bit:spanish_inquisition"
+}

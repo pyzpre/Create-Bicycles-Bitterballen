@@ -1,0 +1,23 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "c:raw_meat"
+    },
+    {
+      "item": "create:wheat_flour"
+
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 125,
+      "fluid": "minecraft:milk"
+    }
+  ],
+  "results": [
+    {
+
+      "id": "create_bic_bit:raw_bitterballen"
+    }
+  ]
+}

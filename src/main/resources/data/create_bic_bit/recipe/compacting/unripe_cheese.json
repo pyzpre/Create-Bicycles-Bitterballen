@@ -1,0 +1,15 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "type": "fluid_stack",
+      "amount": 500,
+      "fluid": "create_bic_bit:curdled_milk"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_bic_bit:unripe_cheese"
+    }
+  ]
+}

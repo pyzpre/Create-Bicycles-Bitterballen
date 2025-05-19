@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "group": "food",
+  "category": "food",
+  "experience": 0,
+  "cookingtime": 600,
+  "ingredient": {
+    "item": "create_bic_bit:raw_herring"
+  },
+  "result": {
+    "count": 1,
+    "id": "create_bic_bit:cooked_herring"
+  }
+}

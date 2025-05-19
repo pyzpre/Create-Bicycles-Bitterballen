@@ -1,0 +1,19 @@
+{
+  "type": "create_bic_bit:deep_frying",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "create_bic_bit:raw_frikandel"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 125,
+      "fluid": "create_bic_bit:frying_oil"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_bic_bit:frikandel"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "values": [
+    "create_bic_bit:stamppot_bowl",
+    "minecraft:bowl",
+    "create_bic_bit:curdled_milk_bucket",
+    "create_bic_bit:ketchup_bucket",
+    "create_bic_bit:mayonnaise_bucket",
+    "create_bic_bit:frying_oil_bucket",
+    "create_bic_bit:frying_oil_bottle",
+    "create_bic_bit:ketchup_bottle",
+    "create_bic_bit:mayonnaise_bottle"
+  ]
+}

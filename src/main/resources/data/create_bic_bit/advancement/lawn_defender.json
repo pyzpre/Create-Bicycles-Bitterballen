@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:sunflower"
+    },
+    "title": {
+      "translate": "advancements.lawn_defender.title"
+    },
+    "description": {
+      "translate": "advancements.lawn_defender.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "harvested_sunflower": {
+      "trigger": "minecraft:impossible"
+    },
+    "obtained_sunflower_head": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sunflower"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "harvested_sunflower",
+      "obtained_sunflower_head"
+    ]
+  ],
+  "parent": "create_bic_bit:welcome"
+}
