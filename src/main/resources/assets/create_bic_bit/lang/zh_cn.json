@@ -140,8 +140,8 @@
 
   "create_bic_bit.ponder.mechanical_fryer.header" : "使用动力炸锅处理物品",
   "create_bic_bit.ponder.mechanical_fryer.text_1" : "使用炸锅和工作盆，可以油炸一些食物",
-  "create_bic_bit.ponder.mechanical_fryer.text_2" : "向盆中注入炸油",
-  "create_bic_bit.ponder.mechanical_fryer.text_3" : "油炸需要烈焰人燃烧室的热量",
+  "create_bic_bit.ponder.mechanical_fryer.text_2" : "向工作盆中注入炸油",
+  "create_bic_bit.ponder.mechanical_fryer.text_3" : "油炸需要烈焰人燃烧室提供热量",
 
   "item.create_bic_bit.cheese.tooltip.part1": "剪切以收集",
   "item.create_bic_bit.cheese.tooltip.part2": "块楔形奶酪，",
