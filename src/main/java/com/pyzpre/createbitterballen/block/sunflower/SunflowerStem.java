@@ -165,9 +165,9 @@ public class SunflowerStem extends DoublePlantBlock implements BonemealableBlock
         }
 
         if (currentAge == 2) {
-            boolean isAboveBlockRemoved = world.removeBlock(pos.above(), false);
-            if (isAboveBlockRemoved) {
-                DoublePlantBlock.placeAt(world, Blocks.SUNFLOWER.defaultBlockState(), pos, 3);
+            boolean AboveBlockRemoved = world.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 18);
+            if (AboveBlockRemoved) {
+                DoublePlantBlock.placeAt(world, Blocks.SUNFLOWER.defaultBlockState(), pos, 18);
             }
         }
     }

@@ -2,9 +2,7 @@ package com.pyzpre.createbitterballen.mixin;
 
 import com.pyzpre.createbitterballen.block.sunflower.SunflowerStem;
 import com.pyzpre.createbitterballen.index.BlockRegistry;
-import com.pyzpre.createbitterballen.index.ItemRegistry;
 import com.simibubi.create.api.contraption.storage.item.MountedItemStorageWrapper;
-import com.simibubi.create.content.contraptions.MountedStorageManager;
 import com.simibubi.create.content.contraptions.actors.harvester.HarvesterMovementBehaviour;
 import com.simibubi.create.content.contraptions.behaviour.MovementContext;
 import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
@@ -59,6 +57,7 @@ public abstract class HarvesterMixin {
         long inserted;
         try(Transaction t = Transaction.openOuter()) {
             inserted = internalStorage.insert(ItemVariant.of(Items.SUNFLOWER), 1, t);
+            t.commit();
         }
 
         // Drop it on the ground if it couldn't be inserted
