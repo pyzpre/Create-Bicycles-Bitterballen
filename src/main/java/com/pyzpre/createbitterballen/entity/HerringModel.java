@@ -104,7 +104,7 @@ public class HerringModel<T extends Entity> extends EntityModel<T> {
         }
 
         // If not in fluid, lay on its side but still animate
-        if (!herring.isInFluidType()) {
+        if (!herring.isInWater()) {
             // Lay the fish on its side by adjusting the roll.
             // You can choose xRot or zRot depending on how your model is oriented.
             // For example, if we assume rotating around Z makes it look like it's lying on its side:

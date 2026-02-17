@@ -4,37 +4,44 @@ package com.pyzpre.createbitterballen.events;
 import com.pyzpre.createbitterballen.CreateBitterballen;
 import com.pyzpre.createbitterballen.entity.HerringModel;
 import com.pyzpre.createbitterballen.entity.HerringRenderer;
+import com.pyzpre.createbitterballen.index.BlockRegistry;
 import com.pyzpre.createbitterballen.index.EffectRegistry;
 import com.pyzpre.createbitterballen.index.EntityRegistry;
+import com.pyzpre.createbitterballen.index.FluidRegistry;
+import com.pyzpre.createbitterballen.ponder.BitterOrbPonderPlugin;
 import com.pyzpre.createbitterballen.util.DeepfriedSoundInstance;
+import io.github.fabricators_of_create.porting_lib.client_events.event.client.PlaySoundCallback;
+import net.createmod.ponder.foundation.PonderIndex;
+import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.PostChain;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.resources.sounds.SoundInstance;
+import net.minecraft.client.sounds.SoundEngine;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.client.event.RenderLevelStageEvent;
-import net.minecraftforge.client.event.sound.PlaySoundEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 
 import java.util.Random;
 
-@Mod.EventBusSubscriber(modid = CreateBitterballen.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-public class ClientModEventSubscriber {
+public class ClientModEventSubscriber implements ClientModInitializer {
+    @Override
+    public void onInitializeClient() {
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.CRYSTALLISED_OIL.get(), RenderType.translucent());
+        PonderIndex.addPlugin(new BitterOrbPonderPlugin());
 
-    @SubscribeEvent
-    public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerEntityRenderer(EntityRegistry.HERRING.get(), HerringRenderer::new);
+        ClientTickEvents.END_CLIENT_TICK.register(ClientSetup::onClientTick);
+        PlaySoundCallback.EVENT.register(SoundModifier::onPlaySound);
+
+        EntityRendererRegistry.register(EntityRegistry.HERRING.get(), HerringRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(HerringModel.LAYER_LOCATION, HerringModel::createBodyLayer);
+        ScreenEvents.AFTER_INIT.register(TitleScreenHandler::onTitleScreenInit);
     }
 
-    @SubscribeEvent
-    public static void onRegisterLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(HerringModel.LAYER_LOCATION, HerringModel::createBodyLayer);
-    }
-    @Mod.EventBusSubscriber(modid = CreateBitterballen.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
     public class ClientSetup {
 
         private static PostChain grayscaleShader;
@@ -61,12 +68,7 @@ public class ClientModEventSubscriber {
             }
         }
 
-        @SubscribeEvent
-        public static void onRenderLevelStage(RenderLevelStageEvent event) {
-            if (event.getStage() != RenderLevelStageEvent.Stage.AFTER_WEATHER) {
-                return;
-            }
-
+        public static void onRenderLevelStage(float partialTick) {
             Minecraft mc = Minecraft.getInstance();
 
             if (mc.player != null) {
@@ -85,7 +87,7 @@ public class ClientModEventSubscriber {
 
                         if (grayscaleShader != null) {
                             try {
-                                grayscaleShader.process(event.getPartialTick());
+                                grayscaleShader.process(partialTick);
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
@@ -106,12 +108,7 @@ public class ClientModEventSubscriber {
         /**
          * Handles window resizing manually by checking the current window size during client ticks.
          */
-        @SubscribeEvent
-        public static void onClientTick(TickEvent.ClientTickEvent event) {
-            if (event.phase != TickEvent.Phase.END) {
-                return; // Only run at the end of the tick
-            }
-
+        public static void onClientTick(Minecraft minecraft) {
             resizeShaderIfNeeded();
         }
 
@@ -141,19 +138,14 @@ public class ClientModEventSubscriber {
         }
     }
 
-    @Mod.EventBusSubscriber(modid = CreateBitterballen.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
     public class SoundModifier {
-
-        @SubscribeEvent
-        public static void onPlaySound(PlaySoundEvent event) {
+        public static SoundInstance onPlaySound(SoundEngine engine, SoundInstance sound, SoundInstance originalSound) {
             Minecraft mc = Minecraft.getInstance();
 
             if (mc.player != null) {
                 MobEffectInstance effect = mc.player.getEffect(EffectRegistry.OILED_UP.get());
 
                 if (effect != null && effect.getAmplifier() >= 2) {
-                    SoundInstance originalSound = event.getOriginalSound();
-
                     if (originalSound != null) {
                         ResourceLocation soundLocation = originalSound.getLocation();
 
@@ -161,8 +153,7 @@ public class ClientModEventSubscriber {
                                 soundLocation.toString().equals("minecraft:entity.minecart.riding") ||
                                 soundLocation.toString().equals("create:cogs") ||
                                 soundLocation.toString().equals("minecraft:entity.minecart.inside.underwater")) {
-                            event.setSound(null); // Suppress the sound completely
-                            return;
+                            return null;
                         }
 
 
@@ -197,10 +188,11 @@ public class ClientModEventSubscriber {
                         modifiedSound.resolve(mc.getSoundManager());
 
                         // Set the modified sound to play
-                        event.setSound(modifiedSound);
+                        return modifiedSound;
                     }
                 }
             }
+            return sound;
         }
     }
 }

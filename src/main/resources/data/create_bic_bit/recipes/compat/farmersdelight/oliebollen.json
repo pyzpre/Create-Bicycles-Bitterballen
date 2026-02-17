@@ -1,10 +1,12 @@
 {
   "type": "create_bic_bit:deep_frying",
   "heatRequirement": "heated",
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "type": "forge:mod_loaded",
-      "modid": "farmersdelight"
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "farmersdelight"
+      ]
     }
   ],
   "ingredients": [

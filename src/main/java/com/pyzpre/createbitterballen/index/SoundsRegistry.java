@@ -3,8 +3,12 @@ package com.pyzpre.createbitterballen.index;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.pyzpre.createbitterballen.CreateBitterballen;
+import com.pyzpre.createbitterballen.mixin.DataGeneratorAccessor;
+import io.github.fabricators_of_create.porting_lib.util.RegistryObject;
 import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
 import net.minecraft.core.Vec3i;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
@@ -18,9 +22,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegisterEvent;
-import net.minecraftforge.registries.RegistryObject;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -55,11 +56,9 @@ public class SoundsRegistry {
             entry.prepare();
     }
 
-    public static void register(RegisterEvent event) {
-        event.register(Registries.SOUND_EVENT, helper -> {
-            for (SoundEntry entry : ALL.values())
-                entry.register(helper);
-        });
+    public static void register() {
+        for (SoundEntry entry : ALL.values())
+            entry.register();
     }
 
     public static void provideLang(BiConsumer<String, String> consumer) {
@@ -75,12 +74,14 @@ public class SoundsRegistry {
     public static void playItemPickup(Player player) {
         player.level().playSound(null, player.blockPosition(), SoundEvents.ITEM_PICKUP, SoundSource.PLAYERS, .2f,
                 1f + CreateBitterballen.RANDOM.nextFloat());
-    }private static class SoundEntryProvider implements DataProvider {
+    }
+
+    private static class SoundEntryProvider implements DataProvider {
 
         private PackOutput output;
 
         public SoundEntryProvider(DataGenerator generator) {
-            output = generator.getPackOutput();
+            output = ((DataGeneratorAccessor)generator).create_bic_bit$getPackOutput();
         }
 
         @Override
@@ -169,7 +170,7 @@ public class SoundsRegistry {
         }
 
         public SoundEntryBuilder playExisting(Holder<SoundEvent> event) {
-            return playExisting(event::get, 1, 1);
+            return playExisting(event::value, 1, 1);
         }
 
         public SoundEntry build() {
@@ -198,7 +199,7 @@ public class SoundsRegistry {
 
         public abstract void prepare();
 
-        public abstract void register(RegisterEvent.RegisterHelper<SoundEvent> registry);
+        public abstract void register();
 
         public abstract void write(JsonObject json);
 
@@ -280,23 +281,22 @@ public class SoundsRegistry {
             for (int i = 0; i < wrappedEvents.size(); i++) {
                 ConfiguredSoundEvent wrapped = wrappedEvents.get(i);
                 ResourceLocation location = getIdOf(i);
-                RegistryObject<SoundEvent> event = RegistryObject.create(location, ForgeRegistries.SOUND_EVENTS);
-                compiledEvents.add(new CompiledSoundEvent(event, wrapped.volume(), wrapped.pitch()));
+                compiledEvents.add(new CompiledSoundEvent(location, wrapped.volume(), wrapped.pitch()));
             }
         }
 
         @Override
-        public void register(RegisterEvent.RegisterHelper<SoundEvent> helper) {
+        public void register() {
             for (CompiledSoundEvent compiledEvent : compiledEvents) {
-                ResourceLocation location = compiledEvent.event().getId();
-                helper.register(location, SoundEvent.createVariableRangeEvent(location));
+                ResourceLocation location = compiledEvent.eventId();
+                Registry.register(BuiltInRegistries.SOUND_EVENT, location, SoundEvent.createVariableRangeEvent(location));
             }
         }
 
         @Override
         public SoundEvent getMainEvent() {
             return compiledEvents.get(0)
-                    .event().get();
+                    .event();
         }
 
         protected ResourceLocation getIdOf(int i) {
@@ -328,7 +328,7 @@ public class SoundsRegistry {
         @Override
         public void play(Level world, Player entity, double x, double y, double z, float volume, float pitch) {
             for (CompiledSoundEvent event : compiledEvents) {
-                world.playSound(entity, x, y, z, event.event().get(), category, event.volume() * volume,
+                world.playSound(entity, x, y, z, event.event(), category, event.volume() * volume,
                         event.pitch() * pitch);
             }
         }
@@ -336,12 +336,15 @@ public class SoundsRegistry {
         @Override
         public void playAt(Level world, double x, double y, double z, float volume, float pitch, boolean fade) {
             for (CompiledSoundEvent event : compiledEvents) {
-                world.playLocalSound(x, y, z, event.event().get(), category, event.volume() * volume,
+                world.playLocalSound(x, y, z, event.event(), category, event.volume() * volume,
                         event.pitch() * pitch, fade);
             }
         }
 
-        private record CompiledSoundEvent(RegistryObject<SoundEvent> event, float volume, float pitch) {
+        private record CompiledSoundEvent(ResourceLocation eventId, float volume, float pitch) {
+            public SoundEvent event() {
+                return BuiltInRegistries.SOUND_EVENT.get(eventId);
+            }
         }
 
     }
@@ -349,7 +352,7 @@ public class SoundsRegistry {
     private static class CustomSoundEntry extends SoundEntry {
 
         protected List<ResourceLocation> variants;
-        protected RegistryObject<SoundEvent> event;
+        protected ResourceLocation eventId;
 
         public CustomSoundEntry(ResourceLocation id, List<ResourceLocation> variants, String subtitle,
                                 SoundSource category, int attenuationDistance) {
@@ -359,18 +362,18 @@ public class SoundsRegistry {
 
         @Override
         public void prepare() {
-            event = RegistryObject.create(id, ForgeRegistries.SOUND_EVENTS);
+            eventId = id;
         }
 
         @Override
-        public void register(RegisterEvent.RegisterHelper<SoundEvent> helper) {
-            ResourceLocation location = event.getId();
-            helper.register(location, SoundEvent.createVariableRangeEvent(location));
+        public void register() {
+            ResourceLocation location = eventId;
+            Registry.register(BuiltInRegistries.SOUND_EVENT, location, SoundEvent.createVariableRangeEvent(location));
         }
 
         @Override
         public SoundEvent getMainEvent() {
-            return event.get();
+            return BuiltInRegistries.SOUND_EVENT.get(eventId);
         }
 
         @Override
@@ -402,12 +405,12 @@ public class SoundsRegistry {
 
         @Override
         public void play(Level world, Player entity, double x, double y, double z, float volume, float pitch) {
-            world.playSound(entity, x, y, z, event.get(), category, volume, pitch);
+            world.playSound(entity, x, y, z, getMainEvent(), category, volume, pitch);
         }
 
         @Override
         public void playAt(Level world, double x, double y, double z, float volume, float pitch, boolean fade) {
-            world.playLocalSound(x, y, z, event.get(), category, volume, pitch, fade);
+            world.playLocalSound(x, y, z, getMainEvent(), category, volume, pitch, fade);
         }
 
     }

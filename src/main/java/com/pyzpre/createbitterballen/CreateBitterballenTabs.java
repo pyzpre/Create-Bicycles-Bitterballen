@@ -3,22 +3,22 @@ package com.pyzpre.createbitterballen;
 import com.pyzpre.createbitterballen.index.BlockRegistry;
 import com.pyzpre.createbitterballen.index.FluidRegistry;
 import com.pyzpre.createbitterballen.index.ItemRegistry;
+import io.github.fabricators_of_create.porting_lib.util.LazyRegistrar;
+import io.github.fabricators_of_create.porting_lib.util.RegistryObject;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
 
 public class CreateBitterballenTabs {
 
-	private static final DeferredRegister<CreativeModeTab> TAB_REGISTER =
-			DeferredRegister.create(Registries.CREATIVE_MODE_TAB, "create_bic_bit");
+	private static final LazyRegistrar<CreativeModeTab> TAB_REGISTER =
+			LazyRegistrar.create(Registries.CREATIVE_MODE_TAB, "create_bic_bit");
 
 	public static final RegistryObject<CreativeModeTab> BITTERBALLEN =
 			TAB_REGISTER.register("tabs",
-					() -> CreativeModeTab.builder()
+					() -> FabricItemGroup.builder()
 							.title(Component.translatable("item_group.create_bic_bit.tabs"))
 							.icon(() -> new ItemStack(ItemRegistry.STROOPWAFEL.get()))
 							.displayItems((parameters, tabData) -> {
@@ -94,7 +94,7 @@ public class CreateBitterballenTabs {
 							})
 							.build());
 
-	public static void register(IEventBus eventBus) {
-		TAB_REGISTER.register(eventBus);
+	public static void register() {
+		TAB_REGISTER.register();
 	}
 }

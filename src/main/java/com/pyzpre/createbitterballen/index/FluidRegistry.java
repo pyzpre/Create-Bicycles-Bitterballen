@@ -1,263 +1,138 @@
 package com.pyzpre.createbitterballen.index;
 
-import com.mojang.blaze3d.shaders.FogShape;
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.simibubi.create.content.fluids.VirtualFluid;
-import com.tterrag.registrate.builders.FluidBuilder;
+import com.simibubi.create.foundation.fluid.FluidHelper;
+import com.tterrag.registrate.fabric.SimpleFlowableFluid;
 import com.tterrag.registrate.util.entry.FluidEntry;
-import net.createmod.catnip.theme.Color;
-import net.minecraft.client.Camera;
-import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.client.renderer.FogRenderer;
+import io.github.fabricators_of_create.porting_lib.event.common.FluidPlaceBlockCallback;
+import net.createmod.catnip.data.Iterate;
+import net.fabricmc.fabric.api.transfer.v1.fluid.FluidConstants;
+import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
+import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant;
+import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariantAttributeHandler;
+import net.fabricmc.fabric.api.transfer.v1.fluid.base.EmptyItemFluidStorage;
+import net.fabricmc.fabric.api.transfer.v1.fluid.base.FullItemFluidStorage;
+import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.BlockAndTintGetter;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.core.Direction;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.FluidTags;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
-import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
-import net.minecraftforge.common.ForgeMod;
-import net.minecraftforge.fluids.FluidInteractionRegistry;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.FluidType;
-import net.minecraftforge.fluids.ForgeFlowingFluid;
-import org.jetbrains.annotations.NotNull;
-import org.joml.Vector3f;
-
-import java.util.function.Consumer;
-import java.util.function.Supplier;
+import org.jetbrains.annotations.Nullable;
 
 import static com.pyzpre.createbitterballen.CreateBitterballen.REGISTRATE;
+import static net.minecraft.world.item.Items.BOWL;
 
 public class FluidRegistry {
-    public static final FluidEntry<ForgeFlowingFluid.Flowing> FRYING_OIL =
-            REGISTRATE.standardFluid("frying_oil",
-                            TransparentRenderedPlaceableFluidType.create(0xEDC483,
-                                    () -> 1f / 8f))
+    public static final long STAMPPOT_AMOUNT = FluidConstants.BLOCK / 4;
+    public static final FluidEntry<SimpleFlowableFluid.Flowing> FRYING_OIL =
+            REGISTRATE.standardFluid("frying_oil")
                     .lang("Frying Oil")
-                    .properties(b -> b
-                            .viscosity(1500)
-                            .density(500))
-                    .fluidProperties(p -> p
-                            .levelDecreasePerBlock(1)
+                    .tag(FluidTags.WATER)
+                    .renderType(() -> RenderType::translucent)
+                    .fluidProperties(p -> p.levelDecreasePerBlock(1)
                             .tickRate(5)
-                            .slopeFindDistance(5)
-                            .explosionResistance(100f))
-                    .source(ForgeFlowingFluid.Source::new)
-                    .bucket()
-                    .build()
+                            .flowSpeed(2)
+                            .blastResistance(100f))
+                    .fluidAttributes(() -> new CreateBitterballenAttributeHandler(1500, 500))
                     .register();
-
-    public static final FluidEntry<ForgeFlowingFluid.Flowing> KETCHUP =
-            REGISTRATE.standardFluid("ketchup",
-                            SolidRenderedPlaceableFluidType.create(0x9B1C1D,
-                                    () -> 1f / 8f))
+    public static final FluidEntry<SimpleFlowableFluid.Flowing> KETCHUP =
+            REGISTRATE.standardFluid("ketchup")
                     .lang("Ketchup")
-                    .properties(b -> b
-                            .viscosity(1500)
-                            .density(1400))
-                    .fluidProperties(p -> p
-                            .levelDecreasePerBlock(2)
+                    .tag(FluidTags.WATER)
+                    .fluidProperties(p -> p.levelDecreasePerBlock(2)
                             .tickRate(25)
-                            .slopeFindDistance(3)
-                            .explosionResistance(100f))
+                            .flowSpeed(3)
+                            .blastResistance(100f))
+                    .fluidAttributes(() -> new CreateBitterballenAttributeHandler(1500, 1400))
                     .register();
-    public static final FluidEntry<ForgeFlowingFluid.Flowing> MAYONNAISE =
-            REGISTRATE.standardFluid("mayonnaise",
-                            SolidRenderedPlaceableFluidType.create(0xC9C79C,
-                                    () -> 1f / 8f))
+    public static final FluidEntry<SimpleFlowableFluid.Flowing> MAYONNAISE =
+            REGISTRATE.standardFluid("mayonnaise")
                     .lang("Mayonnaise")
-                    .properties(b -> b
-                            .viscosity(1500)
-                            .density(1400))
-                    .fluidProperties(p -> p
-                            .levelDecreasePerBlock(2)
+                    .tag(FluidTags.WATER)
+                    .fluidProperties(p -> p.levelDecreasePerBlock(2)
                             .tickRate(25)
-                            .slopeFindDistance(3)
-                            .explosionResistance(100f))
+                            .flowSpeed(3)
+                            .blastResistance(100f))
+                    .fluidAttributes(() -> new CreateBitterballenAttributeHandler(1500, 1400))
                     .register();
-    public static final FluidEntry<ForgeFlowingFluid.Flowing> CURDLED_MILK =
-            REGISTRATE.standardFluid("curdled_milk",
-                            SolidRenderedPlaceableFluidType.create(0xC9C79C,
-                                    () -> 1f / 8f))
+    public static final FluidEntry<SimpleFlowableFluid.Flowing> CURDLED_MILK =
+            REGISTRATE.standardFluid("curdled_milk")
                     .lang("Curdled Milk")
-                    .properties(b -> b
-                            .viscosity(1500)
-                            .density(900))
-                    .fluidProperties(p -> p
-                            .levelDecreasePerBlock(1)
-                            .tickRate(5)
-                            .slopeFindDistance(4)
-                            .explosionResistance(100f))
+                    .tag(FluidTags.WATER)
+                    .fluidProperties(p -> p.levelDecreasePerBlock(2)
+                            .tickRate(25)
+                            .flowSpeed(3)
+                            .blastResistance(100f))
+                    .fluidAttributes(() -> new CreateBitterballenAttributeHandler(1500, 900))
                     .register();
     public static final FluidEntry<VirtualFluid> STAMPPOT =
             REGISTRATE.virtualFluid("stamppot")
                     .lang("Stamppot")
+                    .onRegisterAfter(Registries.ITEM, stamppot -> {
+                        Fluid still = stamppot.getSource();
+                        FluidStorage.combinedItemApiProvider(ItemRegistry.STAMPPOT_BOWL.get()).register(context ->
+                                new FullItemFluidStorage(context, bottle -> ItemVariant.of(BOWL), FluidVariant.of(still), STAMPPOT_AMOUNT));
+                        FluidStorage.combinedItemApiProvider(BOWL).register(context ->
+                                new EmptyItemFluidStorage(context, bottle -> ItemVariant.of(ItemRegistry.STAMPPOT_BOWL.get()), still, STAMPPOT_AMOUNT));
+                    })
                     .register();
 
+
+
     public static void register() {}
-    public static void registerFluidInteractions() {
-        FluidInteractionRegistry.addInteraction(ForgeMod.LAVA_TYPE.get(), new FluidInteractionRegistry.InteractionInformation(
-                FRYING_OIL.get().getFluidType(),
-                fluidState -> {
-                    if (fluidState.isSource()) {
-                        return Blocks.OBSIDIAN.defaultBlockState();
-                    } else {
-                        return BlockRegistry.CRYSTALLISED_OIL.get()
-                                .defaultBlockState();
-                    }
-                }
-        ));
-    }
-    public static abstract class TintedFluidType extends FluidType {
 
-        protected static final int NO_TINT = 0xffffffff;
-        private ResourceLocation stillTexture;
-        private ResourceLocation flowingTexture;
-
-        public TintedFluidType(Properties properties, ResourceLocation stillTexture, ResourceLocation flowingTexture) {
-            super(properties);
-            this.stillTexture = stillTexture;
-            this.flowingTexture = flowingTexture;
+    private record CreateBitterballenAttributeHandler(int viscosity, boolean lighterThanAir) implements FluidVariantAttributeHandler {
+        private CreateBitterballenAttributeHandler(int viscosity, int density) {
+            this(viscosity, density <= 0);
         }
-    @Override
-    public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
-        consumer.accept(new IClientFluidTypeExtensions() {
 
-            @Override
-            public ResourceLocation getStillTexture() {
-                return stillTexture;
-            }
+        @Override
+        public int getViscosity(FluidVariant variant, @Nullable Level world) {
+            return viscosity;
+        }
 
-            @Override
-            public ResourceLocation getFlowingTexture() {
-                return flowingTexture;
-            }
-
-            @Override
-            public int getTintColor(FluidStack stack) {
-                return TintedFluidType.this.getTintColor(stack);
-            }
-
-            @Override
-            public int getTintColor(FluidState state, BlockAndTintGetter getter, BlockPos pos) {
-                return TintedFluidType.this.getTintColor(state, getter, pos);
-            }
-
-            @Override
-            public @NotNull Vector3f modifyFogColor(Camera camera, float partialTick, ClientLevel level,
-                                                    int renderDistance, float darkenWorldAmount, Vector3f fluidFogColor) {
-                Vector3f customFogColor = TintedFluidType.this.getCustomFogColor();
-                return customFogColor == null ? fluidFogColor : customFogColor;
-            }
-
-            @Override
-            public void modifyFogRender(Camera camera, FogRenderer.FogMode mode, float renderDistance, float partialTick,
-                                        float nearDistance, float farDistance, FogShape shape) {
-                float modifier = TintedFluidType.this.getFogDistanceModifier();
-                float baseWaterFog = 96.0f;
-                if (modifier != 1f) {
-                    RenderSystem.setShaderFogShape(FogShape.CYLINDER);
-                    RenderSystem.setShaderFogStart(-8);
-                    RenderSystem.setShaderFogEnd(baseWaterFog * modifier);
-                }
-            }
-
-        });
+        @Override
+        public boolean isLighterThanAir(FluidVariant variant) {
+            return lighterThanAir;
+        }
     }
+    public static void registerFluidInteractions() {
+        // fabric: no fluid interaction API, use legacy method
+        FluidPlaceBlockCallback.EVENT.register(FluidRegistry::whenFluidsMeet);
+    }
+    public static BlockState whenFluidsMeet(LevelAccessor world, BlockPos pos, BlockState blockState) {
+        FluidState fluidState = blockState.getFluidState();
 
-    protected abstract int getTintColor(FluidStack stack);
+        if (fluidState.isSource() && FluidHelper.isLava(fluidState.getType()))
+            return null;
 
-    protected abstract int getTintColor(FluidState state, BlockAndTintGetter getter, BlockPos pos);
-
-    protected Vector3f getCustomFogColor() {
+        for (Direction direction : Iterate.directions) {
+            FluidState metFluidState =
+                    fluidState.isSource() ? fluidState : world.getFluidState(pos.relative(direction));
+            if (!metFluidState.is(FluidTags.WATER))
+                continue;
+            BlockState lavaInteraction = FluidRegistry.getLavaInteraction(metFluidState);
+            if (lavaInteraction == null)
+                continue;
+            return lavaInteraction;
+        }
         return null;
     }
+    @Nullable
+    public static BlockState getLavaInteraction (FluidState fluidState)  {
+        Fluid fluid = fluidState.getType();
+        if (fluid.isSame(FRYING_OIL.get())) {
+            return BlockRegistry.CRYSTALLISED_OIL
+                    .get()
+                    .defaultBlockState();
 
-    protected float getFogDistanceModifier() {
-        return 1f;
-    }
-
-}
-
-    private static class TransparentRenderedPlaceableFluidType extends TintedFluidType {
-
-        private Vector3f fogColor;
-        private Supplier<Float> fogDistance;
-
-        public static FluidBuilder.FluidTypeFactory create(int fogColor, Supplier<Float> fogDistance) {
-            return (p, s, f) -> {
-                TransparentRenderedPlaceableFluidType fluidType = new TransparentRenderedPlaceableFluidType(p, s, f);
-                fluidType.fogColor = new Color(fogColor, true).asVectorF();
-                fluidType.fogDistance = fogDistance;
-                return fluidType;
-            };
         }
-
-        private TransparentRenderedPlaceableFluidType(Properties properties, ResourceLocation stillTexture,
-                                                ResourceLocation flowingTexture) {
-            super(properties, stillTexture, flowingTexture);
-        }
-
-        @Override
-        protected int getTintColor(FluidStack stack) {
-            return NO_TINT;
-        }
-
-        @Override
-        public int getTintColor(FluidState state, BlockAndTintGetter world, BlockPos pos) {
-            return 0xCCFFFFFF; // 80% transparent white
-        }
-
-        @Override
-        protected Vector3f getCustomFogColor() {
-            return fogColor;
-        }
-
-        @Override
-        protected float getFogDistanceModifier() {
-            return fogDistance.get();
-        }
-
-    }
-
-    private static class SolidRenderedPlaceableFluidType extends TintedFluidType {
-
-        private Vector3f fogColor;
-        private Supplier<Float> fogDistance;
-
-        public static FluidBuilder.FluidTypeFactory create(int fogColor, Supplier<Float> fogDistance) {
-            return (p, s, f) -> {
-                SolidRenderedPlaceableFluidType fluidType = new SolidRenderedPlaceableFluidType(p, s, f);
-                fluidType.fogColor = new Color(fogColor, false).asVectorF();
-                fluidType.fogDistance = fogDistance;
-                return fluidType;
-            };
-        }
-
-        private SolidRenderedPlaceableFluidType(Properties properties, ResourceLocation stillTexture,
-                                                ResourceLocation flowingTexture) {
-            super(properties, stillTexture, flowingTexture);
-        }
-
-        @Override
-        protected int getTintColor(FluidStack stack) {
-            return NO_TINT;
-        }
-
-        @Override
-        public int getTintColor(FluidState state, BlockAndTintGetter world, BlockPos pos) {
-            return 0x00ffffff;
-        }
-
-        @Override
-        protected Vector3f getCustomFogColor() {
-            return fogColor;
-        }
-
-        @Override
-        protected float getFogDistanceModifier() {
-            return fogDistance.get();
-        }
-
+        return null;
     }
 }

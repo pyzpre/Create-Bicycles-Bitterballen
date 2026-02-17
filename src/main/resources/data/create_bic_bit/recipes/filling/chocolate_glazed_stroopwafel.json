@@ -5,7 +5,7 @@
       "item": "create_bic_bit:stroopwafel"
     },
     {
-      "amount": 250,
+      "amount": 20250,
       "fluid": "create:chocolate",
       "nbt": {}
     }
@@ -15,4 +15,4 @@
       "item": "create_bic_bit:chocolate_glazed_stroopwafel"
     }
   ]
-}s
+}

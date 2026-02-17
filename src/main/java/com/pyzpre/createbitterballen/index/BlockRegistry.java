@@ -5,12 +5,14 @@ import com.pyzpre.createbitterballen.block.mechanicalfryer.MechanicalFryer;
 import com.pyzpre.createbitterballen.block.sunflower.SunflowerStem;
 import com.pyzpre.createbitterballen.block.sunflower.VanillaSunflowerBlock;
 import com.simibubi.create.api.stress.BlockStressValues;
-import com.simibubi.create.content.kinetics.base.IRotate;
 import com.simibubi.create.content.processing.AssemblyOperatorBlockItem;
 import com.simibubi.create.foundation.data.BlockStateGen;
 import com.simibubi.create.foundation.data.SharedProperties;
-import com.simibubi.create.infrastructure.config.CStress;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import io.github.fabricators_of_create.porting_lib.util.LazyRegistrar;
+import io.github.fabricators_of_create.porting_lib.util.RegistryObject;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.GlassBlock;
@@ -19,10 +21,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 
 import static com.pyzpre.createbitterballen.CreateBitterballen.REGISTRATE;
 import static com.simibubi.create.foundation.data.ModelGen.customItemModel;
@@ -127,16 +125,6 @@ public class BlockRegistry {
                     .build()
                     .lang("Crystallised Oil")
                     .register();
-
-
-    // Creating a DeferredRegister to overwrite vanilla blocks
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, "minecraft");
-
-    // Replacing the vanilla sunflower block with my own
-    public static final RegistryObject<Block> SUNFLOWER = BLOCKS.register("sunflower",
-            () -> new VanillaSunflowerBlock(BlockBehaviour.Properties.copy(Blocks.SUNFLOWER))
-    );
-    public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
-    }
+    
+    public static void register() {}
 }

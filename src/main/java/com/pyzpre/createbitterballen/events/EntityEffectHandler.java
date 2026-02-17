@@ -3,7 +3,10 @@ package com.pyzpre.createbitterballen.events;
 import com.pyzpre.createbitterballen.index.BlockRegistry;
 import com.pyzpre.createbitterballen.index.EffectRegistry;
 import com.pyzpre.createbitterballen.index.FluidRegistry;
+import com.pyzpre.createbitterballen.mixin.MobAccessor;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -16,11 +19,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.AABB;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.EntityJoinLevelEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -29,10 +27,7 @@ public class EntityEffectHandler {
     private static final Logger LOGGER = LogManager.getLogger();
     private static boolean isInitialized = false;
 
-    @SubscribeEvent
-    public void onLevelTick(TickEvent.LevelTickEvent event) {
-        Level level = event.level;
-
+    public static void onLevelTick(Level level) {
         if (!level.isClientSide) {
 
             // Iterate over all players in the level
@@ -52,7 +47,7 @@ public class EntityEffectHandler {
             }
         }
     }
-    private boolean isInFryingOil(LivingEntity entity, Level level) {
+    private static boolean isInFryingOil(LivingEntity entity, Level level) {
         BlockPos pos = entity.blockPosition();
         FluidState fluidState = level.getFluidState(pos);
 
@@ -62,7 +57,7 @@ public class EntityEffectHandler {
         return isFryingOil;
     }
 
-    private void applyOilEffect(LivingEntity entity) {
+    private static void applyOilEffect(LivingEntity entity) {
         // Apply the OILED_UP effect to the entity
         MobEffectInstance oiledup = new MobEffectInstance(EffectRegistry.OILED_UP.get(), 200, 1);
 
@@ -70,20 +65,18 @@ public class EntityEffectHandler {
             entity.addEffect(oiledup);
         }
     }
-    @SubscribeEvent
-    public void onEntityJoinLevel(EntityJoinLevelEvent event) {
-        if (event.getEntity() instanceof Chicken chicken) {
+
+    public static boolean onEntityJoinLevel(Entity entity, Level world, boolean loadedFromDisk) {
+        if (entity instanceof Chicken chicken) {
             // Add a new TemptGoal for sunflower seeds
-            chicken.goalSelector.addGoal(3, new TemptGoal(chicken, 1.0D, Ingredient.of(BlockRegistry.SUNFLOWERSTEM.get().asItem()), false));
+            ((MobAccessor)chicken).create_bic_bit$getGoalSelector().addGoal(3, new TemptGoal(chicken, 1.0D, Ingredient.of(BlockRegistry.SUNFLOWERSTEM.get().asItem()), false));
         }
+        return true;
     }
 
-    @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
-    public void onEntityInteract(PlayerInteractEvent.EntityInteractSpecific event) {
-        if (!event.getLevel().isClientSide()) {
-            Entity target = event.getTarget();
-            Player player = event.getEntity();
-            ItemStack heldItem = player.getItemInHand(event.getHand());
+    public static InteractionResult onEntityInteract(Player player, Entity target, InteractionHand hand) {
+        if (!player.level().isClientSide()) {
+            ItemStack heldItem = player.getItemInHand(hand);
 
             if (target instanceof Chicken chicken) {
                 if (heldItem.getItem() == BlockRegistry.SUNFLOWERSTEM.get().asItem()) {
@@ -92,13 +85,14 @@ public class EntityEffectHandler {
                             heldItem.shrink(1);
                         }
                         chicken.setInLove(player);
-                        player.swing(event.getHand(), true);
+                        player.swing(hand, true);
                         Level level = player.level();
                         level.broadcastEntityEvent(chicken, (byte)18);
-                        event.setCanceled(true);
+                        return InteractionResult.SUCCESS;
                     }
                 }
             }
         }
+        return null;
     }
 }

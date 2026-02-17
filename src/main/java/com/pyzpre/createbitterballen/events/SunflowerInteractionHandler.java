@@ -10,6 +10,8 @@ import net.minecraft.server.PlayerAdvancements;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -18,20 +20,14 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraft.world.phys.BlockHitResult;
 
 import static net.minecraft.world.level.block.Block.popResource;
 
 public class SunflowerInteractionHandler {
-
-
-    @SubscribeEvent
-    public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-        BlockPos pos = event.getPos();
-        BlockState state = event.getLevel().getBlockState(pos);
-        Player player = event.getEntity();
-        Level world = event.getLevel();
+    public static InteractionResult onRightClickBlock(Player player, Level world, InteractionHand hand, BlockHitResult hitResult) {
+        BlockPos pos = hitResult.getBlockPos();
+        BlockState state = world.getBlockState(pos);
 
         if (state.getBlock() == Blocks.SUNFLOWER) {
 
@@ -67,8 +63,9 @@ public class SunflowerInteractionHandler {
                 ServerPlayer serverPlayer = (ServerPlayer) player;
                 grantAdvancementCriterion(serverPlayer, "create_bic_bit:lawn_defender", "harvested_sunflower");
             }
-            event.setCanceled(true);
+            return InteractionResult.SUCCESS;
         }
+        return InteractionResult.PASS;
     }
     private static void grantAdvancementCriterion(ServerPlayer player, String advancementID, String criterionKey) {
         PlayerAdvancements playerAdvancements = player.getAdvancements();

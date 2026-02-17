@@ -1,6 +1,7 @@
 package com.pyzpre.createbitterballen.entity;
 
 import com.pyzpre.createbitterballen.index.ItemRegistry;
+import net.fabricmc.fabric.api.entity.EntityPickInteractionAware;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -12,16 +13,16 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.FollowFlockLeaderGoal;
 import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
 import net.minecraft.world.entity.animal.AbstractSchoolingFish;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.HitResult;
-import net.minecraftforge.common.ForgeMod;
 
 import javax.annotation.Nonnull;
 
-public class HerringEntity extends AbstractSchoolingFish {
+public class HerringEntity extends AbstractSchoolingFish implements EntityPickInteractionAware {
 
     private boolean isSwimming = false;
 
@@ -32,8 +33,7 @@ public class HerringEntity extends AbstractSchoolingFish {
         return LivingEntity.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 3.0)
                 .add(Attributes.MOVEMENT_SPEED, 0.6)
-                .add(Attributes.FOLLOW_RANGE, 16.0)
-                .add(ForgeMod.SWIM_SPEED.get(), 1.0);
+                .add(Attributes.FOLLOW_RANGE, 16.0);
     }
 
     public HerringEntity(EntityType<? extends AbstractSchoolingFish> entityType, Level world) {
@@ -56,7 +56,7 @@ public class HerringEntity extends AbstractSchoolingFish {
     }
 
     @Override
-    public ItemStack getPickedResult(HitResult target) {
+    public ItemStack getPickedStack(Player player, HitResult target) {
         return this.getBucketItemStack();
     }
 

@@ -2,11 +2,14 @@ package com.pyzpre.createbitterballen.block.cheese;
 
 import com.pyzpre.createbitterballen.index.BlockRegistry;
 import com.pyzpre.createbitterballen.index.ItemRegistry;
+import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -53,8 +56,8 @@ public class WaxedAgedCheeseBlock extends Block {
                 if (handleDewaxing(world, pos, state)) {
                     return InteractionResult.SUCCESS;
                 }
-            } else if (itemStack.is(ItemTags.create(new ResourceLocation("forge", "shears"))) ||
-                    itemStack.is(ItemTags.create(new ResourceLocation("forge", "tools/knives")))) {
+            } else if (itemStack.is(ConventionalItemTags.SHEARS) ||
+                    itemStack.is(TagKey.create(Registries.ITEM, new ResourceLocation("c", "knives")))) {
                 if (handleShearing(world, pos, state)) {
                     playShearingEffect(world, pos);
                     return InteractionResult.SUCCESS;

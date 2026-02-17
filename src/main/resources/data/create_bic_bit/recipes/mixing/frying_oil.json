@@ -6,13 +6,13 @@
       "item": "create_bic_bit:crushed_sunflower_seeds"
     },
     {
-      "amount": 250,
+      "amount": 20250,
       "fluid": "minecraft:water"
     }
   ],
   "results": [
     {
-      "amount": 250,
+      "amount": 20250,
       "fluid": "create_bic_bit:frying_oil"
     }
   ]

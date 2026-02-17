@@ -5,8 +5,14 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "createbitterballen.refmap.json",
   "mixins": [
-    "SunflowerMixin",
+    "BlocksMixin",
+    "DataGeneratorAccessor",
+    "FrictionMixin",
     "HarvesterMixin",
-    "FrictionMixin"
+    "MobAccessor",
+    "SunflowerMixin"
+  ],
+  "client": [
+    "LevelRendererMixin"
   ]
 }

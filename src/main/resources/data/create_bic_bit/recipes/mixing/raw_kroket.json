@@ -2,7 +2,7 @@
     "type": "create:mixing",
     "ingredients": [
     {
-        "tag": "forge:raw_meat"
+        "tag": "c:raw_meat"
     },
     {
         "item": "create:wheat_flour"
@@ -13,8 +13,8 @@
 
         },
     {
-        "amount": 250,
-        "fluid": "minecraft:milk"
+        "amount": 20250,
+        "fluidTag": "c:milk"
     }
     ],
     "results": [

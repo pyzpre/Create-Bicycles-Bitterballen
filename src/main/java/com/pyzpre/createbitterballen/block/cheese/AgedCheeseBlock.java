@@ -3,19 +3,20 @@ package com.pyzpre.createbitterballen.block.cheese;
 import com.pyzpre.createbitterballen.index.BlockRegistry;
 import com.pyzpre.createbitterballen.index.ItemRegistry;
 import com.simibubi.create.foundation.item.TooltipHelper;
-import com.simibubi.create.foundation.utility.CreateLang;
 import net.createmod.catnip.lang.FontHelper;
-import net.minecraft.ChatFormatting;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -36,8 +37,6 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -68,8 +67,8 @@ public class AgedCheeseBlock extends Block {
                 if (handleWaxing(world, pos, state, player, itemStack)) {
                     return InteractionResult.SUCCESS;
                 }
-            } else if (itemStack.is(ItemTags.create(new ResourceLocation("forge", "shears"))) ||
-                    itemStack.is(ItemTags.create(new ResourceLocation("forge", "tools/knives")))) {
+            } else if (itemStack.is(TagKey.create(Registries.ITEM, new ResourceLocation("forge", "shears"))) ||
+                    itemStack.is(TagKey.create(Registries.ITEM, new ResourceLocation("forge", "tools/knives")))) {
                 if (handleShearing(world, pos, state)) {
                     playShearingEffect(world, pos);
                     return InteractionResult.SUCCESS;
@@ -161,7 +160,7 @@ public class AgedCheeseBlock extends Block {
         builder.add(AGE, WAXED);
     }
     @Override
-    @OnlyIn(Dist.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
         super.appendHoverText(stack, level, tooltip, flag);
         FontHelper.Palette palette = FontHelper.Palette.STANDARD_CREATE;

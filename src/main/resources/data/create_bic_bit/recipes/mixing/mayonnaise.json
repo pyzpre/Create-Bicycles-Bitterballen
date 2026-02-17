@@ -11,13 +11,13 @@
       "item": "minecraft:egg"
     },
     {
-      "amount": 250,
-      "fluid": "minecraft:milk"
+      "amount": 20250,
+      "fluidTag": "c:milk"
     }
   ],
   "results": [
     {
-      "amount": 250,
+      "amount": 20250,
       "fluid": "create_bic_bit:mayonnaise"
     }
   ]

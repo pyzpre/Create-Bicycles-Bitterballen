@@ -1,42 +1,39 @@
 package com.pyzpre.createbitterballen;
 
+import com.pyzpre.createbitterballen.entity.HerringEntity;
 import com.pyzpre.createbitterballen.events.EntityEffectHandler;
 
+import com.pyzpre.createbitterballen.events.LootTables;
 import com.pyzpre.createbitterballen.events.SunflowerInteractionHandler;
 import com.pyzpre.createbitterballen.index.*;
-import com.pyzpre.createbitterballen.ponder.BitterOrbPonderPlugin;
 import com.pyzpre.createbitterballen.util.ConfigHandler;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
+import io.github.fabricators_of_create.porting_lib.entity.events.EntityEvents;
+import io.github.fabricators_of_create.porting_lib.entity.events.PlayerInteractionEvents;
 import net.createmod.catnip.lang.FontHelper;
-import net.createmod.ponder.api.registration.PonderSceneRegistrationHelper;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.commands.Commands;
-import net.minecraft.network.chat.Component;
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.entity.EntityPickInteractionAware;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraftforge.common.MinecraftForge;
-import net.createmod.ponder.foundation.PonderIndex;
-import net.minecraftforge.event.RegisterCommandsEvent;
-import net.minecraftforge.eventbus.EventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.level.levelgen.Heightmap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import java.util.Random;
 
-@Mod(CreateBitterballen.MOD_ID)
-public class CreateBitterballen {
+public class CreateBitterballen implements ModInitializer {
 
 	public static final String MOD_ID = "create_bic_bit";
 	public static final Logger LOGGER = LogManager.getLogger();
@@ -48,44 +45,42 @@ public class CreateBitterballen {
 
 	public static final Random RANDOM = new Random();
 
-	public CreateBitterballen() {
+	public void onInitialize() {
+		BlockRegistry.register();
+		BlockEntityRegistry.register();
+		FluidRegistry.register();
+		ItemRegistry.register();
+		REGISTRATE.register();
 
-		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-		EntityRegistry.register(eventBus);
+		EntityRegistry.register();
 		SoundsRegistry.prepare();
 		PartialsRegistry.init();
-		BlockRegistry.register(FMLJavaModLoadingContext.get().getModEventBus());
-		BlockEntityRegistry.register();
-		MinecraftForge.EVENT_BUS.register(new FluidRegistry());
-		MinecraftForge.EVENT_BUS.register(new EntityEffectHandler());
-		ItemRegistry.register();
-		EffectRegistry.register(eventBus);
-		RecipeRegistry.register(eventBus);
-		CreateBitterballenTabs.register(eventBus);
-		REGISTRATE.registerEventListeners(eventBus);
-		ConfigHandler.loadConfig(FMLPaths.CONFIGDIR.get());
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setupClient);
 
-		eventBus.addListener(SoundsRegistry::register);
-
-		MinecraftForge.EVENT_BUS.register(SunflowerInteractionHandler.class);
-
-
-
-	}
-
-	private void setup(final FMLCommonSetupEvent event) {
 		FluidRegistry.registerFluidInteractions();
+		ServerTickEvents.START_WORLD_TICK.register(EntityEffectHandler::onLevelTick);
+		PlayerInteractionEvents.INTERACT_ENTITY_GENERAL.register(EntityEffectHandler::onEntityInteract);
+		EntityEvents.ON_JOIN_WORLD.register(EntityEffectHandler::onEntityJoinLevel);
+		EffectRegistry.register();
+		RecipeRegistry.register();
+		CreateBitterballenTabs.register();
+		ConfigHandler.loadConfig(FabricLoader.getInstance().getConfigDir());
 
+		SoundsRegistry.register();
+
+		UseBlockCallback.EVENT.register(SunflowerInteractionHandler::onRightClickBlock);
+		LootTableEvents.MODIFY.register(LootTables::onLootTableLoad);
+
+		SpawnPlacements.register(EntityRegistry.HERRING.get(), SpawnPlacements.Type.IN_WATER, Heightmap.Types.WORLD_SURFACE, HerringEntity::canSpawnHere);
+		BiomeModifications.addSpawn(
+				context -> context.hasTag(TagKey.create(Registries.BIOME, new ResourceLocation(CreateBitterballen.MOD_ID, "herring_spawn"))),
+				MobCategory.WATER_AMBIENT,
+				EntityRegistry.HERRING.get(),
+				35,
+				3,
+				5
+		);
 	}
 
-	private void setupClient(final FMLClientSetupEvent event) {
-		ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FRYING_OIL.get(), RenderType.translucent());
-		ItemBlockRenderTypes.setRenderLayer(FluidRegistry.FRYING_OIL.getSource(), RenderType.translucent());
-		ItemBlockRenderTypes.setRenderLayer(BlockRegistry.CRYSTALLISED_OIL.get(), RenderType.translucent());
-		PonderIndex.addPlugin(new BitterOrbPonderPlugin());
-	}
 	public static ResourceLocation asResource(String path) {
 		return new ResourceLocation(MOD_ID, path);
 	}

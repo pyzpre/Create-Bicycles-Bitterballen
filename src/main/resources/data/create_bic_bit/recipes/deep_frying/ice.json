@@ -2,16 +2,16 @@
 "heatRequirement": "heated",
 "ingredients": [
 {
-    "tag": "forge:ice"
+    "tag": "c:ice"
 },
 {
-    "amount": 1000,
+    "amount": 81000,
     "fluid": "create_bic_bit:frying_oil"
 }
 ],
 "results": [
 {
-    "amount": 1000,
+    "amount": 81000,
     "fluid": "minecraft:water"
 }
 ]

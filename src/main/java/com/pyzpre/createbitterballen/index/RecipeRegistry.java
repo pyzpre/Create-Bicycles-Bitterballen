@@ -1,11 +1,13 @@
 package com.pyzpre.createbitterballen.index;
 
-import com.pyzpre.createbitterballen.CreateBitterballen;
 import com.pyzpre.createbitterballen.block.mechanicalfryer.DeepFryingRecipe;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
+import io.github.fabricators_of_create.porting_lib.util.LazyRegistrar;
+import io.github.fabricators_of_create.porting_lib.util.RegistryObject;
 import net.createmod.catnip.lang.Lang;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Container;
@@ -13,10 +15,6 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
@@ -35,15 +33,15 @@ public enum RecipeRegistry implements IRecipeTypeInfo {
     RecipeRegistry(Supplier<RecipeSerializer<?>> serializerSupplier) {
         String name = Lang.asId(name());
         serializerObject = Registers.SERIALIZER_REGISTER.register(name, serializerSupplier);
-        typeObject = Registers.TYPE_REGISTER.register(name, () -> RecipeType.simple(id));
+        typeObject = Registers.TYPE_REGISTER.register(name, () -> new RecipeType<>() {});
         type = typeObject;
     }
     RecipeRegistry(ProcessingRecipeBuilder.ProcessingRecipeFactory<?> processingFactory) {
         this(() -> new ProcessingRecipeSerializer<>(processingFactory));
     }
-    public static void register(IEventBus modEventBus) {
-        Registers.SERIALIZER_REGISTER.register(modEventBus);
-        Registers.TYPE_REGISTER.register(modEventBus);
+    public static void register() {
+        Registers.SERIALIZER_REGISTER.register();
+        Registers.TYPE_REGISTER.register();
     }
 
     @Override
@@ -74,7 +72,7 @@ public enum RecipeRegistry implements IRecipeTypeInfo {
 
 
     private static class Registers {
-        private static final DeferredRegister<RecipeSerializer<?>> SERIALIZER_REGISTER = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, "create_bic_bit");
-        private static final DeferredRegister<RecipeType<?>> TYPE_REGISTER = DeferredRegister.create(Registries.RECIPE_TYPE, "create_bic_bit");
+        private static final LazyRegistrar<RecipeSerializer<?>> SERIALIZER_REGISTER = LazyRegistrar.create(BuiltInRegistries.RECIPE_SERIALIZER, "create_bic_bit");
+        private static final LazyRegistrar<RecipeType<?>> TYPE_REGISTER = LazyRegistrar.create(Registries.RECIPE_TYPE, "create_bic_bit");
     }
 }

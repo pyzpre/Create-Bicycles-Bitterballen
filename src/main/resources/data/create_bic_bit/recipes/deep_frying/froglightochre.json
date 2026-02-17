@@ -7,7 +7,7 @@
     },
     {
       "fluid": "create:potion",
-      "amount": 250,
+      "amount": 20250,
       "nbt": {
         "Bottle": "REGULAR",
         "Potion": "minecraft:fire_resistance"

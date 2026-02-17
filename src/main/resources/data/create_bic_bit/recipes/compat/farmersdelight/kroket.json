@@ -1,14 +1,16 @@
 {
     "type": "create:mixing",
-    "conditions": [
+    "fabric:load_conditions": [
         {
-            "type": "forge:mod_loaded",
-            "modid": "farmersdelight"
+            "condition": "fabric:all_mods_loaded",
+            "values": [
+                "farmersdelight"
+            ]
         }
     ],
     "ingredients": [
     {
-        "tag": "forge:raw_meat_delight"
+        "tag": "c:raw_meat_delight"
     },
     {
         "item": "create:wheat_flour"
@@ -20,7 +22,7 @@
         },
     {
         "amount": 250,
-        "fluid": "minecraft:milk"
+        "fluidTag": "c:milk"
     }
     ],
     "results": [

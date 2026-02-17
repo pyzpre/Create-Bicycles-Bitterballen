@@ -2,7 +2,7 @@
   "type": "create:compacting",
   "ingredients": [
     {
-      "amount": 500,
+      "amount": 40500,
       "fluid": "create_bic_bit:curdled_milk"
     }
   ],

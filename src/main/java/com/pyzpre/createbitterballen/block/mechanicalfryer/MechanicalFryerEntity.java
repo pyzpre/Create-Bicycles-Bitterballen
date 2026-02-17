@@ -12,19 +12,35 @@ import com.simibubi.create.foundation.blockEntity.behaviour.fluid.SmartFluidTank
 import com.simibubi.create.foundation.fluid.FluidIngredient;
 import com.simibubi.create.foundation.item.ItemHelper;
 import com.simibubi.create.foundation.item.SmartInventory;
+import io.github.fabricators_of_create.porting_lib.fluids.FluidStack;
+import io.github.fabricators_of_create.porting_lib.transfer.ViewOnlyWrappedStorageView;
+import io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandler;
 import net.createmod.catnip.animation.AnimationTickHolder;
 import net.createmod.catnip.math.VecHelper;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant;
+import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
+import net.fabricmc.fabric.api.transfer.v1.storage.Storage;
+import net.fabricmc.fabric.api.transfer.v1.storage.StorageView;
+import net.fabricmc.fabric.api.transfer.v1.storage.base.CombinedStorage;
+import net.fabricmc.fabric.api.transfer.v1.storage.base.SidedStorageBlockEntity;
+import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
+import net.fabricmc.fabric.api.transfer.v1.transaction.TransactionContext;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.PlayerAdvancements;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.tags.TagKey;
 import net.minecraft.util.Mth;
 import net.minecraft.world.Container;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
@@ -32,30 +48,22 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.items.wrapper.CombinedInvWrapper;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
 
 
-public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
+public class MechanicalFryerEntity extends FryerOperatingBlockEntity implements SidedStorageBlockEntity {
     private static final Object DeepFryingRecipesKey = new Object();
     private boolean shouldRecalculateProcessingTicks;
 
     public SmartInventory inputInv;
     public SmartInventory outputInv;
-    public LazyOptional<IItemHandler> capability;
+    public FryerInventoryHandler capability;
 
     public int timer;
     private DeepFryingRecipe lastRecipe;
@@ -68,7 +76,7 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
         super(type, pos, state);
         inputInv  = new SmartInventory(1, this);
         outputInv = new SmartInventory(9, this);
-        capability = LazyOptional.of(() -> new FryerInventoryHandler(inputInv, outputInv));
+        capability = new FryerInventoryHandler();
         shouldRecalculateProcessingTicks = true;
     }
 
@@ -128,6 +136,10 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
         super.write(compound, clientPacket);
     }
 
+    @Override
+    public @Nullable Storage<ItemVariant> getItemStorage(@Nullable Direction side) {
+        return capability;
+    }
 
     private boolean applyRecipe(DeepFryingRecipe recipe) {
         Optional<BasinBlockEntity> basinOpt = getBasin();
@@ -137,7 +149,7 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
         BasinBlockEntity basin = basinOpt.get();
 
         // Get the fluid handler
-        IFluidHandler fluidHandler = basin.getCapability(ForgeCapabilities.FLUID_HANDLER).orElse(null);
+        Storage<FluidVariant> fluidHandler = basin.getFluidStorage(null);
         if (fluidHandler == null) {
             return false;
         }
@@ -145,50 +157,58 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
         // Calculate the maximum items that can be processed based on available fluids
         int maxProcessableItems = inputInv.getStackInSlot(0).getCount();
         for (FluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
-            int requiredAmount = fluidIngredient.getRequiredAmount();
+            long requiredAmount = fluidIngredient.getRequiredAmount();
             int totalMatchingAmount = 0;
 
-            for (int tank = 0; tank < fluidHandler.getTanks(); tank++) {
-                FluidStack fluidInTank = fluidHandler.getFluidInTank(tank);
+            // Calculate total fluid amount available for this ingredient
+            for (StorageView<FluidVariant> view : fluidHandler.nonEmptyViews()) {
+                FluidStack fluidInTank = new FluidStack(view.getResource(), view.getAmount());
+
+                // Use fluidIngredient.test(fluidInTank) to include NBT data
                 if (fluidIngredient.test(fluidInTank)) {
                     totalMatchingAmount += fluidInTank.getAmount();
                 }
             }
 
-            // Calculate the maximum items based on available fluid for each ingredient
-            maxProcessableItems = Math.min(maxProcessableItems, totalMatchingAmount / requiredAmount);
+            // Calculate the maximum items that can be processed with this fluid ingredient
+            maxProcessableItems = (int)(Math.min(maxProcessableItems, totalMatchingAmount / requiredAmount));
         }
 
         if (maxProcessableItems <= 0) {
             return false; // Not enough fluids to process even a single item
         }
 
-        // Consume the required amount of fluids for the batch
-        for (FluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
-            int amountToConsume = fluidIngredient.getRequiredAmount() * maxProcessableItems;
-            for (int tank = 0; tank < fluidHandler.getTanks(); tank++) {
-                FluidStack fluidInTank = fluidHandler.getFluidInTank(tank);
-                if (fluidIngredient.test(fluidInTank)) {
-                    int drainedAmount = fluidHandler.drain(new FluidStack(fluidInTank, amountToConsume), IFluidHandler.FluidAction.EXECUTE).getAmount();
-                    amountToConsume -= drainedAmount;
-                    if (amountToConsume <= 0) break;
+        try(Transaction t = Transaction.openOuter()) {
+            // Consume the required amount of fluids for the batch
+            for (FluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
+                long amountToConsume = fluidIngredient.getRequiredAmount() * maxProcessableItems;
+                for (StorageView<FluidVariant> view : fluidHandler.nonEmptyViews()) {
+                    FluidStack fluidInTank = new FluidStack(view.getResource(), view.getAmount());
+                    if (fluidIngredient.test(fluidInTank)) {
+                        long drainedAmount = view.extract(view.getResource(), amountToConsume, t);
+                        amountToConsume -= drainedAmount;
+                        if (amountToConsume <= 0) break;
+                    }
                 }
             }
-        }
 
-        // Consume items in the input inventory
-        ItemStack inputStack = inputInv.getStackInSlot(0);
-        inputStack.shrink(maxProcessableItems);
-        inputInv.setStackInSlot(0, inputStack);
+            // Consume items in the input inventory
+            ItemStack inputStack = inputInv.getStackInSlot(0);
+            inputStack.shrink(maxProcessableItems);
+            inputInv.setStackInSlot(0, inputStack);
 
-        // Produce outputs for the processed batch
-        List<ItemStack> outputs = recipe.rollResults();
-        for (ItemStack output : outputs) {
-            output.setCount(output.getCount() * maxProcessableItems); // Multiply output by the batch size
-            ItemStack remaining = ItemHandlerHelper.insertItemStacked(outputInv, output.copy(), false);
-            if (!remaining.isEmpty()) {
-                return false; // Stop processing if output inventory is full
+            // Produce outputs for the processed batch
+            List<ItemStack> outputs = recipe.rollResults();
+            for (ItemStack output : outputs) {
+                output.setCount(output.getCount() * maxProcessableItems); // Multiply output by the batch size
+                long transferred = outputInv.insert(ItemVariant.of(output), output.getCount(), t);
+
+                if (transferred != output.getCount()) {
+                    return false; // Stop processing if output inventory is full
+                }
             }
+
+            t.commit();
         }
 
         // Sync state
@@ -262,13 +282,32 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
             }
 
             if (runningTicks == 20 && processingTicks == 1) {
-                for (int slot = 0; slot < inputInv.getSlots(); slot++) {
-                    ItemStack stackInSlot = inputInv.getStackInSlot(slot);
-                    if (isIce(stackInSlot)) {
+                Storage<ItemVariant> itemStorage = inputInv;  // Assuming inputInv is a Storage<ItemVariant>
 
-                        causeExplosion();
-                        inputInv.setStackInSlot(slot, ItemStack.EMPTY);
-                        break;
+                try (Transaction transaction = Transaction.openOuter()) {
+                    final boolean[] foundIce = {false};
+
+                    itemStorage.forEach((view) -> {
+                        ItemStack stack = view.getResource().toStack((int) view.getAmount());
+                        if (isIce(stack)) {
+                            // Cause the explosion if ice is found
+                            if (!foundIce[0]) {  // Ensure explosion only once
+                                causeExplosion();
+                                foundIce[0] = true;
+                            }
+
+                            // Attempt to remove the ice from the storage
+                            long extracted = view.extract(view.getResource(), view.getAmount(), transaction);
+                            if (extracted > 0) {
+                                // Commit changes inside if block if you want to continue checking others
+                                // Or just handle the ice without breaking because forEach cannot break early
+                            }
+                        }
+                        // There's no return statement needed; continue checking all items
+                    });
+
+                    if (foundIce[0]) {
+                        transaction.commit();  // Commit the transaction outside the forEach if ice was found and processed
                     }
                 }
             }
@@ -312,8 +351,8 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
     }
 
     private boolean isIce(ItemStack stack) {
-        ResourceLocation iceTag = new ResourceLocation("forge", "ice");
-        return stack.is(net.minecraft.tags.ItemTags.create(iceTag));
+        TagKey<Item> iceTag = TagKey.create(Registries.ITEM, new ResourceLocation("create_bic_bit", "ice"));
+        return stack.is(iceTag);
     }
     private void resetAnimationAndProcessing() {
         running = false;
@@ -427,78 +466,41 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
             return false;
         }
         BasinBlockEntity basin = basinOpt.get();
-
-        // Get the fluids from the basin
-        IFluidHandler fluidHandler = basin.getCapability(ForgeCapabilities.FLUID_HANDLER).orElse(null);
-        if (fluidHandler == null) {
-
-            return false;
-        }
-
-        // Check if fluid ingredients match
-        for (FluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
-            int requiredAmount = fluidIngredient.getRequiredAmount();
-            int totalMatchingAmount = 0;
-
-            for (int tank = 0; tank < fluidHandler.getTanks(); tank++) {
-                FluidStack fluidInTank = fluidHandler.getFluidInTank(tank);
-
-                // Use fluidIngredient.test(fluidInTank) to include NBT data
-                if (fluidIngredient.test(fluidInTank)) {
-                    totalMatchingAmount += fluidInTank.getAmount();
-
-                } else {
-
-                }
-
-                // If we have enough fluid, we can stop checking further tanks
-                if (totalMatchingAmount >= requiredAmount)
-                    break;
-            }
-
-            // If the total matching amount is less than required, the recipe cannot proceed
-            if (totalMatchingAmount < requiredAmount) {
-
-                return false;
-            }
-        }
-
-
-        return true;
+        return areBasinFluidsMatching(basin, recipe);
     }
 
 
     private boolean areBasinFluidsMatching(BasinBlockEntity basin, DeepFryingRecipe recipe) {
-        IFluidHandler fluidHandler = basin.getCapability(ForgeCapabilities.FLUID_HANDLER).orElse(null);
+        // Get Fluid Storage capability from basin
+        Storage<FluidVariant> availableFluids = basin.getFluidStorage(null);
+
+        if (availableFluids == null) {
+            return false;
+        }
 
         for (FluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
-            int requiredAmount = fluidIngredient.getRequiredAmount();
-            int totalMatchingAmount = 0;
+            long totalFluidAmount = 0;
 
-            for (int tank = 0; tank < fluidHandler.getTanks(); tank++) {
-                FluidStack fluidInTank = fluidHandler.getFluidInTank(tank);
-
-                // First, check if the fluid types match
-                if (!fluidIngredient.test(fluidInTank)) {
-                    continue;
+            try (Transaction transaction = Transaction.openOuter()) {
+                // Iterate directly over the storage views provided by the storage object
+                for (StorageView<FluidVariant> view : availableFluids) {
+                    // Check if the storage view is not empty and the fluid matches the ingredient
+                    if (!view.isResourceBlank() && fluidIngredient.test(new FluidStack(view.getResource().getFluid(), 1))) {
+                        // If we are not simulating, extract the fluid
+                        long extracted = view.extract(view.getResource(), fluidIngredient.getRequiredAmount(), transaction);
+                        if (extracted > 0) {
+                            totalFluidAmount += extracted;
+                            // If we've satisfied the ingredient requirement, we can break out of the loop
+                            if (totalFluidAmount >= fluidIngredient.getRequiredAmount()) {
+                                break;
+                            }
+                        }
+                    }
                 }
 
-                // Then, check if the NBT data matches
-                if (!hasMatchingNBT(fluidIngredient, fluidInTank)) {
-                    continue;
+                if (totalFluidAmount < fluidIngredient.getRequiredAmount()) { // Assuming getRequiredAmount() is in bucket units
+                    return false;
                 }
-
-                totalMatchingAmount += fluidInTank.getAmount();
-
-                // If we have enough fluid, we can stop checking further tanks
-                if (totalMatchingAmount >= requiredAmount) {
-                    break;
-                }
-            }
-
-            // If the total matching amount is less than required, the recipe cannot proceed
-            if (totalMatchingAmount < requiredAmount) {
-                return false;
             }
         }
 
@@ -520,10 +522,6 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
         }
         return false;
     }
-
-
-
-
 
     public void renderParticles() {
         Optional<BasinBlockEntity> basin = getBasin();
@@ -587,7 +585,7 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
 
 
     @Override
-    @OnlyIn(Dist.CLIENT)
+    @Environment(EnvType.CLIENT)
     public void tickAudio() {
         super.tickAudio();
 
@@ -601,12 +599,6 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
         }
     }
 
-    @Override
-    public <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, Direction side) {
-        if (isItemHandlerCap(cap))
-            return capability.cast();
-        return super.getCapability(cap, side);
-    }
     public boolean canProcess(ItemStack stack) {
         if (lastRecipe != null && isItemValidForRecipe(lastRecipe, stack)) {
             return true;
@@ -626,36 +618,55 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
     }
 
 
-    private class FryerInventoryHandler extends CombinedInvWrapper {
+    public class FryerInventoryHandler extends CombinedStorage<ItemVariant, ItemStackHandler> {
 
-        public FryerInventoryHandler(SmartInventory inputInv, SmartInventory outputInv) {
-            super(inputInv, outputInv);
+        public FryerInventoryHandler() {
+            super(List.of(inputInv, outputInv));
         }
 
         @Override
-        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
-            if (outputInv == getHandlerFromIndex(getIndexForSlot(slot)))
-                return false;
-            return canProcess(stack) && super.isItemValid(slot, stack);
-        }
-
-
-        @Override
-        public @NotNull ItemStack insertItem(int slot, @NotNull ItemStack stack, boolean simulate) {
-            if (outputInv == getHandlerFromIndex(getIndexForSlot(slot)))
-                return stack;
-            if (!isItemValid(slot, stack))
-                return stack;
-            return super.insertItem(slot, stack, simulate);
+        public long insert(@NotNull ItemVariant resource, long maxAmount, TransactionContext transaction) {
+            if (canProcess(resource.toStack())) {
+                long inserted = inputInv.insert(resource, maxAmount, transaction);
+                return inserted;
+            }
+            return 0;
         }
 
         @Override
-        public ItemStack extractItem(int slot, int amount, boolean simulate) {
-            if (inputInv == getHandlerFromIndex(getIndexForSlot(slot)))
-                return ItemStack.EMPTY;
-            return super.extractItem(slot, amount, simulate);
+        public long extract(ItemVariant resource, long maxAmount, TransactionContext transaction) {
+            long extracted = outputInv.extract(resource, maxAmount, transaction);
+            return extracted;
         }
 
+        @Override
+        public Iterator<StorageView<ItemVariant>> iterator() {
+            return new FryerInventoryHandlerIterator();
+        }
+
+        private class FryerInventoryHandlerIterator implements Iterator<StorageView<ItemVariant>> {
+            private boolean output = true;
+            private Iterator<StorageView<ItemVariant>> wrapped;
+
+            public FryerInventoryHandlerIterator() {
+                wrapped = outputInv.iterator();
+            }
+
+            @Override
+            public boolean hasNext() {
+                return wrapped.hasNext();
+            }
+
+            @Override
+            public StorageView<ItemVariant> next() {
+                if (!output && !wrapped.hasNext()) {
+                    wrapped = inputInv.iterator();
+                    output = false;
+                }
+                StorageView<ItemVariant> view = wrapped.next();
+                if (!output) view = new ViewOnlyWrappedStorageView<>(view);
+                return view;
+            }
+        }
     }
-
 }

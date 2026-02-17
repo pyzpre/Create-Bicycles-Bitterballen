@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "create_bic_bit",
+	"version": "${version}",
+	"name": "Create: Bitterballen",
+	"description": "G E K O L O N I S E E R D",
+	"authors": [
+		"Pyzpre, Vitecekuwu"
+	],
+	"license": "MIT",
+	"icon": "logo.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.pyzpre.createbitterballen.CreateBitterballen"
+		],
+		"client": [
+			"com.pyzpre.createbitterballen.events.ClientModEventSubscriber"
+		],
+		"jei_mod_plugin": [
+			"com.pyzpre.createbitterballen.compat.jei.CreateBicyclesBitterballenJEI"
+		],
+		"rei_client": [
+			"com.pyzpre.createbitterballen.compat.rei.CreateBicyclesBitterballenREI"
+		]
+	},
+	"mixins": [
+		"create_bic_bit.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.3",
+		"fabric-resource-loader-v0": "*",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"create" : ">=6.0.7.0"
+	},
+	"custom": {
+		"loom:injected_interfaces": {
+			"net/minecraft/class_1688": [ "com/simibubi/create/foundation/utility/fabric/AbstractMinecartExtensions" ]
+		}
+	}
+}

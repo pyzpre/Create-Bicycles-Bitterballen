@@ -2,7 +2,7 @@
   "type": "create:mixing",
   "ingredients": [
     {
-      "tag": "forge:cheese"
+      "tag": "c:cheese"
     },
     {
       "item": "create:wheat_flour"

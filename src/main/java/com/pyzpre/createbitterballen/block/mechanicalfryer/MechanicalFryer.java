@@ -9,6 +9,7 @@ import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import com.simibubi.create.content.kinetics.base.HorizontalKineticBlock;
 import com.simibubi.create.content.kinetics.base.IRotate;
 import com.simibubi.create.foundation.block.IBE;
+import io.github.fabricators_of_create.porting_lib.transfer.item.ItemStackHandler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
@@ -33,8 +34,6 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.EntityCollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.items.ItemHandlerHelper;
 public class MechanicalFryer extends HorizontalKineticBlock implements IBE<MechanicalFryerEntity>{
     public MechanicalFryer(Properties properties) {
         super(properties);
@@ -65,7 +64,7 @@ public class MechanicalFryer extends HorizontalKineticBlock implements IBE<Mecha
                     InteractionResult result = blockItem.useOn(new UseOnContext(player, handIn, hit));
                     if (result.consumesAction()) {
                         // Play placement sound if the block is placed
-                        SoundType soundType = blockItem.getBlock().getSoundType(blockItem.getBlock().defaultBlockState(), worldIn, pos, player);
+                        SoundType soundType = blockItem.getBlock().getSoundType(blockItem.getBlock().defaultBlockState());
                         worldIn.playSound(null, pos, soundType.getPlaceSound(), SoundSource.BLOCKS, 1.0F, 1.0F);
                     }
                     return result; // Return the result of the block placement
@@ -74,39 +73,49 @@ public class MechanicalFryer extends HorizontalKineticBlock implements IBE<Mecha
 
             // Check if the item can be processed using the fryer's method
             if (fryer.canProcess(itemInHand)) {
-                // Attempt to insert the whole item stack into the input inventory
-                ItemStack leftover = fryer.inputInv.insertItem(0, itemInHand, true);
+                ItemStack stackInSlot = fryer.inputInv.getItem(0); // Get the current item in the slot
 
-                if (leftover.isEmpty()) {
-                    // If the simulated insert results in no leftovers, perform the actual insert
-                    fryer.inputInv.insertItem(0, itemInHand.copy(), false);
-                    player.setItemInHand(handIn, ItemStack.EMPTY); // Empty the player's hand
-                    fryer.setChanged(); // Mark the entity as changed
-                    fryer.sendData(); // Send updated data to the client
-                    return InteractionResult.CONSUME;
+                if (stackInSlot.isEmpty()) {
+                    // If the slot is empty, directly set the item in the slot
+                    fryer.inputInv.setItem(0, itemInHand.copy());
+                    player.setItemInHand(handIn, ItemStack.EMPTY); // Clear the player's hand
+                }  else if (ItemStack.isSameItemSameTags(itemInHand, stackInSlot)) {
+                    // If the item can stack with the current item in the slot, increase the count
+                    int accept = Math.min(itemInHand.getCount(), stackInSlot.getMaxStackSize() - stackInSlot.getCount());
+                    stackInSlot.grow(accept);
+                    itemInHand.shrink(accept);
+
+                    if (itemInHand.isEmpty()) {
+                        player.setItemInHand(handIn, ItemStack.EMPTY); // Clear the player's hand if all items were moved
+                    } else {
+                        player.setItemInHand(handIn, itemInHand); // Set the remaining items back to the player's hand
+                    }
                 }
             }
         } else {
-            // Handle empty hand logic to retrieve items from the fryer
+            // If the output inventory is not empty, allow the player to retrieve items.
             boolean emptyOutput = true;
-            IItemHandlerModifiable inv = fryer.outputInv;
-            for (int slot = 0; slot < inv.getSlots(); slot++) {
-                ItemStack stackInSlot = inv.getStackInSlot(slot);
+            ItemStackHandler outputInv = fryer.outputInv;
+            for (int slot = 0; slot < outputInv.getSlotCount(); slot++) {
+                ItemStack stackInSlot = outputInv.getStackInSlot(slot);
                 if (!stackInSlot.isEmpty()) {
                     emptyOutput = false;
-                    ItemHandlerHelper.giveItemToPlayer(player, stackInSlot);
-                    inv.setStackInSlot(slot, ItemStack.EMPTY);
+                    player.getInventory().placeItemBackInInventory(stackInSlot);
+                    outputInv.setStackInSlot(slot, ItemStack.EMPTY);
                 }
             }
 
-            if (emptyOutput) {
-                inv = fryer.inputInv;
-                for (int slot = 0; slot < inv.getSlots(); slot++) {
-                    ItemHandlerHelper.giveItemToPlayer(player, inv.getStackInSlot(slot));
-                    inv.setStackInSlot(slot, ItemStack.EMPTY);
+            // If the output was empty and the input inventory was not interacted with, check the input inventory.
+            if (emptyOutput && itemInHand.isEmpty()) {
+                ItemStackHandler inputInv = fryer.inputInv;
+                for (int slot = 0; slot < inputInv.getSlotCount(); slot++) {
+                    ItemStack stackInSlot = inputInv.getStackInSlot(slot);
+                    player.getInventory().placeItemBackInInventory(stackInSlot);
+                    inputInv.setStackInSlot(slot, ItemStack.EMPTY);
                 }
             }
 
+            // Update the block entity to save changes.
             fryer.setChanged();
             fryer.sendData();
         }

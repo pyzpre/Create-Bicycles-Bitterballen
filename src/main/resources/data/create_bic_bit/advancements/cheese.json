@@ -20,7 +20,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:cheese",
+            "tag": "c:cheese",
             "count": {
               "min": 1
             }

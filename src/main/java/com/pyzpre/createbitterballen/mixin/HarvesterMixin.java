@@ -2,9 +2,13 @@ package com.pyzpre.createbitterballen.mixin;
 
 import com.pyzpre.createbitterballen.block.sunflower.SunflowerStem;
 import com.pyzpre.createbitterballen.index.BlockRegistry;
+import com.pyzpre.createbitterballen.index.ItemRegistry;
+import com.simibubi.create.api.contraption.storage.item.MountedItemStorageWrapper;
+import com.simibubi.create.content.contraptions.MountedStorageManager;
 import com.simibubi.create.content.contraptions.actors.harvester.HarvesterMovementBehaviour;
 import com.simibubi.create.content.contraptions.behaviour.MovementContext;
-import com.simibubi.create.foundation.utility.BlockHelper;
+import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
+import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -16,14 +20,10 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemHandlerHelper;
-import org.apache.commons.lang3.mutable.MutableBoolean;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(value = HarvesterMovementBehaviour.class, remap = false)
 public abstract class HarvesterMixin {
@@ -52,17 +52,18 @@ public abstract class HarvesterMixin {
     }
 
     private void handleHarvesterInteraction(Level world, BlockPos pos, MovementContext context, BlockState state) {
-        ItemStack sunflowerHead = new ItemStack(Items.SUNFLOWER);
-
         // Get contraption storage - internal inventories only
-        IItemHandler internalStorage = context.contraption.getStorage().getMountedItems();
+        MountedItemStorageWrapper internalStorage = context.contraption.getStorage().getMountedItems();
 
         // Insert the sunflower item
-        ItemStack remaining = ItemHandlerHelper.insertItem(internalStorage, sunflowerHead, false);
+        long inserted;
+        try(Transaction t = Transaction.openOuter()) {
+            inserted = internalStorage.insert(ItemVariant.of(Items.SUNFLOWER), 1, t);
+        }
 
         // Drop it on the ground if it couldn't be inserted
-        if (!remaining.isEmpty()) {
-            Block.popResource(world, pos, remaining);
+        if (inserted != 1) {
+            Block.popResource(world, pos, new ItemStack(Items.SUNFLOWER));
         }
 
         // Replace with the stem block

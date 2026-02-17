@@ -5,8 +5,8 @@
       "item": "create:dough"
     },
     {
-      "amount": 125,
-      "fluidTag": "forge:honey"
+      "amount": 10125,
+      "fluidTag": "c:honey"
     }
   ],
   "results": [

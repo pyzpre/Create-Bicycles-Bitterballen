@@ -10,15 +10,16 @@ import com.simibubi.create.foundation.blockEntity.behaviour.filtering.FilteringB
 import com.simibubi.create.foundation.fluid.FluidIngredient;
 import com.simibubi.create.foundation.item.SmartInventory;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
+import io.github.fabricators_of_create.porting_lib.fluids.FluidStack;
+import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant;
+import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
+import net.fabricmc.fabric.api.transfer.v1.storage.Storage;
+import net.fabricmc.fabric.api.transfer.v1.storage.StorageView;
+import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
 import net.minecraft.world.Container;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemHandlerHelper;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
@@ -53,8 +54,8 @@ public class DeepFryingRecipe extends BasinRecipe {
     public static boolean apply(SmartInventory inv, BasinBlockEntity basin, MechanicalFryerEntity fryer, Recipe<?> recipe) {
         boolean isDeepFryingRecipe = recipe instanceof DeepFryingRecipe;
 
-        IItemHandler availableItems = fryer.inputInv;
-        IFluidHandler availableFluids = basin.getCapability(ForgeCapabilities.FLUID_HANDLER).orElse(null);
+        SmartInventory availableItems = fryer.inputInv;
+        Storage<FluidVariant> availableFluids = basin.getFluidStorage(null);
 
         if (availableItems == null || availableFluids == null) {
             return false;
@@ -77,12 +78,12 @@ public class DeepFryingRecipe extends BasinRecipe {
         int maxProcessableItems = itemCount; // Start with item count, will be limited by fluids
 
         for (FluidIngredient fluidIngredient : fluidIngredients) {
-            int requiredAmount = fluidIngredient.getRequiredAmount();
+            long requiredAmount = fluidIngredient.getRequiredAmount();
             int totalMatchingAmount = 0;
 
             // Calculate total fluid amount available for this ingredient
-            for (int tank = 0; tank < availableFluids.getTanks(); tank++) {
-                FluidStack fluidInTank = availableFluids.getFluidInTank(tank);
+            for (StorageView<FluidVariant> view : availableFluids.nonEmptyViews()) {
+                FluidStack fluidInTank = new FluidStack(view.getResource(), view.getAmount());
 
                 // Use fluidIngredient.test(fluidInTank) to include NBT data
                 if (fluidIngredient.test(fluidInTank)) {
@@ -91,37 +92,41 @@ public class DeepFryingRecipe extends BasinRecipe {
             }
 
             // Calculate the maximum items that can be processed with this fluid ingredient
-            maxProcessableItems = Math.min(maxProcessableItems, totalMatchingAmount / requiredAmount);
+            maxProcessableItems = (int) (Math.min(maxProcessableItems, totalMatchingAmount / requiredAmount));
         }
 
         if (maxProcessableItems <= 0) {
             return false; // Not enough fluids to process any items
         }
+        try (Transaction t = Transaction.openOuter()) {
+            // Consume fluids and items for the maximum processable items
+            for (FluidIngredient fluidIngredient : fluidIngredients) {
+                long amountToConsume = fluidIngredient.getRequiredAmount() * maxProcessableItems;
+                for (StorageView<FluidVariant> view : availableFluids.nonEmptyViews()) {
+                    FluidStack fluidInTank = new FluidStack(view.getResource(), view.getAmount());
+                    if (fluidIngredient.test(fluidInTank)) {
+                        long drainedAmount = view.extract(view.getResource(), amountToConsume, t);
 
-        // Consume fluids and items for the maximum processable items
-        for (FluidIngredient fluidIngredient : fluidIngredients) {
-            int amountToConsume = fluidIngredient.getRequiredAmount() * maxProcessableItems;
-            for (int tank = 0; tank < availableFluids.getTanks(); tank++) {
-                FluidStack fluidInTank = availableFluids.getFluidInTank(tank);
-                if (fluidIngredient.test(fluidInTank)) {
-                    int drainedAmount = availableFluids.drain(new FluidStack(fluidInTank, amountToConsume), IFluidHandler.FluidAction.EXECUTE).getAmount();
-                    amountToConsume -= drainedAmount;
-                    if (amountToConsume <= 0) break;
+                        amountToConsume -= drainedAmount;
+                        if (amountToConsume <= 0) break;
+                    }
                 }
             }
+
+            // Generate and handle outputs
+            List<ItemStack> recipeOutputItems = generateOutputs(recipe, basin, maxProcessableItems); // Multiply outputs by processed items
+            for (ItemStack itemStack : recipeOutputItems) {
+                long transferred = fryer.outputInv.insert(ItemVariant.of(itemStack), itemStack.getCount(), t);
+                if (transferred != itemStack.getCount()) {
+                    return false; // Output inventory is full, stop processing
+                }
+            }
+
+            t.commit();
         }
 
         // Consume items and generate outputs
-        inputStack.shrink(maxProcessableItems);
-
-        // Generate and handle outputs
-        List<ItemStack> recipeOutputItems = generateOutputs(recipe, basin, maxProcessableItems); // Multiply outputs by processed items
-        for (ItemStack itemStack : recipeOutputItems) {
-            ItemStack remaining = ItemHandlerHelper.insertItemStacked(fryer.outputInv, itemStack, false);
-            if (!remaining.isEmpty()) {
-                return false; // Output inventory is full, stop processing
-            }
-        }
+        inputStack.shrink((int) maxProcessableItems);
 
         // Update states
         basin.setChanged();
@@ -138,8 +143,8 @@ public class DeepFryingRecipe extends BasinRecipe {
     private static boolean apply(BasinBlockEntity basin, MechanicalFryerEntity fryer, Recipe<?> recipe, boolean test) {
         boolean isDeepFryingRecipe = recipe instanceof DeepFryingRecipe;
 
-        IItemHandler availableItems = fryer.inputInv;
-        IFluidHandler availableFluids = basin.getCapability(ForgeCapabilities.FLUID_HANDLER).orElse(null);
+        SmartInventory availableItems = fryer.inputInv;
+        Storage<FluidVariant> availableFluids = basin.getFluidStorage(null);
 
         if (availableItems == null || availableFluids == null) {
             return false;
@@ -162,19 +167,21 @@ public class DeepFryingRecipe extends BasinRecipe {
         // Calculate the maximum number of items that can be processed based on fluid requirements
         int maxProcessableItems = itemCount; // Start with item count, will be limited by fluids
         for (FluidIngredient fluidIngredient : fluidIngredients) {
-            int requiredAmount = fluidIngredient.getRequiredAmount();
+            long requiredAmount = fluidIngredient.getRequiredAmount();
             int totalMatchingAmount = 0;
 
             // Calculate total fluid amount available for this ingredient
-            for (int tank = 0; tank < availableFluids.getTanks(); tank++) {
-                FluidStack fluidInTank = availableFluids.getFluidInTank(tank);
+            for (StorageView<FluidVariant> view : availableFluids.nonEmptyViews()) {
+                FluidStack fluidInTank = new FluidStack(view.getResource(), view.getAmount());
 
+                // Use fluidIngredient.test(fluidInTank) to include NBT data
                 if (fluidIngredient.test(fluidInTank)) {
                     totalMatchingAmount += fluidInTank.getAmount();
                 }
             }
 
-            maxProcessableItems = Math.min(maxProcessableItems, totalMatchingAmount / requiredAmount);
+            // Calculate the maximum items that can be processed with this fluid ingredient
+            maxProcessableItems = (int) (Math.min(maxProcessableItems, totalMatchingAmount / requiredAmount));
         }
 
         if (maxProcessableItems <= 0) {
@@ -182,28 +189,35 @@ public class DeepFryingRecipe extends BasinRecipe {
         }
 
         // Process multiple items if conditions allow
-        inputStack.shrink(maxProcessableItems);
 
-        for (FluidIngredient fluidIngredient : fluidIngredients) {
-            int amountToConsume = fluidIngredient.getRequiredAmount() * maxProcessableItems;
-            for (int tank = 0; tank < availableFluids.getTanks(); tank++) {
-                FluidStack fluidInTank = availableFluids.getFluidInTank(tank);
-                if (fluidIngredient.test(fluidInTank)) {
-                    int drainedAmount = availableFluids.drain(new FluidStack(fluidInTank, amountToConsume), IFluidHandler.FluidAction.EXECUTE).getAmount();
-                    amountToConsume -= drainedAmount;
-                    if (amountToConsume <= 0) break;
+        try (Transaction t = Transaction.openOuter()) {
+            for (FluidIngredient fluidIngredient : fluidIngredients) {
+                long amountToConsume = fluidIngredient.getRequiredAmount() * maxProcessableItems;
+                for (StorageView<FluidVariant> view : availableFluids.nonEmptyViews()) {
+                    FluidStack fluidInTank = new FluidStack(view.getResource(), view.getAmount());
+                    if (fluidIngredient.test(fluidInTank)) {
+                        long drainedAmount;
+                        drainedAmount = view.extract(view.getResource(), amountToConsume, t);
+
+                        amountToConsume -= drainedAmount;
+                        if (amountToConsume <= 0) break;
+                    }
                 }
             }
+
+            // Generate and handle outputs
+            List<ItemStack> recipeOutputItems = generateOutputs(recipe, basin, maxProcessableItems); // Process multiple items
+            for (ItemStack itemStack : recipeOutputItems) {
+                long transferred = fryer.outputInv.insert(ItemVariant.of(itemStack), itemStack.getCount(), t);
+                if (transferred != itemStack.getCount()) {
+                    return false; // Output inventory is full, stop processing
+                }
+            }
+
+            t.commit();
         }
 
-        // Generate and handle outputs
-        List<ItemStack> recipeOutputItems = generateOutputs(recipe, basin, maxProcessableItems); // Process multiple items
-        for (ItemStack itemStack : recipeOutputItems) {
-            ItemStack remaining = ItemHandlerHelper.insertItemStacked(fryer.outputInv, itemStack, false);
-            if (!remaining.isEmpty()) {
-                return false;
-            }
-        }
+        inputStack.shrink(maxProcessableItems);
 
         basin.setChanged();
         basin.sendData();
@@ -246,17 +260,23 @@ public class DeepFryingRecipe extends BasinRecipe {
 
 
 
-    public static boolean consumeFluids(FluidIngredient fluidIngredient, IFluidHandler fluidHandler, BasinBlockEntity basin, boolean simulate) {
-        int amountRequired = fluidIngredient.getRequiredAmount();
+    public static boolean consumeFluids(FluidIngredient fluidIngredient, Storage<FluidVariant> fluidHandler, BasinBlockEntity basin, boolean simulate) {
+        long amountRequired = fluidIngredient.getRequiredAmount();
 
         for (FluidStack matchingFluid : fluidIngredient.getMatchingFluidStacks()) {
             FluidStack fluidToDrain = matchingFluid.copy();
             fluidToDrain.setAmount(amountRequired);
 
             // Attempt to drain the exact fluid with matching NBT data
-            FluidStack drained = fluidHandler.drain(fluidToDrain, simulate ? IFluidHandler.FluidAction.SIMULATE : IFluidHandler.FluidAction.EXECUTE);
+            long drained;
+            try(Transaction t = Transaction.openOuter()) {
+                drained = fluidHandler.extract(fluidToDrain.getType(), fluidToDrain.getAmount(), t);
+                if(!simulate && drained == amountRequired) {
+                    t.commit();
+                }
+            }
 
-            if (!drained.isEmpty() && drained.getAmount() == amountRequired && drained.isFluidStackIdentical(fluidToDrain)) {
+            if (drained == amountRequired) {
                 if (!simulate) {
                     basin.setChanged();
                     basin.sendData();  // Sync fluid state after consumption
@@ -272,10 +292,16 @@ public class DeepFryingRecipe extends BasinRecipe {
 
 
     private static boolean inputFluidsToBasin(BasinBlockEntity basin, FluidStack fluidStack, boolean simulate) {
-        IFluidHandler basinFluidHandler = basin.getCapability(ForgeCapabilities.FLUID_HANDLER).orElse(null);
+        Storage<FluidVariant> basinFluidHandler = basin.getFluidStorage(null);
         if (basinFluidHandler == null) return false;
 
-        int filled = basinFluidHandler.fill(fluidStack, simulate ? IFluidHandler.FluidAction.SIMULATE : IFluidHandler.FluidAction.EXECUTE);
+        long filled;
+        try(Transaction t = Transaction.openOuter()) {
+            filled = basinFluidHandler.insert(fluidStack.getType(), fluidStack.getAmount(), t);
+            if(!simulate && filled == fluidStack.getAmount()) {
+                t.commit();
+            }
+        }
 
         // Sync after modifying the basin's fluid contents
         if (!simulate && filled == fluidStack.getAmount()) {
