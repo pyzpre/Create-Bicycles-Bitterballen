@@ -10,7 +10,7 @@
     ],
     "ingredients": [
     {
-        "tag": "c:raw_meat_delight"
+        "tag": "create_bic_bit:raw_meat_delight"
     },
     {
         "item": "create:wheat_flour"
