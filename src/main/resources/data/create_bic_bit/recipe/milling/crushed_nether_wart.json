@@ -5,11 +5,10 @@
       "item": "minecraft:nether_wart"
     }
   ],
-  "processingTime": 50,
+  "processing_time": 50,
   "results": [
     {
-      "id": "create_bic_bit:crushed_nether_wart",
-      "count": 1
+      "id": "create_bic_bit:crushed_nether_wart"
     }
   ]
 }

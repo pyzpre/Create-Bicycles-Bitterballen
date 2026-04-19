@@ -3,8 +3,6 @@ package com.pyzpre.createbitterballen.index;
 import com.pyzpre.createbitterballen.CreateBitterballen;
 import com.pyzpre.createbitterballen.block.mechanicalfryer.DeepFryingRecipe;
 import com.pyzpre.createbitterballen.block.mechanicalfryer.DeepFryingRecipeSerializer;
-import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
-import com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
 import net.createmod.catnip.lang.Lang;
 import net.minecraft.core.registries.BuiltInRegistries;

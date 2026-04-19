@@ -5,11 +5,10 @@
       "item": "create_bic_bit:sunflower_seeds"
     }
   ],
-  "processingTime": 50,
+  "processing_time": 50,
   "results": [
     {
-      "id": "create_bic_bit:crushed_sunflower_seeds",
-      "count": 1
+      "id": "create_bic_bit:crushed_sunflower_seeds"
     }
   ]
 }

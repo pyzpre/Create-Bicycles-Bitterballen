@@ -3,6 +3,7 @@ package com.pyzpre.createbitterballen.block.mechanicalfryer;
 import com.pyzpre.createbitterballen.index.PartialsRegistry;
 import com.simibubi.create.AllPartialModels;
 import com.simibubi.create.content.kinetics.base.ShaftVisual;
+import dev.engine_room.flywheel.api.visual.DynamicVisual;
 import dev.engine_room.flywheel.api.visualization.VisualizationContext;
 import dev.engine_room.flywheel.lib.instance.InstanceTypes;
 import dev.engine_room.flywheel.lib.instance.OrientedInstance;
@@ -66,12 +67,13 @@ public class FryerInstance extends ShaftVisual<MechanicalFryerEntity> implements
     }
 
     @Override
-    public void beginFrame(Context ctx) {
-        transformModels(ctx.partialTick());
+    public void beginFrame(DynamicVisual.Context ctx) {
+        float pt = ctx.partialTick();
+        transformModels(pt);
     }
 
     private float getRenderedHeadOffset(float pt) {
-        return fryer.getRenderedHeadOffset(pt); // Ensure this method interpolates properly
+        return fryer.getRenderedHeadOffset(pt);
     }
 
     @Override

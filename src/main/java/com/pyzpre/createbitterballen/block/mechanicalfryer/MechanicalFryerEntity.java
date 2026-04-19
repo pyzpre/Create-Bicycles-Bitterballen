@@ -12,7 +12,6 @@ import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
 import com.simibubi.create.content.processing.recipe.HeatCondition;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
 import com.simibubi.create.foundation.blockEntity.behaviour.fluid.SmartFluidTankBehaviour;
-import com.simibubi.create.foundation.fluid.FluidIngredient;
 import com.simibubi.create.foundation.item.ItemHelper;
 import com.simibubi.create.foundation.item.SmartInventory;
 import net.createmod.catnip.animation.AnimationTickHolder;
@@ -47,6 +46,7 @@ import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
+import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.neoforged.neoforge.items.wrapper.CombinedInvWrapper;
@@ -151,20 +151,20 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
         }
         BasinBlockEntity basin = basinOpt.get();
 
-        // Get the fluid handler
-        IFluidHandler fluidHandler = level.getCapability(Capabilities.FluidHandler.BLOCK, basin.getBlockPos(), null);
-
+        IFluidHandler fluidHandler = level.getCapability(
+                Capabilities.FluidHandler.BLOCK,
+                basin.getBlockPos(),
+                null
+        );
         if (fluidHandler == null) {
             return false;
         }
 
-
-
         int maxProcessableItems = inputInv.getStackInSlot(0).getCount();
 
-// Limit by available input fluid
-        for (FluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
-            int requiredAmount = fluidIngredient.getRequiredAmount();
+        // Limit by available input fluid
+        for (SizedFluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
+            int requiredAmount = fluidIngredient.amount();
             int totalMatchingAmount = 0;
 
             for (int tank = 0; tank < fluidHandler.getTanks(); tank++) {
@@ -179,7 +179,11 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
 
         // Limit by available fluid output space
         if (recipe instanceof BasinRecipe basinRecipe) {
-            IFluidHandler basinFluidHandler = level.getCapability(Capabilities.FluidHandler.BLOCK, basin.getBlockPos(), null);
+            IFluidHandler basinFluidHandler = level.getCapability(
+                    Capabilities.FluidHandler.BLOCK,
+                    basin.getBlockPos(),
+                    null
+            );
             if (basinFluidHandler == null) {
                 return false;
             }
@@ -206,18 +210,20 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
             }
         }
 
-
         if (maxProcessableItems <= 0) {
             return false; // Not enough fluids to process even a single item
         }
 
         // Consume the required amount of fluids for the batch
-        for (FluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
-            int amountToConsume = fluidIngredient.getRequiredAmount() * maxProcessableItems;
+        for (SizedFluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
+            int amountToConsume = fluidIngredient.amount() * maxProcessableItems;
             for (int tank = 0; tank < fluidHandler.getTanks(); tank++) {
                 FluidStack fluidInTank = fluidHandler.getFluidInTank(tank);
                 if (fluidIngredient.test(fluidInTank)) {
-                    int drainedAmount = fluidHandler.drain(fluidInTank.copyWithAmount(amountToConsume), IFluidHandler.FluidAction.EXECUTE).getAmount();
+                    int drainedAmount = fluidHandler.drain(
+                            fluidInTank.copyWithAmount(amountToConsume),
+                            IFluidHandler.FluidAction.EXECUTE
+                    ).getAmount();
                     amountToConsume -= drainedAmount;
                     if (amountToConsume <= 0) break;
                 }
@@ -229,16 +235,17 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
         inputStack.shrink(maxProcessableItems);
         inputInv.setStackInSlot(0, inputStack);
 
-        // Produce outputs for the processed batch
-        List<ItemStack> outputs = recipe.rollResults();
+        // Produce item outputs for the processed batch
+        List<ItemStack> outputs = recipe.rollResults(level.random);
         for (ItemStack output : outputs) {
-            output.setCount(output.getCount() * maxProcessableItems); // Multiply output by the batch size
+            output.setCount(output.getCount() * maxProcessableItems);
             ItemStack remaining = ItemHandlerHelper.insertItemStacked(outputInv, output.copy(), false);
             if (!remaining.isEmpty()) {
                 return false; // Stop processing if output inventory is full
             }
         }
-// Handle fluid outputs
+
+        // Handle fluid outputs
         if (recipe instanceof BasinRecipe basinRecipe) {
             List<FluidStack> fluidResults = basinRecipe.getFluidResults();
 
@@ -272,6 +279,7 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
 
         return true;
     }
+
 
 
     @Override
@@ -536,61 +544,47 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
         // Check item ingredient
         ItemStack inputStack = inputInv.getStackInSlot(0);
         if (!recipe.getIngredients().get(0).test(inputStack)) {
-
             return false;
         }
 
-        // Get the basin
         Optional<BasinBlockEntity> basinOpt = getBasin();
         if (basinOpt.isEmpty()) {
-
             return false;
         }
         BasinBlockEntity basin = basinOpt.get();
 
-        // Get the fluids from the basin
         IFluidHandler fluidHandler = level.getCapability(
                 Capabilities.FluidHandler.BLOCK,
                 basin.getBlockPos(),
-                null // Or a direction like Direction.UP if you want
+                null
         );
-
         if (fluidHandler == null) {
             return false;
         }
 
         // Check if fluid ingredients match
-        for (FluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
-            int requiredAmount = fluidIngredient.getRequiredAmount();
+        for (SizedFluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
+            int requiredAmount = fluidIngredient.amount();
             int totalMatchingAmount = 0;
 
             for (int tank = 0; tank < fluidHandler.getTanks(); tank++) {
                 FluidStack fluidInTank = fluidHandler.getFluidInTank(tank);
 
-                // Use fluidIngredient.test(fluidInTank) to include NBT data
                 if (fluidIngredient.test(fluidInTank)) {
                     totalMatchingAmount += fluidInTank.getAmount();
-
-                } else {
-
                 }
 
-                // If we have enough fluid, we can stop checking further tanks
                 if (totalMatchingAmount >= requiredAmount)
                     break;
             }
 
-            // If the total matching amount is less than required, the recipe cannot proceed
             if (totalMatchingAmount < requiredAmount) {
-
                 return false;
             }
         }
 
-
         return true;
     }
-
 
     private boolean areBasinFluidsMatching(BasinBlockEntity basin, DeepFryingRecipe recipe) {
         IFluidHandler fluidHandler = basin.getLevel().getCapability(
@@ -603,32 +597,26 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
             return false;
         }
 
-        for (FluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
-            int requiredAmount = fluidIngredient.getRequiredAmount();
+        for (SizedFluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
+            int requiredAmount = fluidIngredient.amount();
             int totalMatchingAmount = 0;
 
             for (int tank = 0; tank < fluidHandler.getTanks(); tank++) {
                 FluidStack fluidInTank = fluidHandler.getFluidInTank(tank);
 
-                // First, check if the fluid types match
-                if (!fluidIngredient.test(fluidInTank)) {
+                if (!fluidIngredient.test(fluidInTank))
                     continue;
-                }
 
-                // Then, check if the NBT data matches
-                if (!hasMatchingNBT(fluidIngredient, fluidInTank)) {
+                if (!hasMatchingNBT(fluidIngredient, fluidInTank))
                     continue;
-                }
 
                 totalMatchingAmount += fluidInTank.getAmount();
 
-                // If we have enough fluid, we can stop checking further tanks
                 if (totalMatchingAmount >= requiredAmount) {
                     break;
                 }
             }
 
-            // If the total matching amount is less than required, the recipe cannot proceed
             if (totalMatchingAmount < requiredAmount) {
                 return false;
             }
@@ -637,10 +625,12 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
         return true;
     }
 
-    private static boolean hasMatchingNBT(FluidIngredient fluidIngredient, FluidStack fluidInTank) {
-        for (FluidStack matchingFluid : fluidIngredient.getMatchingFluidStacks()) {
-            boolean bothHaveTag = !fluidInTank.getComponents().isEmpty() && !matchingFluid.getComponents().isEmpty();
-            boolean neitherHaveTag = fluidInTank.getComponents().isEmpty() && matchingFluid.getComponents().isEmpty();
+    private static boolean hasMatchingNBT(SizedFluidIngredient fluidIngredient, FluidStack fluidInTank) {
+        for (FluidStack matchingFluid : fluidIngredient.getFluids()) {
+            boolean bothHaveTag =
+                    !fluidInTank.getComponents().isEmpty() && !matchingFluid.getComponents().isEmpty();
+            boolean neitherHaveTag =
+                    fluidInTank.getComponents().isEmpty() && matchingFluid.getComponents().isEmpty();
 
             if (bothHaveTag) {
                 if (fluidInTank.getComponents().equals(matchingFluid.getComponents())) {
@@ -652,11 +642,6 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
         }
         return false;
     }
-
-
-
-
-
 
     public void renderParticles() {
         Optional<BasinBlockEntity> basin = getBasin();
@@ -760,9 +745,6 @@ public class MechanicalFryerEntity extends FryerOperatingBlockEntity {
 
         return false;
     }
-
-
-
 
     private boolean isItemValidForRecipe(DeepFryingRecipe recipe, ItemStack stack) {
         return recipe.getIngredients().stream().anyMatch(ingredient -> ingredient.test(stack));

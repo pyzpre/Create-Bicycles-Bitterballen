@@ -67,11 +67,10 @@ public class CreateBicyclesBitterballenJEI implements IModPlugin {
     private void loadCategories() {
         allCategories.clear();
 
-        CreateRecipeCategory<?>
-
+        CreateRecipeCategory<DeepFryingRecipe>
 
                 frying = builder(DeepFryingRecipe.class)
-                        .addTypedRecipes(RecipeRegistry.DEEP_FRYING)
+                .addTypedRecipes(RecipeRegistry.DEEP_FRYING)
                         .catalyst(BlockRegistry.MECHANICAL_FRYER::get)
                         .catalyst(AllBlocks.BASIN::get)
                         .doubleItemIcon(BlockRegistry.MECHANICAL_FRYER.get(), AllBlocks.BASIN.get())
@@ -250,22 +249,39 @@ public class CreateBicyclesBitterballenJEI implements IModPlugin {
             return this;
         }
 
-        public CreateRecipeCategory<T> build(String name, CreateRecipeCategory.Factory<T> factory) {
+        public CreateRecipeCategory<T> build(
+                String name,
+                CreateRecipeCategory.Factory<T> factory) {
+
+
             Supplier<List<RecipeHolder<T>>> recipesSupplier;
             if (predicate.test(AllConfigs.server().recipes)) {
                 recipesSupplier = () -> {
-                    List<RecipeHolder<T>> recipes = new ArrayList<>();
+                    List<RecipeHolder<T>> list = new ArrayList<>();
                     for (Consumer<List<RecipeHolder<T>>> consumer : recipeListConsumers)
-                        consumer.accept(recipes);
-                    return recipes;
+                        consumer.accept(list);
+                    return list;
                 };
             } else {
                 recipesSupplier = Collections::emptyList;
             }
 
-            CreateRecipeCategory.Info<T> info = new CreateRecipeCategory.Info<>(
-                    mezz.jei.api.recipe.RecipeType.create(Create.ID, name, recipeClass),
-                    CreateLang.translateDirect("recipe." + name), background, icon, recipesSupplier, catalysts);
+
+            mezz.jei.api.recipe.RecipeType<RecipeHolder<T>> jeiType =
+                    mezz.jei.api.recipe.RecipeType.create(Create.ID, name, (Class<RecipeHolder<T>>) (Class<?>) RecipeHolder.class);
+
+
+
+            CreateRecipeCategory.Info<T> info =
+                    new CreateRecipeCategory.Info<>(
+                            jeiType,
+                            CreateLang.translateDirect("recipe." + name),
+                            background,
+                            icon,
+                            (Supplier) recipesSupplier,   // type-match
+                            catalysts);
+
+
             CreateRecipeCategory<T> category = factory.create(info);
             allCategories.add(category);
             return category;
@@ -279,10 +295,6 @@ public class CreateBicyclesBitterballenJEI implements IModPlugin {
                 .getRecipes()
                 .forEach(consumer);
     }
-
-
-
-
 
     public static boolean doInputsMatch(Recipe<?> recipe1, Recipe<?> recipe2) {
         if (recipe1.getIngredients()

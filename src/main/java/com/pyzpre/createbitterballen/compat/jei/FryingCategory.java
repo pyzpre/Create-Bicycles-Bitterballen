@@ -9,7 +9,6 @@ import com.simibubi.create.compat.jei.category.animations.AnimatedBlazeBurner;
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlock;
 import com.simibubi.create.content.processing.recipe.HeatCondition;
 import com.simibubi.create.content.processing.recipe.ProcessingOutput;
-import com.simibubi.create.foundation.fluid.FluidIngredient;
 import com.simibubi.create.foundation.gui.AllGuiTextures;
 import com.simibubi.create.foundation.item.ItemHelper;
 import com.simibubi.create.foundation.utility.CreateLang;
@@ -22,7 +21,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
 import org.apache.commons.lang3.mutable.MutableInt;
 
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -58,7 +59,7 @@ public class FryingCategory extends CreateRecipeCategory<DeepFryingRecipe> {
                     .addItemStacks(stacks);
             i++;
         }
-        for (FluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
+        for (SizedFluidIngredient fluidIngredient : recipe.getFluidIngredients()) {
             int x = 17 + xOffset + (i % 3) * 19;
             int y = 51 - (i / 3) * 19;
             addFluidSlot(builder, x, y, fluidIngredient);
@@ -117,31 +118,41 @@ public class FryingCategory extends CreateRecipeCategory<DeepFryingRecipe> {
 
 
     @Override
-    public void draw(DeepFryingRecipe recipe, IRecipeSlotsView iRecipeSlotsView, GuiGraphics graphics, double mouseX, double mouseY) {
-        super.draw(recipe, iRecipeSlotsView, graphics, mouseX, mouseY);
+    public void draw(DeepFryingRecipe recipe,
+                     IRecipeSlotsView slots,
+                     GuiGraphics graphics,
+                     double mouseX, double mouseY) {
 
         HeatCondition requiredHeat = recipe.getRequiredHeat();
         boolean noHeat = requiredHeat == HeatCondition.NONE;
 
-        // Additional graphics from the second method
-        int vRows = (1 + recipe.getFluidResults().size() + recipe.getRollableResults().size()) / 2;
+        /* ── your original rendering code ─────────────────────────── */
+        int vRows = (1 + recipe.getFluidResults().size()
+                + recipe.getRollableResults().size()) / 2;
         if (vRows <= 2)
-            AllGuiTextures.JEI_DOWN_ARROW.render(graphics, 136, -19 * (vRows - 1) + 32);
+            AllGuiTextures.JEI_DOWN_ARROW.render(graphics,
+                    136,
+                    -19 * (vRows - 1) + 32);
 
-        AllGuiTextures shadow = noHeat ? AllGuiTextures.JEI_SHADOW : AllGuiTextures.JEI_LIGHT;
+        AllGuiTextures shadow = noHeat ? AllGuiTextures.JEI_SHADOW
+                : AllGuiTextures.JEI_LIGHT;
         shadow.render(graphics, 81, 58 + (noHeat ? 10 : 30));
 
-        // Heat bar and translation, always drawn
-        AllGuiTextures heatBar = noHeat ? AllGuiTextures.JEI_NO_HEAT_BAR : AllGuiTextures.JEI_HEAT_BAR;
+        AllGuiTextures heatBar = noHeat ? AllGuiTextures.JEI_NO_HEAT_BAR
+                : AllGuiTextures.JEI_HEAT_BAR;
         heatBar.render(graphics, 4, 80);
-        graphics.drawString(Minecraft.getInstance().font, CreateLang.translateDirect(requiredHeat.getTranslationKey()), 9,
-                86, requiredHeat.getColor(), false);
 
-        // Original graphics related to heat and fryer
+        graphics.drawString(Minecraft.getInstance().font,
+                CreateLang.translateDirect(requiredHeat.getTranslationKey()),
+                9, 86, requiredHeat.getColor(), false);
+
         if (!noHeat)
             heater.withHeat(requiredHeat.visualizeAsBlazeBurner())
                     .draw(graphics, getBackground().getWidth() / 2 + 3, 55);
+
         fryer.draw(graphics, getBackground().getWidth() / 2 + 3, 34);
     }
+
+
 
 }

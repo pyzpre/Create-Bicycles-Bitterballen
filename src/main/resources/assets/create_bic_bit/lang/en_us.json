@@ -71,6 +71,8 @@
   "fluid_type.create_bic_bit.curdled_milk" : "Curdled Milk",
   "fluid.create_bic_bit.curdled_milk" : "Curdled Milk",
 
+  "entity.create_bic_bit.herring" : "Herring",
+
   "item_group.create_bic_bit.tabs": "Create: Bitterballen",
   "create_bic_bit.group.main": "Create: Bitterballen",
   "item.create_bic_bit.roasted_sunflower_seeds": "Roasted Sunflower Seeds",

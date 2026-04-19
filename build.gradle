@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id "net.neoforged.moddev" version "2.0.74"
+    id "net.neoforged.moddev" version "2.0.107"
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -19,7 +19,7 @@ group = mod_group_id
 repositories {
     mavenLocal()
     maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
-    maven { url = "https://mvn.devos.one/snapshots" } // Registrate
+    maven { url = "https://maven.ithundxr.dev/snapshots" } // Registrate
     maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // ForgeConfigAPIPort
     maven {url = "https://www.cursemaven.com/"}
 }
