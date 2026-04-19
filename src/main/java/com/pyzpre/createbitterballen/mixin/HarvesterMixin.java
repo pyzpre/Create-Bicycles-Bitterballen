@@ -34,9 +34,12 @@ public abstract class HarvesterMixin {
             cancellable = true
     )
     private void onVisitNewPosition(MovementContext context, BlockPos pos, CallbackInfo ci) {
-        Level world = context.world;
+        if (context == null) {
+            return;
+        }
 
-        if (world.isClientSide()) {
+        Level world = context.world;
+        if (world == null || world.isClientSide()) {
             return;
         }
 
@@ -51,27 +54,32 @@ public abstract class HarvesterMixin {
     private void handleHarvesterInteraction(Level world, BlockPos pos, MovementContext context, BlockState state) {
         ItemStack sunflowerHead = new ItemStack(Items.SUNFLOWER);
 
-        // Get contraption storage - internal inventories only
-        IItemHandler internalStorage = context.contraption.getStorage().getMountedItems();
-
-        // Insert the sunflower item
-        ItemStack remaining = ItemHandlerHelper.insertItem(internalStorage, sunflowerHead, false);
-
-        // Drop it on the ground if it couldn't be inserted
-        if (!remaining.isEmpty()) {
-            Block.popResource(world, pos, remaining);
+        IItemHandler internalStorage = null;
+        if (context != null
+                && context.contraption != null
+                && context.contraption.getStorage() != null) {
+            internalStorage = context.contraption.getStorage().getMountedItems();
         }
 
-        // Replace with the stem block
+        if (internalStorage != null) {
+            ItemStack remaining = ItemHandlerHelper.insertItem(internalStorage, sunflowerHead, false);
+            if (!remaining.isEmpty()) {
+                Block.popResource(world, pos, remaining);
+            }
+        } else {
+            Block.popResource(world, pos, sunflowerHead);
+        }
+
         replaceWithSunflowerStem(world, pos, state);
 
-        // Play sound effect
         world.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 1.0F);
     }
 
-
-
     private void replaceWithSunflowerStem(Level world, BlockPos pos, BlockState state) {
+        if (!state.hasProperty(DoublePlantBlock.HALF)) {
+            return;
+        }
+
         DoubleBlockHalf half = state.getValue(DoublePlantBlock.HALF);
         BlockPos lowerPos = half == DoubleBlockHalf.LOWER ? pos : pos.below();
         BlockPos upperPos = lowerPos.above();
