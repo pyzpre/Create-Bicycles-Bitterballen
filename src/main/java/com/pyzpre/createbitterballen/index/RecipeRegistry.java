@@ -1,6 +1,5 @@
 package com.pyzpre.createbitterballen.index;
 
-import com.pyzpre.createbitterballen.CreateBitterballen;
 import com.pyzpre.createbitterballen.block.mechanicalfryer.DeepFryingRecipe;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer;

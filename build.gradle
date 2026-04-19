@@ -23,7 +23,7 @@ apply plugin: 'org.spongepowered.mixin'
 jarJar.enable()
 
 
-version = '1.0'
+version = '1.0.2B'
 group = 'com.pyzpre.Create-Bicycles-Bitterballen'
 archivesBaseName = 'createbicbit-1.20.1'
 
@@ -90,14 +90,9 @@ minecraft {
 }
 sourceSets.main.resources.srcDir 'src/generated/resources'
 repositories {
-    maven {
-        name = 'tterrag maven'
-        url = 'https://maven.tterrag.com/'
-    }
-    maven {
-        name "createmod maven"
-        url "https://maven.createmod.net/"
-    }
+    maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
+    maven { url = "https://maven.ithundxr.dev/mirror" } // Registrate
+    maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // ForgeConfigAPIPort
     maven { url = "https://maven.blamejared.com" } // JEI, Vazkii's Mods
     maven {
         url = 'https://repo.spongepowered.org/repository/maven-public'
