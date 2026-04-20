@@ -19,6 +19,7 @@ import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -35,9 +36,13 @@ public abstract class HarvesterMixin {
             cancellable = true
     )
     private void onVisitNewPosition(MovementContext context, BlockPos pos, CallbackInfo ci) {
+        if (context == null) {
+            return;
+        }
+
         Level world = context.world;
 
-        if (world.isClientSide()) {
+        if (world == null || world.isClientSide()) {
             return;
         }
 
@@ -49,15 +54,23 @@ public abstract class HarvesterMixin {
         }
     }
 
+    @Unique
     private void handleHarvesterInteraction(Level world, BlockPos pos, MovementContext context, BlockState state) {
         // Get contraption storage - internal inventories only
-        MountedItemStorageWrapper internalStorage = context.contraption.getStorage().getMountedItems();
+        MountedItemStorageWrapper internalStorage = null;
+        if (context != null
+                && context.contraption != null
+                && context.contraption.getStorage() != null) {
+            internalStorage = context.contraption.getStorage().getMountedItems();
+        }
 
         // Insert the sunflower item
-        long inserted;
-        try(Transaction t = Transaction.openOuter()) {
-            inserted = internalStorage.insert(ItemVariant.of(Items.SUNFLOWER), 1, t);
-            t.commit();
+        long inserted = 0;
+        if(internalStorage != null) {
+            try (Transaction t = Transaction.openOuter()) {
+                inserted = internalStorage.insert(ItemVariant.of(Items.SUNFLOWER), 1, t);
+                t.commit();
+            }
         }
 
         // Drop it on the ground if it couldn't be inserted
@@ -72,9 +85,12 @@ public abstract class HarvesterMixin {
         world.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 1.0F);
     }
 
-
-
+    @Unique
     private void replaceWithSunflowerStem(Level world, BlockPos pos, BlockState state) {
+        if (!state.hasProperty(DoublePlantBlock.HALF)) {
+            return;
+        }
+
         DoubleBlockHalf half = state.getValue(DoublePlantBlock.HALF);
         BlockPos lowerPos = half == DoubleBlockHalf.LOWER ? pos : pos.below();
         BlockPos upperPos = lowerPos.above();

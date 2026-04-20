@@ -19,17 +19,20 @@ import net.minecraft.world.level.storage.loot.entries.LootTableReference;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
 public class LootTables {
 
     public static final ResourceLocation FISH = new ResourceLocation(CreateBitterballen.MOD_ID, "gameplay/fishing/fish");
     private static final ResourceLocation SUNFLOWER = new ResourceLocation("minecraft", "blocks/sunflower");
 
     public static void onLootTableLoad(ResourceManager resourceManager, LootDataManager lootManager, ResourceLocation name, LootTable.Builder tableBuilder, LootTableSource source) {
-        if (name.equals(BuiltInLootTables.FISHING)) {
-            boolean first = true;
+        if (name.equals(BuiltInLootTables.FISHING_FISH)) {
+            AtomicBoolean first = new AtomicBoolean(true);
             tableBuilder.modifyPools(poolBuilder -> {
-                if(first) {
+                if(first.get()) {
                     poolBuilder.add(getInjectEntry(FISH, 25, -1));
+                    first.set(false);
                 }
             });
         }
