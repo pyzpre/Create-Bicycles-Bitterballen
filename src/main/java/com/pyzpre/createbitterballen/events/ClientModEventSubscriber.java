@@ -1,13 +1,12 @@
 package com.pyzpre.createbitterballen.events;
 
-
 import com.pyzpre.createbitterballen.CreateBitterballen;
 import com.pyzpre.createbitterballen.entity.HerringModel;
 import com.pyzpre.createbitterballen.entity.HerringRenderer;
 import com.pyzpre.createbitterballen.index.BlockRegistry;
 import com.pyzpre.createbitterballen.index.EffectRegistry;
 import com.pyzpre.createbitterballen.index.EntityRegistry;
-import com.pyzpre.createbitterballen.index.FluidRegistry;
+import com.pyzpre.createbitterballen.index.PartialsRegistry;
 import com.pyzpre.createbitterballen.ponder.BitterOrbPonderPlugin;
 import com.pyzpre.createbitterballen.util.DeepfriedSoundInstance;
 import io.github.fabricators_of_create.porting_lib.client_events.event.client.PlaySoundCallback;
@@ -40,6 +39,8 @@ public class ClientModEventSubscriber implements ClientModInitializer {
         EntityRendererRegistry.register(EntityRegistry.HERRING.get(), HerringRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(HerringModel.LAYER_LOCATION, HerringModel::createBodyLayer);
         ScreenEvents.AFTER_INIT.register(TitleScreenHandler::onTitleScreenInit);
+
+        PartialsRegistry.init();
     }
 
     public class ClientSetup {

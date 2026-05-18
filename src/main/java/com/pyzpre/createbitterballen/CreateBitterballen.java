@@ -17,7 +17,6 @@ import io.github.fabricators_of_create.porting_lib.entity.events.PlayerInteracti
 import net.createmod.catnip.lang.FontHelper;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
-import net.fabricmc.fabric.api.entity.EntityPickInteractionAware;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
@@ -54,7 +53,6 @@ public class CreateBitterballen implements ModInitializer {
 
 		EntityRegistry.register();
 		SoundsRegistry.prepare();
-		PartialsRegistry.init();
 
 		FluidRegistry.registerFluidInteractions();
 		ServerTickEvents.START_WORLD_TICK.register(EntityEffectHandler::onLevelTick);
